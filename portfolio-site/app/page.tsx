@@ -1,8 +1,23 @@
 import { FC } from 'react';
 
+import Image from 'next/image';
+
+import hakkei from '../public/hakkei-lanterns.jpg'
+
 const HomePage: FC = () => {
   return (
     <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      <div className='relative'>
+            <Image
+                src={hakkei}
+                alt='Lanterns outside Hakkei'
+                priority
+                className='w-full rounded-md shadow-lg'
+                placeholder='blur'
+                width='500'
+                height='100'
+            />
+        </div>
       <h1 className="text-4xl font-bold">Jed Harwood</h1>
       <h2 className="text-lg text-gray-600">
         Software Engineer
