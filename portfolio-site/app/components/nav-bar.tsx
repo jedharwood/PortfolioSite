@@ -1,14 +1,15 @@
 "use client";
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, JSX } from "react";
+import { usePathname } from "next/navigation";
 
-export default function Navbar() {
+export const Navbar = (): JSX.Element => {
     const menuRef = useRef<HTMLDivElement>(null);
-
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleClickOutsideOfMenu = (event: MouseEvent) => {
@@ -23,7 +24,8 @@ export default function Navbar() {
     };
   }, []);
 
-const navClass: string = isMobileMenuOpen ? 'w-full' : 'hidden w-full';
+const navMenuClasses: string = isMobileMenuOpen ? 'w-full' : 'hidden w-full';
+
 type NavLink = {
     name: string;
     href: string;
@@ -40,7 +42,7 @@ type NavLink = {
 
   return (
     <nav className="sticky top-0 z-10 shadow-md bg-black">
-      <div className="max-w-screen-xl flex flex-wrap justify-end py-4 px-4 lg:px-0" ref={menuRef}>
+      <div className="max-w-screen-xl flex flex-wrap justify-end py-4 px-4" ref={menuRef}>
         <button
             type="button"
             className="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -65,18 +67,19 @@ type NavLink = {
                 />
           </svg>
         </button>
-        <div
-            className={navClass}
-            // id="navbar-hamburger"
-            // ref={menuRef}
-        >
+        <div className={navMenuClasses}>
            <ul className="flex flex-col font-medium mt-4">
               {navLinks.map((link, index) => (
                 <li
                   key={index}
                   className="flex justify-center lg:justify-end"
                 >
-                  <Link href={link.href} className="block py-2">
+                  <Link href={link.href} 
+                className={`block py-2 text-white ${
+                    pathname === link.href ? "underline" : ""
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     {link.name}
                   </Link>
                 </li>
