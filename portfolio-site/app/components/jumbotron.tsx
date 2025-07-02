@@ -1,20 +1,44 @@
+'use client';
 import Image from 'next/image';
+import type { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import hakkei from '../../public/hakkei-lanterns.jpg';
-import { JSX } from 'react';
+import gotokuji from '../../public/gotokuji-cats.webp';
+import { JSX, useState, useEffect } from 'react';
 
-// dynamically import image
+export const Jumbotron = (): JSX.Element | null => {
+    const [isMounted, setIsMounted] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
-export const Jumbotron = (): JSX.Element => {
-    return (
-        <div className='relative'>
+    useEffect(() => {
+        setIsMounted(true);
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        setIsDarkMode(mediaQuery.matches);
+        
+        const handleChange = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
+        mediaQuery.addEventListener('change', handleChange);
+
+        return () => mediaQuery.removeEventListener('change', handleChange);
+    }, []);
+
+    type JumbotronImage = {
+        src: StaticImport;
+        alt: string;
+    };
+
+    const jumbotronImage: JumbotronImage = isDarkMode
+        ? { src: hakkei, alt: 'Lanterns outside Seto shrine, Kanazawa Hakkei' }
+        : { src: gotokuji, alt: 'Manekineko at Gotokuji shrine, Tokyo' };
+
+    return !isMounted ? null : (
+        <div className='relative aspect-[2762/911] w-full overflow-hidden'>
             <Image
-                src={hakkei}
-                alt='Lanterns outside Hakkei'
+                src={jumbotronImage.src}
+                alt={jumbotronImage.alt}
                 priority
-                className='w-full shadow-lg'
+                fill
+                className='object-cover shadow-lg'
                 placeholder='blur'
-                width='500'
-                height='100'
+                sizes='100vw'
             />
         </div>
     );
