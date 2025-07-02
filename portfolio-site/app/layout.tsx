@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Jumbotron } from './components/jumbotron';
 import { Navbar } from './components/nav-bar';
+import { Footer } from './components/footer';
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -28,14 +29,12 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col px-0 antialiased lg:px-16 xl:px-48 2xl:px-64`}
             >
-                <main className='px-0 lg:px-16 xl:px-48 2xl:px-64'>
-                    <Jumbotron />
-                    <Navbar />
-                    {children}
-                    <h4>Footer</h4>
-                </main>
+                <Jumbotron />
+                <Navbar />
+                <main className='flex-grow'>{children}</main>
+                <Footer />
             </body>
         </html>
     );

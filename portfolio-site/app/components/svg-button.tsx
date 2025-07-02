@@ -2,23 +2,29 @@ import { JSX } from 'react';
 
 type SvgButtonProps = {
     onClickFunction: () => void;
+    label: string;
+    buttonType: 'burger-menu';
 };
 
-export const SvgButton = ({ onClickFunction }: SvgButtonProps): JSX.Element => {
+export const SvgButton = ({
+    onClickFunction,
+    label,
+    buttonType,
+}: SvgButtonProps): JSX.Element => {
     return (
         <button
             type='button'
-            className='svg-button inline-flex h-10 w-10 items-center justify-center rounded-lg p-2'
-            aria-controls='navbar-hamburger'
+            className='svg-button h-10 w-10 p-2'
+            aria-controls={buttonType}
             aria-expanded='false'
+            aria-label={label}
             onClick={onClickFunction}
         >
-            <span className='sr-only'>Open main menu</span>
             <svg
                 className='h-5 w-5'
                 aria-hidden='true'
                 xmlns='http://www.w3.org/2000/svg'
-                fill='none'
+                fill='currentColor'
                 viewBox='0 0 17 14'
             >
                 <path

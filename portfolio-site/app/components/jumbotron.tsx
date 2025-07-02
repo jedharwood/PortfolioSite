@@ -2,6 +2,8 @@ import Image from 'next/image';
 import hakkei from '../../public/hakkei-lanterns.jpg';
 import { JSX } from 'react';
 
+// dynamically import image
+
 export const Jumbotron = (): JSX.Element => {
     return (
         <div className='relative'>
