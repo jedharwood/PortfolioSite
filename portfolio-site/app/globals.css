@@ -1,26 +1,56 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
+    --svg-path: red;
+    --svg-path-hover: pink;
+    --svg-path-focus: purple;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* @theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+} */
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+        --svg-path: green;
+        --svg-path-hover: blue;
+        --svg-path-focus: purple;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-bar {
+    background: var(--background);
+    color: var(--foreground);
+}
+
+.svg-button {
+    color: var(--svg-path);
+}
+
+.svg-button:hover {
+    color: var(--svg-path-hover);
+}
+
+.svg-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--svg-path-focus);
+    color: var(--svg-path-focus);
+}
+
+.svg-button:focus:hover {
+    box-shadow: 0 0 0 2px var(--svg-path-hover);
+    color: var(--svg-path-hover);
 }
