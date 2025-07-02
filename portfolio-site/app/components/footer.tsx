@@ -9,7 +9,7 @@ const scrollToTop = (): void => {
 };
 
 export const Footer = (): JSX.Element => (
-    <footer className='py-4 px-2 flex w-full justify-center gap-2'>
+    <footer className='flex w-full justify-center gap-2 px-2 py-4'>
         <SvgAnchor
             label='Link to LinkedIn page'
             href='https://uk.linkedin.com/in/jed-harwood-39aaba194'
