@@ -16,7 +16,7 @@ export const SvgButton = ({
     return (
         <button
             type='button'
-            className={`svg-button p-2${size === 'large' ? 'h-20 w-20' : 'h-10 w-10'}`}
+            className={`svg-button p-2 ${size === 'large' ? 'h-20 w-20' : 'h-12 w-12'}`}
             aria-controls={buttonType}
             aria-expanded='false'
             aria-label={label}
@@ -24,7 +24,7 @@ export const SvgButton = ({
         >
             {buttonType === 'burger-menu' ? (
                 <svg
-                    className='h-5 w-5'
+                    className='h-12 w-12'
                     aria-hidden='true'
                     xmlns='http://www.w3.org/2000/svg'
                     fill='currentColor'
@@ -40,7 +40,7 @@ export const SvgButton = ({
                 </svg>
             ) : (
                 <svg
-                    className='h-10 w-10'
+                    className='h-20 w-20'
                     viewBox='0 0 24 24'
                     fill='none'
                     xmlns='http://www.w3.org/2000/svg'

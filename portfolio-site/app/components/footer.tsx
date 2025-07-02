@@ -2,6 +2,7 @@
 import { JSX } from 'react';
 import { SvgButton } from './svg-button';
 import { SvgAnchor } from './svg-anchor';
+import { githubUrl, linkedInUrl } from '../utilities/resources';
 
 const scrollToTop = (): void => {
     if (typeof window === 'undefined') return;
@@ -9,15 +10,15 @@ const scrollToTop = (): void => {
 };
 
 export const Footer = (): JSX.Element => (
-    <footer className='py-4 px-2 flex w-full justify-center gap-2'>
+    <footer className='flex w-full justify-center gap-2 px-2 py-4'>
         <SvgAnchor
             label='Link to LinkedIn page'
-            href='https://uk.linkedin.com/in/jed-harwood-39aaba194'
+            href={linkedInUrl}
             buttonType='linked-in'
         />
         <SvgAnchor
             label='Link to github page'
-            href='https://github.com/jedharwood'
+            href={githubUrl}
             buttonType='github'
         />
         <SvgButton
