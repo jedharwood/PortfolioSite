@@ -1,12 +1,35 @@
 @import 'tailwindcss';
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
-    --svg-path: red;
-    --svg-path-hover: pink;
-    --svg-path-focus: purple;
+    --background: #cececc;
+    --foreground: #292320;
+    --svg-path: #c32b2e;
+    --svg-path-hover: #e69092;
+    --svg-path-focus: #8C1F21;
 }
+
+/*
+Light Theme
+
+Delta
+--background: #AEAEAA; 0%
+--background: #bebebb; 20%
+--background: #cececc; 40%
+--background: #AEAEAA; 0%
+
+Cocoa Brown
+--foreground: #292320; 0%
+
+Old Brick
+--svg-path-focus: #8C1F21; 0%
+--svg-path-focus: #c32b2e; 20%
+--svg-path-focus: #da585b; 40%
+--svg-path-focus: #e07476; 50%
+--svg-path-focus: #e69092; 60%
+
+Tobacco Brown
+#665C45
+*/
 
 @theme inline {
     --color-background: var(--background);
@@ -17,13 +40,37 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-        --svg-path: green;
-        --svg-path-hover: blue;
-        --svg-path-focus: purple;
+        --background: #351815;
+        --foreground: #fbe2a3;
+        --svg-path: #ec7d4e;
+        --svg-path-hover: #f5bca3;
+        --svg-path-focus: #df5418;
     }
 }
+
+/* 
+Dark Theme
+
+Tamarind
+--background: #351815;
+
+Casablanca
+--foreground: #F7C548; 0%
+--foreground: #fadc91; 40% 
+--foreground: #fbe2a3; 50%
+
+Tabasco
+--svg-path: #A43E12; 0%
+--svg-path: #df5418; 20%
+--svg-path: #e86830; 30%
+--svg-path: #ec7d4e; 40%
+--svg-path: #ef936b; 50%
+--svg-path: #f2a889; 60%
+--svg-path: #f5bca3; 70%
+
+Comet 
+# 62647D
+*/
 
 body {
     background: var(--background);
