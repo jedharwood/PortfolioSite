@@ -47,15 +47,18 @@ export const Navbar = (): JSX.Element => {
     return (
         <nav className='nav-bar sticky top-0 z-10 opacity-100 lg:opacity-90'>
             <div
-                className='flex max-w-full flex-wrap justify-end px-4 py-4'
+                className='flex max-w-full flex-wrap justify-center px-4 py-4 lg:justify-end'
                 ref={menuRef}
             >
-                <LanguageSelector />
-                <SvgButton
-                    onClickFunction={toggleMenu}
-                    label='Open main menu'
-                    buttonType='burger-menu'
-                />
+                <div className='flex space-x-2'>
+                    <LanguageSelector />
+                    <SvgButton
+                        onClickFunction={toggleMenu}
+                        label='Open main menu'
+                        buttonType='burger-menu'
+                    />
+                </div>
+
                 <div className={navMenuClasses} id='burger-menu'>
                     <ul className='mt-4 flex flex-col font-medium'>
                         {navLinks.map((link, index) => (
