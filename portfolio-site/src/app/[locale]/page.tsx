@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useTranslations } from 'next-intl';
 
 const generatePageContent = () => {
     return (
@@ -11,6 +12,8 @@ const generatePageContent = () => {
 };
 
 const HomePage: FC = () => {
+    const t = useTranslations('Home');
+
     return (
         <>
             <div className='px-4 lg:px-0'>
@@ -21,6 +24,7 @@ const HomePage: FC = () => {
                     great, accessible user experiences with ReactJs and other
                     modern JavaScript frameworks
                 </h3>
+                <h1>{t('title')}</h1>
                 {generatePageContent()}
             </div>
         </>

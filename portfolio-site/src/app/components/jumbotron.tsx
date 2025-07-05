@@ -1,8 +1,8 @@
 'use client';
 import Image from 'next/image';
 import type { StaticImport } from 'next/dist/shared/lib/get-img-props';
-import hakkei from '../../public/hakkei-lanterns.jpg';
-import gotokuji from '../../public/gotokuji-cats.webp';
+import hakkei from '../../../public/hakkei-lanterns.jpg';
+import gotokuji from '../../../public/gotokuji-cats.webp';
 import { JSX, useState, useEffect } from 'react';
 
 export const Jumbotron = (): JSX.Element | null => {
