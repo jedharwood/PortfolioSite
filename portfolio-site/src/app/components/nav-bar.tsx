@@ -1,8 +1,8 @@
 'use client';
-import Link from 'next/link';
+import { Link, usePathname } from '../../i18n/routing';
 import { useState, useRef, useEffect, JSX } from 'react';
-import { usePathname } from 'next/navigation';
 import { SvgButton } from './svg-button';
+import { LanguageSelector } from './language-selector';
 
 export const Navbar = (): JSX.Element => {
     const menuRef = useRef<HTMLDivElement>(null);
@@ -50,6 +50,7 @@ export const Navbar = (): JSX.Element => {
                 className='flex max-w-full flex-wrap justify-end px-4 py-4'
                 ref={menuRef}
             >
+                <LanguageSelector />
                 <SvgButton
                     onClickFunction={toggleMenu}
                     label='Open main menu'
