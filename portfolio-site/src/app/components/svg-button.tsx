@@ -3,7 +3,7 @@ import { JSX } from 'react';
 type SvgButtonProps = {
     onClickFunction: () => void;
     label: string;
-    buttonType: 'burger-menu' | 'up-chevron';
+    buttonType: 'burger-menu' | 'scroll-to-top';
     size?: 'regular' | 'large';
 };
 
@@ -41,25 +41,18 @@ export const SvgButton = ({
             ) : (
                 <svg
                     className='h-20 w-20'
+                    aria-hidden='true'
                     viewBox='0 0 24 24'
                     fill='none'
                     xmlns='http://www.w3.org/2000/svg'
                 >
-                    <g id='SVGRepo_bgCarrier' strokeWidth='0' />
-                    <g
-                        id='SVGRepo_tracerCarrier'
+                    <path
+                        d='M6 15L12 9L18 15'
+                        stroke='currentColor'
+                        strokeWidth='2'
                         strokeLinecap='round'
                         strokeLinejoin='round'
                     />
-                    <g id='SVGRepo_iconCarrier'>
-                        <path
-                            d='M6 15L12 9L18 15'
-                            stroke='currentColor'
-                            strokeWidth='2'
-                            strokeLinecap='round'
-                            strokeLinejoin='round'
-                        />
-                    </g>
                 </svg>
             )}
         </button>

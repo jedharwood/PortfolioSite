@@ -24,7 +24,7 @@ export const Footer = (): JSX.Element => (
         <SvgButton
             onClickFunction={scrollToTop}
             label='Scroll to top'
-            buttonType='up-chevron'
+            buttonType='scroll-to-top'
             size='large'
         />
     </footer>
