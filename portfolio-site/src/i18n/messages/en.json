@@ -1,5 +1,11 @@
 {
     "Home": {
         "title": "Banana EN"
+    },
+    "WorkHistory": {
+        "title": "Work History",
+        "softwareEngineer": "Software Engineer",
+        "frontEndEngineer": "Front End Engineer",
+        "jrSoftwareDeveloper": "Junior Software Developer"
     }
 }
