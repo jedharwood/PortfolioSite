@@ -49,7 +49,7 @@ export const LanguageSelector = (): JSX.Element => {
                 />
             </svg>
 
-            <span className='text-sm font-semibold w-[2ch] text-center'>
+            <span className='w-[2ch] text-center text-sm font-semibold'>
                 {targetLanguage.code.toUpperCase()}
             </span>
         </Link>

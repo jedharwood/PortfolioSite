@@ -36,7 +36,7 @@ export default async function LocaleLayout({
     return (
         <html lang={locale}>
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col px-0 antialiased lg:px-16 xl:px-48 2xl:px-64`}
+                className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col px-0 antialiased lg:px-16 xl:px-48 2xl:px-64`}
             >
                 <NextIntlClientProvider messages={messages}>
                     <Jumbotron />
