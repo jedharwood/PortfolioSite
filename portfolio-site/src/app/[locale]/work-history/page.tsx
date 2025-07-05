@@ -15,9 +15,14 @@ const WorkHistoryPage: FC = () => {
                 location='Brighton, UK'
                 dateRange='Oct 23 - Aug 25'
                 description={[
-                    'A description of the job',
-                    'Another description of the job',
+                    t('appliedSystems.embeddedRating.descriptionOne'),
                 ]}
+                bulletPoints={[
+                    t('appliedSystems.embeddedRating.bulletPointOne'),
+                    t('appliedSystems.embeddedRating.bulletPointTwo'),
+                    t('appliedSystems.embeddedRating.bulletPointThree'),
+                ]}
+                technologies={t('appliedSystems.embeddedRating.technologies')}
             />
             <Accordion
                 id='freelance-japan-accordion'
@@ -26,6 +31,8 @@ const WorkHistoryPage: FC = () => {
                 location='Japan'
                 dateRange='Sep 21 - Oct 23'
                 description={['A description of the job']}
+                bulletPoints={[]}
+                technologies=''
             />
             <Accordion
                 id='appliedsystems-payments-accordion'
@@ -34,6 +41,8 @@ const WorkHistoryPage: FC = () => {
                 location='Brighton, UK'
                 dateRange='Jul 20 - Jun 21'
                 description={['A description of the job']}
+                bulletPoints={[]}
+                technologies=''
             />
             <Accordion
                 id='vero-screening-accordion'
@@ -42,6 +51,8 @@ const WorkHistoryPage: FC = () => {
                 location='Brighton, UK'
                 dateRange='Aug 19 - Jul 20'
                 description={['A description of the job']}
+                bulletPoints={[]}
+                technologies=''
             />
         </div>
     );

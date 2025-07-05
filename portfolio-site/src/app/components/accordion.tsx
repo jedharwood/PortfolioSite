@@ -8,6 +8,8 @@ type AccordionProps = {
     location: string;
     dateRange: string;
     description: string[];
+    bulletPoints: string[];
+    technologies: string;
 };
 
 export const Accordion = ({
@@ -17,6 +19,8 @@ export const Accordion = ({
     location,
     dateRange,
     description,
+    bulletPoints,
+    technologies
 }: AccordionProps) => {
     const [accordionOpen, setAccordionOpen] = useState<boolean>(false);
 
@@ -25,16 +29,16 @@ export const Accordion = ({
     }, []);
 
     return (
-        <div className='accordion py-2'>
+        <div className='accordion space-y-4 py-2'>
             <h2>
                 <button
-                    className='flex w-full items-center justify-between py-2 text-left font-semibold'
+                    className='justify-betweentext-left flex w-full items-center'
                     onClick={() => setAccordionOpen(!accordionOpen)}
                     aria-expanded={accordionOpen}
                     aria-controls={id}
                 >
-                    <div className='flex w-full flex-col gap-1'>
-                        <div className='flex w-full flex-wrap space-x-2 font-semibold'>
+                    <div className='flex w-full flex-col gap-1 font-semibold'>
+                        <div className='flex w-full flex-wrap space-x-2'>
                             <span className='whitespace-nowrap'>{`${jobTitle},`}</span>
                             <span className='whitespace-nowrap'>
                                 {companyName}
@@ -77,14 +81,18 @@ export const Accordion = ({
                 id={id}
                 role='region'
                 aria-labelledby={`${jobTitle}, ${location} ${dateRange}`}
-                className={`grid overflow-hidden text-sm text-slate-600 transition-all duration-300 ease-in-out ${accordionOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+                className={`grid overflow-hidden text-sm transition-all duration-300 ease-in-out ${accordionOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
             >
-                <div className='overflow-hidden'>
+                <div className='space-y-2 overflow-hidden'>
                     {description.map((text, i) => (
-                        <p key={i} className='pb-2'>
-                            {text}
-                        </p>
+                        <p key={i}>{text}</p>
                     ))}
+                    <ul className='list-inside list-disc space-y-1'>
+                        {bulletPoints.map((point, i) => (
+                            <li key={i}>{point}</li>
+                        ))}
+                    </ul>
+                    <p className='pb-2'><span className='font-semibold'>Technologies: </span>{technologies}</p>
                 </div>
             </div>
         </div>
