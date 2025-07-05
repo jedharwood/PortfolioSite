@@ -6,6 +6,7 @@
     --svg-path: #c32b2e;
     --svg-path-hover: #e69092;
     --svg-path-focus: #8c1f21;
+    --border: #665c45;
 }
 
 /*
@@ -45,6 +46,7 @@ Tobacco Brown
         --svg-path: #ec7d4e;
         --svg-path-hover: #f5bca3;
         --svg-path-focus: #df5418;
+        --border: #62647d;
     }
 }
 
@@ -89,6 +91,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .svg-button:hover {
@@ -104,4 +107,8 @@ body {
 .svg-button:focus:hover {
     box-shadow: 0 0 0 2px var(--svg-path-hover);
     color: var(--svg-path-hover);
+}
+
+.accordion {
+    border-bottom: solid 2px var(--border);
 }
