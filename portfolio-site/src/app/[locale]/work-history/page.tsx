@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Accordion } from '../../components/accordion';
 import { useTranslations } from 'next-intl';
-import screenshot from '../../../../public/saved-screenshots-desktop.jpg'
+import screenshot from '../../../../public/saved-screenshots-desktop.jpg';
 
 const WorkHistoryPage: FC = () => {
     const t = useTranslations('WorkHistory');
@@ -24,8 +24,10 @@ const WorkHistoryPage: FC = () => {
                     t('appliedSystems.embeddedRating.bulletPointThree'),
                 ]}
                 technologies={t('appliedSystems.embeddedRating.technologies')}
-                image={screenshot}
-                altText='A placeholder image of a screenshot'
+                image={{
+                    src: screenshot,
+                    alt: 'A placeholder image of a screenshot',
+                }}
             />
             <Accordion
                 id='freelance-japan-accordion'
@@ -36,8 +38,10 @@ const WorkHistoryPage: FC = () => {
                 description={['A description of the job']}
                 bulletPoints={[]}
                 technologies=''
-                image={screenshot}
-                altText='A placeholder image of a screenshot'
+                image={{
+                    src: screenshot,
+                    alt: 'A placeholder image of a screenshot',
+                }}
             />
             <Accordion
                 id='appliedsystems-payments-accordion'
@@ -48,8 +52,10 @@ const WorkHistoryPage: FC = () => {
                 description={['A description of the job']}
                 bulletPoints={[]}
                 technologies=''
-                image={screenshot}
-                altText='A placeholder image of a screenshot'
+                image={{
+                    src: screenshot,
+                    alt: 'A placeholder image of a screenshot',
+                }}
             />
             <Accordion
                 id='vero-screening-accordion'
@@ -60,8 +66,10 @@ const WorkHistoryPage: FC = () => {
                 description={['A description of the job']}
                 bulletPoints={[]}
                 technologies=''
-                image={screenshot}
-                altText='A placeholder image of a screenshot'
+                image={{
+                    src: screenshot,
+                    alt: 'A placeholder image of a screenshot',
+                }}
             />
         </div>
     );

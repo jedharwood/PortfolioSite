@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect, JSX } from 'react';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 type AccordionProps = {
     id: string;
@@ -11,8 +11,7 @@ type AccordionProps = {
     description: string[];
     bulletPoints: string[];
     technologies: string;
-    image: StaticImageData;
-    altText: string;
+    image: GlobalImage;
 };
 
 const renderAccordionHeader = (props: AccordionProps): JSX.Element => {
@@ -48,7 +47,6 @@ export const Accordion = (props: AccordionProps) => {
         bulletPoints,
         technologies,
         image,
-        altText
     } = props;
 
     const renderPlusMinusSvg = (): JSX.Element => {
@@ -81,7 +79,7 @@ export const Accordion = (props: AccordionProps) => {
     };
 
     return (
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+        <div className='grid grid-cols-1 gap-6 lg:grid-cols-3'>
             <div className='accordion col-span-1 space-y-4 py-2 lg:col-span-2'>
                 <h2>
                     <button
@@ -117,25 +115,27 @@ export const Accordion = (props: AccordionProps) => {
                         </p>
                     </div>
                     {/* {accordionIsOpen && (<div className='lg:hidden'>Mobile Image</div>)} */}
-                    {accordionIsOpen && (<Image
-                        src={image}
-                        alt={altText}
-                        priority
-                        // fill
-                        className='lg:hidden'
-                        placeholder='blur'
-                        width={200}
-                        height={200}
-                    />)}
+                    {accordionIsOpen && (
+                        <Image
+                            src={image.src}
+                            alt={image.alt}
+                            priority
+                            // fill
+                            className='lg:hidden'
+                            placeholder='blur'
+                            width={200}
+                            height={200}
+                        />
+                    )}
                 </div>
             </div>
             {accordionIsOpen && (
-                <div className="relative col-span-1 hidden lg:contents aspect-[1964/3024]">
+                <div className='relative col-span-1 hidden aspect-[1964/3024] lg:contents'>
                     <Image
-                        src={image}
-                        alt={altText}
-                        placeholder="blur"
-                        className='rounded-md my-2'
+                        src={image.src}
+                        alt={image.alt}
+                        placeholder='blur'
+                        className='my-2 rounded-md'
                     />
                 </div>
             )}
