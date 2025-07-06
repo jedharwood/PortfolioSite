@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Accordion } from '../../components/accordion';
 import { useTranslations } from 'next-intl';
 import screenshot from '../../../../public/saved-screenshots-desktop.jpg';
+import { appliedSystemsUrl } from '../../utilities/resources';
 
 const WorkHistoryPage: FC = () => {
     const t = useTranslations('WorkHistory');
@@ -28,6 +29,7 @@ const WorkHistoryPage: FC = () => {
                     src: screenshot,
                     alt: 'A placeholder image of a screenshot',
                 }}
+                href={appliedSystemsUrl}
             />
             <Accordion
                 id='freelance-japan-accordion'
@@ -42,6 +44,7 @@ const WorkHistoryPage: FC = () => {
                     src: screenshot,
                     alt: 'A placeholder image of a screenshot',
                 }}
+                href={appliedSystemsUrl}
             />
             <Accordion
                 id='appliedsystems-payments-accordion'
@@ -56,6 +59,7 @@ const WorkHistoryPage: FC = () => {
                     src: screenshot,
                     alt: 'A placeholder image of a screenshot',
                 }}
+                href={appliedSystemsUrl}
             />
             <Accordion
                 id='vero-screening-accordion'
@@ -70,6 +74,7 @@ const WorkHistoryPage: FC = () => {
                     src: screenshot,
                     alt: 'A placeholder image of a screenshot',
                 }}
+                href={appliedSystemsUrl}
             />
         </div>
     );

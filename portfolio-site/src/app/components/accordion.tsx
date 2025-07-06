@@ -12,6 +12,7 @@ type AccordionProps = {
     bulletPoints: string[];
     technologies: string;
     image: GlobalImage;
+    href: string;
 };
 
 const renderAccordionHeader = (props: AccordionProps): JSX.Element => {
@@ -47,6 +48,7 @@ export const Accordion = (props: AccordionProps) => {
         bulletPoints,
         technologies,
         image,
+        href
     } = props;
 
     const renderPlusMinusSvg = (): JSX.Element => {
@@ -78,9 +80,26 @@ export const Accordion = (props: AccordionProps) => {
         );
     };
 
+    const renderAccordionImageAnchor = (
+        screenSize: 'mobile' | 'desktop',
+    ): JSX.Element => {
+        const accordionImageClassNames: string = `relative col-span-1 overflow-hidden transition-all duration-300 ease-in-out ${screenSize === 'mobile' ? 'lg:hidden' : 'hidden lg:block'} ${accordionIsOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'} hover:scale-98`;
+
+        return (
+            <a className={accordionImageClassNames} href={href}>
+                <Image
+                    src={image.src}
+                    alt={image.alt}
+                    placeholder='blur'
+                    className='my-2 h-auto w-full rounded-md object-contain'
+                />
+            </a>
+        );
+    };
+
     return (
         <div className='grid grid-cols-1 gap-6 lg:grid-cols-3'>
-            <div className='accordion col-span-1 space-y-4 py-2 lg:col-span-2'>
+            <div className='accordion col-span-1 space-y-2 py-2 lg:col-span-2'>
                 <h2>
                     <button
                         className='justify-betweentext-left flex w-full items-center'
@@ -114,31 +133,10 @@ export const Accordion = (props: AccordionProps) => {
                             {technologies}
                         </p>
                     </div>
-                    {/* {accordionIsOpen && (<div className='lg:hidden'>Mobile Image</div>)} */}
-                    {accordionIsOpen && (
-                        <Image
-                            src={image.src}
-                            alt={image.alt}
-                            priority
-                            // fill
-                            className='lg:hidden'
-                            placeholder='blur'
-                            width={200}
-                            height={200}
-                        />
-                    )}
+                    {renderAccordionImageAnchor('mobile')}
                 </div>
             </div>
-            {accordionIsOpen && (
-                <div className='relative col-span-1 hidden aspect-[1964/3024] lg:contents'>
-                    <Image
-                        src={image.src}
-                        alt={image.alt}
-                        placeholder='blur'
-                        className='my-2 rounded-md'
-                    />
-                </div>
-            )}
+            {renderAccordionImageAnchor('desktop')}
         </div>
     );
 };
