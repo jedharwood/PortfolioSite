@@ -39,7 +39,7 @@ Tobacco Brown
     --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --background: #351815;
         --foreground: #fbe2a3;
@@ -48,7 +48,7 @@ Tobacco Brown
         --svg-path-focus: #df5418;
         --border: #62647d;
     }
-}
+} */
 
 /* 
 Dark Theme
