@@ -1,5 +1,20 @@
 {
     "Home": {
         "title": "Banana EN"
+    },
+    "WorkHistory": {
+        "title": "Work History",
+        "softwareEngineer": "Software Engineer",
+        "frontEndEngineer": "Front End Engineer",
+        "jrSoftwareDeveloper": "Junior Software Developer",
+        "appliedSystems": {
+            "embeddedRating": {
+                "descriptionOne": "Working as a full stack engineer in the Phoenix team, responsible for the maintenance and transformation of the embedded ra7ng system for a large insurance broker management product. I occupied the role of UI SME in the team.",
+                "bulletPointOne": "Rearchitecting an overly complex and outdated React/Redux UI into a simpler, more lightweight solution using ContextApi, hooks, component testing with react-testing-library and MSW. Streamlining the architecture of the UI to reduce unnecessary development time overhead, introducing component testing to reduce reliance on expensive, bulky libraries like Specflow for UI testing.",
+                "bulletPointTwo": "Migrating an existing legacy system away from an EventStore driven DDD micro-service cluster into a more streamlined three-layer architecture using gRPC api technology and SQL databases. Simplifying the architecture of the application to speed up development time while reducing the overhead cost of EventStore.",
+                "bulletPointThree": "Mentoring and supporting newer members in an offshore team based in India.",
+                "technologies": ".Net, EventStore, React, react-testing-library, GRPC"
+            }
+        }
     }
 }

@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import type { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import hakkei from '../../../public/hakkei-lanterns.jpg';
 import gotokuji from '../../../public/gotokuji-cats.webp';
 import { JSX, useState, useEffect } from 'react';
@@ -21,12 +20,7 @@ export const Jumbotron = (): JSX.Element | null => {
         return () => mediaQuery.removeEventListener('change', handleChange);
     }, []);
 
-    type JumbotronImage = {
-        src: StaticImport;
-        alt: string;
-    };
-
-    const jumbotronImage: JumbotronImage = isDarkMode
+    const jumbotronImage: GlobalImage = isDarkMode
         ? { src: hakkei, alt: 'Lanterns outside Seto shrine, Kanazawa Hakkei' }
         : { src: gotokuji, alt: 'Manekineko at Gotokuji shrine, Tokyo' };
 
