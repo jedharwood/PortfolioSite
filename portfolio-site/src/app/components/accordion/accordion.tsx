@@ -12,6 +12,7 @@ type AccordionProps = {
     technologies: string;
     image: GlobalImage;
     href: string;
+    isNestedAccordion?: boolean;
 };
 
 export const Accordion = ({
@@ -22,6 +23,7 @@ export const Accordion = ({
     technologies,
     image,
     href,
+    isNestedAccordion = false
 }: AccordionProps) => {
     const [accordionIsOpen, setAccordionIsOpen] = useState<boolean>(false);
 
@@ -49,7 +51,7 @@ export const Accordion = ({
     return (
         <div className='grid grid-cols-3 gap-6'>
             <div
-                className={`accordion col-span-3 space-y-2 py-2 lg:col-span-2`}
+                className={`accordion col-span-3 space-y-2 py-2 lg:col-span-2 ${isNestedAccordion && 'pl-10'}`}
             >
                 <h2>
                     <ExpandableHeaderButton

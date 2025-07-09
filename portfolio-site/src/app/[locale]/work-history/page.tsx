@@ -76,6 +76,7 @@ const WorkHistoryPage: FC = () => {
                         alt: 'A placeholder image of a screenshot',
                     }}
                     href={appliedSystemsUrl}
+                    isNestedAccordion={true}
                 />
                 <Accordion
                     id='vero-screening-accordion'
@@ -93,6 +94,7 @@ const WorkHistoryPage: FC = () => {
                         alt: 'A placeholder image of a screenshot',
                     }}
                     href={appliedSystemsUrl}
+                    isNestedAccordion={true}
                 />
             </AccordionNest>
             <Accordion

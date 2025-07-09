@@ -5,7 +5,7 @@ type ExpandableHeaderButtonProps = {
     headerProps: AccordionHeaderProps;
     accordionIsOpen: boolean;
     onClickFunction: () => void;
-    isNestedAccordion?: boolean;
+    isNestingAccordion?: boolean;
 };
 
 export const ExpandableHeaderButton = ({
@@ -13,9 +13,9 @@ export const ExpandableHeaderButton = ({
     headerProps,
     accordionIsOpen,
     onClickFunction,
-    isNestedAccordion = false,
+    isNestingAccordion = false,
 }: ExpandableHeaderButtonProps): JSX.Element => {
-    const expandableHeaderButtonClassNames: string = `flex w-full items-center justify-between text-left${isNestedAccordion && ' py-2'}`;
+    const expandableHeaderButtonClassNames: string = `flex w-full items-center justify-between text-left${isNestingAccordion && ' py-2'}`;
     const {jobTitle, companyName, location, dateRange} = headerProps;
 
     const accordionHeader: JSX.Element = (

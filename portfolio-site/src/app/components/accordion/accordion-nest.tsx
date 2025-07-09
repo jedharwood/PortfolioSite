@@ -28,14 +28,14 @@ export const AccordionNest = ({
                     headerProps={headerProps}
                     accordionIsOpen={accordionIsOpen}
                     onClickFunction={() => setAccordionIsOpen(!accordionIsOpen)}
-                    isNestedAccordion={true}
+                    isNestingAccordion={true}
                 />
             </h2>
             <CollapsibleContent
                 id={id}
                 headerProps={headerProps}
                 accordionIsOpen={accordionIsOpen}
-                isNestedAccordion={true}
+                isNestingAccordion={true}
             >
                 {children}
             </CollapsibleContent>

@@ -5,7 +5,7 @@ type CollapsibleContentProps = {
     children: ReactNode;
     headerProps: AccordionHeaderProps;
     accordionIsOpen: boolean;
-    isNestedAccordion?: boolean;
+    isNestingAccordion?: boolean;
 };
 
 export const CollapsibleContent = ({
@@ -13,11 +13,11 @@ export const CollapsibleContent = ({
     children,
     headerProps,
     accordionIsOpen,
-    isNestedAccordion = false,
+    isNestingAccordion = false,
 }: CollapsibleContentProps): JSX.Element => {
     const { jobTitle, companyName, dateRange } = headerProps;
     const baseClasses: string = 'overflow-hidden transition-all duration-300';
-    const nestedClasses: string = isNestedAccordion ? 'col-span-3 ml-8 lg:mr-4' : '';
+    const nestedClasses: string = isNestingAccordion ? 'col-span-3' : '';
     const openStateClasses: string = accordionIsOpen
         ? 'max-h-[800px] opacity-100'
         : 'max-h-0 opacity-0';
