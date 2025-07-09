@@ -23,7 +23,7 @@ export const Accordion = ({
     technologies,
     image,
     href,
-    isNestedAccordion = false
+    isNestedAccordion = false,
 }: AccordionProps) => {
     const [accordionIsOpen, setAccordionIsOpen] = useState<boolean>(false);
 

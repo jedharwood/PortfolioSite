@@ -28,7 +28,7 @@ export const Navbar = (): JSX.Element => {
         };
     }, []);
 
-    const navMenuClasses: string = `w-full ${isMenuOpen ? '' : 'hidden'}`;
+    const navMenuClasses: string = `w-full overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`;
 
     type NavLink = {
         name: string;
@@ -41,8 +41,6 @@ export const Navbar = (): JSX.Element => {
         { name: 'Projects', href: '/projects' },
         { name: 'Contact', href: '/contact' },
     ];
-
-    // Animate transition of the menu
 
     return (
         <nav className='nav-bar sticky top-0 z-10 opacity-100 lg:opacity-90'>
