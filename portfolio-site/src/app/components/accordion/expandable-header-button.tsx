@@ -16,7 +16,7 @@ export const ExpandableHeaderButton = ({
     isNestingAccordion = false,
 }: ExpandableHeaderButtonProps): JSX.Element => {
     const expandableHeaderButtonClassNames: string = `flex w-full items-center justify-between text-left${isNestingAccordion && ' py-2'}`;
-    const {jobTitle, companyName, location, dateRange} = headerProps;
+    const { jobTitle, companyName, location, dateRange } = headerProps;
 
     const accordionHeader: JSX.Element = (
         <div className='flex w-full flex-col gap-1 font-semibold'>
