@@ -1,8 +1,7 @@
 'use client';
 import { useState, useEffect, JSX } from 'react';
 import Image from 'next/image';
-import { AccordionHeader } from './accordion-header';
-import { ExpandAccordionSvg } from './expand-accordion-svg';
+import { ExpandableHeaderButton } from './expandable-header-button';
 
 type AccordionProps = {
     id: string;
@@ -83,15 +82,12 @@ export const Accordion = ({
                 className={`accordion col-span-3 space-y-2 py-2 lg:col-span-2`}
             >
                 <h2>
-                    <button
-                        className='justify-betweentext-left flex w-full items-center'
-                        onClick={() => setAccordionIsOpen(!accordionIsOpen)}
-                        aria-expanded={accordionIsOpen}
-                        aria-controls={id}
-                    >
-                        <AccordionHeader {...headerProps} />
-                        <ExpandAccordionSvg accordionIsOpen={accordionIsOpen} />
-                    </button>
+                    <ExpandableHeaderButton
+                        id={id}
+                        headerProps={headerProps}
+                        accordionIsOpen={accordionIsOpen}
+                        onClickFunction={() => setAccordionIsOpen(!accordionIsOpen)}
+                    />
                 </h2>
                 {collapsibleContent}
             </div>
