@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, JSX, ReactNode } from 'react';
 import { AccordionHeader } from './accordion-header';
+import { ExpandAccordionSvg } from './expand-accordion-svg';
 
 type AccordionNestProps = {
     id: string;
@@ -20,32 +21,6 @@ export const AccordionNest = ({
     }, []);
 
     const { jobTitle, companyName, dateRange } = headerProps;
-
-    const rectClassNames: string = `origin-center transform transition duration-200 ease-out ${accordionIsOpen && '!rotate-180'}`;
-    const plusMinusSvg: JSX.Element = (
-        <svg
-            className='svg-button ml-4 shrink-0 lg:ml-6'
-            width='16'
-            height='16'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-        >
-            <rect
-                y='7'
-                width='20'
-                height='2'
-                rx='1'
-                className={rectClassNames}
-            />
-            <rect
-                y='7'
-                width='20'
-                height='2'
-                rx='1'
-                className={`${rectClassNames} rotate-90`}
-            />
-        </svg>
-    );
 
     const collapsibleContent: JSX.Element =
         (
@@ -73,8 +48,8 @@ export const AccordionNest = ({
                     aria-controls={id}
                 >
                     <AccordionHeader {...headerProps} />
-                    {plusMinusSvg}
-                </button>
+                    <ExpandAccordionSvg accordionIsOpen={accordionIsOpen} />
+                    </button>
             </h2>
             {collapsibleContent}
         </div>
