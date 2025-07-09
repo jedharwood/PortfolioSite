@@ -1,13 +1,11 @@
 'use client';
 import { useState, useEffect, JSX } from 'react';
 import Image from 'next/image';
+import { AccordionHeader } from './accordion-header';
 
 type AccordionProps = {
     id: string;
-    jobTitle: string;
-    companyName: string;
-    location: string;
-    dateRange: string;
+    headerProps: AccordionHeaderProps;
     description: string[];
     bulletPoints: string[];
     technologies: string;
@@ -17,15 +15,12 @@ type AccordionProps = {
 
 export const Accordion = ({
     id,
-    jobTitle,
-    companyName,
-    location,
-    dateRange,
+    headerProps,
     description,
     bulletPoints,
     technologies,
     image,
-    href
+    href,
 }: AccordionProps) => {
     const [accordionIsOpen, setAccordionIsOpen] = useState<boolean>(false);
 
@@ -33,18 +28,7 @@ export const Accordion = ({
         setAccordionIsOpen(false);
     }, []);
 
-    const accordionHeader: JSX.Element = (
-        <div className='flex w-full flex-col gap-1 font-semibold'>
-            <div className='flex w-full flex-wrap space-x-2'>
-                <span className='whitespace-nowrap'>{`${jobTitle},`}</span>
-                <span className='whitespace-nowrap'>{companyName}</span>
-            </div>
-            <div className='flex w-full flex-wrap justify-between space-x-4 text-sm'>
-                <span className='whitespace-nowrap'>{location}</span>
-                <span className='whitespace-nowrap'>{dateRange}</span>
-            </div>
-        </div>
-    );
+    const { jobTitle, companyName, dateRange } = headerProps;
 
     const rectClassNames: string = `origin-center transform transition duration-200 ease-out ${accordionIsOpen && '!rotate-180'}`;
     const plusMinusSvg: JSX.Element = (
@@ -94,7 +78,11 @@ export const Accordion = ({
             id={id}
             role='region'
             aria-labelledby={`${jobTitle}, ${companyName} ${dateRange}`}
-            className={`col-span-1 grid overflow-hidden text-sm transition-all duration-300 ease-in-out lg:col-span-2 ${accordionIsOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+            className={`overflow-hidden transition-all duration-300 ${
+                accordionIsOpen
+                    ? 'max-h-[800px] opacity-100'
+                    : 'max-h-0 opacity-0'
+            }`}
         >
             <div className='space-y-2 overflow-hidden'>
                 {description.map((text, i) => (
@@ -106,9 +94,7 @@ export const Accordion = ({
                     ))}
                 </ul>
                 <p className='pb-2'>
-                    <span className='font-semibold'>
-                        Technologies:{' '}
-                    </span>
+                    <span className='font-semibold'>Technologies: </span>
                     {technologies}
                 </p>
             </div>
@@ -117,8 +103,10 @@ export const Accordion = ({
     );
 
     return (
-        <div className='grid gap-6 grid-cols-3'>
-            <div className={`accordion col-span-3 space-y-2 py-2 lg:col-span-2`}>
+        <div className='grid grid-cols-3 gap-6'>
+            <div
+                className={`accordion col-span-3 space-y-2 py-2 lg:col-span-2`}
+            >
                 <h2>
                     <button
                         className='justify-betweentext-left flex w-full items-center'
@@ -126,7 +114,7 @@ export const Accordion = ({
                         aria-expanded={accordionIsOpen}
                         aria-controls={id}
                     >
-                        {accordionHeader}
+                        <AccordionHeader {...headerProps} />
                         {plusMinusSvg}
                     </button>
                 </h2>
