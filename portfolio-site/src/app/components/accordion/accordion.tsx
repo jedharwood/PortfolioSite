@@ -2,6 +2,7 @@
 import { useState, useEffect, JSX } from 'react';
 import Image from 'next/image';
 import { ExpandableHeaderButton } from './expandable-header-button';
+import { CollapsibleContent } from './collapsible-content';
 
 type AccordionProps = {
     id: string;
@@ -28,8 +29,6 @@ export const Accordion = ({
         setAccordionIsOpen(false);
     }, []);
 
-    const { jobTitle, companyName, dateRange } = headerProps;
-
     const renderAccordionImageAnchor = (
         screenSize: 'mobile' | 'desktop',
     ): JSX.Element | null => {
@@ -47,35 +46,6 @@ export const Accordion = ({
         );
     };
 
-    const collapsibleContent: JSX.Element = (
-        <div
-            id={id}
-            role='region'
-            aria-labelledby={`${jobTitle}, ${companyName} ${dateRange}`}
-            className={`overflow-hidden transition-all duration-300 ${
-                accordionIsOpen
-                    ? 'max-h-[800px] opacity-100'
-                    : 'max-h-0 opacity-0'
-            }`}
-        >
-            <div className='space-y-2 overflow-hidden'>
-                {description.map((text, i) => (
-                    <p key={i}>{text}</p>
-                ))}
-                <ul className='list-inside list-disc space-y-1'>
-                    {bulletPoints.map((point, i) => (
-                        <li key={i}>{point}</li>
-                    ))}
-                </ul>
-                <p className='pb-2'>
-                    <span className='font-semibold'>Technologies: </span>
-                    {technologies}
-                </p>
-            </div>
-            {renderAccordionImageAnchor('mobile')}
-        </div>
-    );
-
     return (
         <div className='grid grid-cols-3 gap-6'>
             <div
@@ -86,10 +56,34 @@ export const Accordion = ({
                         id={id}
                         headerProps={headerProps}
                         accordionIsOpen={accordionIsOpen}
-                        onClickFunction={() => setAccordionIsOpen(!accordionIsOpen)}
+                        onClickFunction={() =>
+                            setAccordionIsOpen(!accordionIsOpen)
+                        }
                     />
                 </h2>
-                {collapsibleContent}
+                <CollapsibleContent
+                    id={id}
+                    headerProps={headerProps}
+                    accordionIsOpen={accordionIsOpen}
+                >
+                    <div className='space-y-2 overflow-hidden'>
+                        {description.map((text, i) => (
+                            <p key={i}>{text}</p>
+                        ))}
+                        <ul className='list-inside list-disc space-y-1'>
+                            {bulletPoints.map((point, i) => (
+                                <li key={i}>{point}</li>
+                            ))}
+                        </ul>
+                        <p className='pb-2'>
+                            <span className='font-semibold'>
+                                Technologies:{' '}
+                            </span>
+                            {technologies}
+                        </p>
+                    </div>
+                    {renderAccordionImageAnchor('mobile')}
+                </CollapsibleContent>
             </div>
             {renderAccordionImageAnchor('desktop')}
         </div>
