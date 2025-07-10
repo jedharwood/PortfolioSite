@@ -24,7 +24,8 @@
             }
         },
         "freelanceContracting": {
-            "companyName": "Freelance/Contracting"
+            "companyName": "Freelance/Contracting",
+            "dateRange": "Aug 19 - Jul 20"
         },
         "axa": {
             "descriptionOne": "At Axa I worked on the cloud migration of an internal applicant processing system. Because of my previous experience with React I was appointed to lead the UI development within a small, cross functional team. I also worked on backend features using Node/Fastify and MySql.",

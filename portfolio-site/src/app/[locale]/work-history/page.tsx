@@ -17,7 +17,7 @@ const WorkHistoryPage: FC = () => {
                     jobTitle: t('softwareEngineer'),
                     companyName: t('appliedSystems.companyName'),
                     location: t('location.brighton'),
-                    dateRange: 'Oct 23 - Aug 25',
+                    dateRange: t('appliedSystems.embeddedRating.dateRange'),
                 }}
                 description={[
                     t('appliedSystems.embeddedRating.descriptionOne'),
@@ -40,7 +40,7 @@ const WorkHistoryPage: FC = () => {
                     jobTitle: t('frontendEngineer'),
                     companyName: t('freelanceContracting.companyName'),
                     location: t('location.japan'),
-                    dateRange: 'Aug 19 - Jul 20',
+                    dateRange: t('freelanceContracting.dateRange'),
                 }}
             >
                 <Accordion
