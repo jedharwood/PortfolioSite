@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import Accordion from '../../components/accordion/accordion';
 import { useTranslations } from 'next-intl';
-import screenshot from '../../../../public/saved-screenshots-desktop.jpg';
 import { appliedSystemsUrl } from '../../utilities/resources';
+import screenshot from '../../../../public/saved-screenshots-desktop.jpg';
+import Accordion from '../../components/accordion/accordion';
 import AccordionNest from '../../components/accordion/accordion-nest';
 
 const WorkHistoryPage: FC = () => {

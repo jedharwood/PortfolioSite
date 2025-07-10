@@ -1,7 +1,7 @@
 'use client';
 import { JSX } from 'react';
-import { Link, usePathname } from '../../i18n/routing';
 import { useLocale } from 'next-intl';
+import { Link, usePathname } from '../../i18n/routing';
 
 const LanguageSelector = (): JSX.Element => {
     const locale = useLocale();

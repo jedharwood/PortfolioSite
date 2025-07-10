@@ -1,8 +1,8 @@
 'use client';
 import { useState, useEffect, JSX } from 'react';
 import Image from 'next/image';
-import ExpandableHeaderButton from './expandable-header-button';
 import CollapsibleContent from './collapsible-content';
+import ExpandableHeaderButton from './expandable-header-button';
 
 type AccordionProps = {
     id: string;

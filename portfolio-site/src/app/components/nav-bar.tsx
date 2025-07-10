@@ -1,8 +1,8 @@
 'use client';
-import { Link, usePathname } from '../../i18n/routing';
 import { useState, useRef, useEffect, JSX } from 'react';
-import SvgButton from './svg-button';
+import { Link, usePathname } from '../../i18n/routing';
 import LanguageSelector from './language-selector';
+import SvgButton from './svg-button';
 
 const Navbar = (): JSX.Element => {
     const menuRef = useRef<HTMLDivElement>(null);

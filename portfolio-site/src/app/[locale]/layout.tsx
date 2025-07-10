@@ -1,11 +1,11 @@
 import './globals.css';
-import Jumbotron from '../components/jumbotron';
-import Navbar from '../components/nav-bar';
-import Footer from '../components/footer';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import Footer from '../components/footer';
+import Jumbotron from '../components/jumbotron';
+import Navbar from '../components/nav-bar';
 
 const geistSans = Geist({
     variable: '--font-geist-sans',

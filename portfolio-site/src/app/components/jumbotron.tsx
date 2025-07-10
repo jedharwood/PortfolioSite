@@ -1,8 +1,8 @@
 'use client';
-import Image from 'next/image';
-import hakkei from '../../../public/hakkei-lanterns.jpg';
-import gotokuji from '../../../public/gotokuji-cats.webp';
 import { JSX, useState, useEffect } from 'react';
+import Image from 'next/image';
+import gotokuji from '../../../public/gotokuji-cats.webp';
+import hakkei from '../../../public/hakkei-lanterns.jpg';
 
 const Jumbotron = (): JSX.Element | null => {
     const [isMounted, setIsMounted] = useState(false);

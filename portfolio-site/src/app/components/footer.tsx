@@ -1,8 +1,8 @@
 'use client';
 import { JSX } from 'react';
-import SvgButton from './svg-button';
-import SvgAnchor from './svg-anchor';
 import { githubUrl, linkedInUrl } from '../utilities/resources';
+import SvgAnchor from './svg-anchor';
+import SvgButton from './svg-button';
 
 const scrollToTop = (): void => {
     if (typeof window === 'undefined') return;
