@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import { useTranslations } from 'next-intl';
-import { appliedSystemsUrl } from '../../utilities/resources';
+import { appliedSystemsUrl, axaJapanUrl } from '../../utilities/resources';
 import appliedSystemsScreenshot from '../../../../public/work-history/applied-systems-screenshot.png';
+import axaScreenShot from '../../../../public/work-history/axa-screenshot.png'
 import Accordion from '../../components/accordion/accordion';
 import AccordionNest from '../../components/accordion/accordion-nest';
 
@@ -44,21 +45,21 @@ const WorkHistoryPage: FC = () => {
                 }}
             >
                 <Accordion
-                    id='vero-screening-accordion'
+                    id='axa-japan-accordion'
                     headerProps={{
-                        jobTitle: t('jrSoftwareDeveloper'),
-                        companyName: 'Vero Screening Ltd.',
-                        location: 'Brighton, UK',
-                        dateRange: 'Aug 19 - Jul 20',
+                        jobTitle: t('frontendEngineer'),
+                        companyName: t('axa.companyName'),
+                        location: t('location.tokyo'),
+                        dateRange: t('axa.dateRange'),
                     }}
-                    description={['A description of the job']}
-                    bulletPoints={[]}
-                    technologies=''
+                    description={[t('axa.descriptionOne')]}
+                    bulletPoints={[t('axa.bulletPointOne'), t('axa.bulletPointTwo')]}
+                    technologies={t('axa.technologies')}
                     image={{
-                        src: appliedSystemsScreenshot,
-                        alt: 'A placeholder image of a screenshot',
+                        src: axaScreenShot,
+                        alt: t('axa.imageAltText'),
                     }}
-                    href={appliedSystemsUrl}
+                    href={axaJapanUrl}
                     isNestedAccordion={true}
                 />
                 <Accordion

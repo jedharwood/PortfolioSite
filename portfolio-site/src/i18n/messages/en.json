@@ -9,7 +9,8 @@
         "jrSoftwareDeveloper": "Junior Software Developer",
         "location": {
             "brighton": "Brighton, UK",
-            "japan": "Japan"
+            "japan": "Japan",
+            "tokyo": "Tokyo, Japan"
         },
         "appliedSystems": {
             "companyName": "Applied Systems Inc.", 
@@ -28,6 +29,8 @@
             "dateRange": "Aug 19 - Jul 20"
         },
         "axa": {
+            "companyName": "Axa",
+            "dateRange": "Aug 19 - Jul 20",
             "descriptionOne": "At Axa I worked on the cloud migration of an internal applicant processing system. Because of my previous experience with React I was appointed to lead the UI development within a small, cross functional team. I also worked on backend features using Node/Fastify and MySql.",
             "bulletPointOne": "I identified the need early on for a design system of regulated, reusable components in order to unify the appearance of the UI while also speeding up delivery and reducing development cost. Alongside developing features I also implemented the design system across the UI.",
             "bulletPointTwo": "Collaborated with business analysts in order to define requirements and refine user stories to maintain a healthy backlog of workable tickets for our teams to pull from and maximise productive time during sprints.",
