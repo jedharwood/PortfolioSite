@@ -1,8 +1,8 @@
 'use client';
 import { useState, useEffect, JSX } from 'react';
 import Image from 'next/image';
-import { ExpandableHeaderButton } from './expandable-header-button';
-import { CollapsibleContent } from './collapsible-content';
+import ExpandableHeaderButton from './expandable-header-button';
+import CollapsibleContent from './collapsible-content';
 
 type AccordionProps = {
     id: string;
@@ -15,7 +15,7 @@ type AccordionProps = {
     isNestedAccordion?: boolean;
 };
 
-export const Accordion = ({
+const Accordion = ({
     id,
     headerProps,
     description,
@@ -24,7 +24,7 @@ export const Accordion = ({
     image,
     href,
     isNestedAccordion = false,
-}: AccordionProps) => {
+}: AccordionProps): JSX.Element => {
     const [accordionIsOpen, setAccordionIsOpen] = useState<boolean>(false);
 
     useEffect(() => {
@@ -91,3 +91,5 @@ export const Accordion = ({
         </div>
     );
 };
+
+export default Accordion;
