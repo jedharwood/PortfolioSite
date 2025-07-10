@@ -8,7 +8,7 @@ type ExpandableHeaderButtonProps = {
     isNestingAccordion?: boolean;
 };
 
-export const ExpandableHeaderButton = ({
+const ExpandableHeaderButton = ({
     id,
     headerProps,
     accordionIsOpen,
@@ -69,3 +69,5 @@ export const ExpandableHeaderButton = ({
         </button>
     );
 };
+
+export default ExpandableHeaderButton;

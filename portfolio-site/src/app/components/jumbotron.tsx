@@ -4,7 +4,7 @@ import hakkei from '../../../public/hakkei-lanterns.jpg';
 import gotokuji from '../../../public/gotokuji-cats.webp';
 import { JSX, useState, useEffect } from 'react';
 
-export const Jumbotron = (): JSX.Element | null => {
+const Jumbotron = (): JSX.Element | null => {
     const [isMounted, setIsMounted] = useState(false);
     const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -38,3 +38,5 @@ export const Jumbotron = (): JSX.Element | null => {
         </div>
     );
 };
+
+export default Jumbotron;

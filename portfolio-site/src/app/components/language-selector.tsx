@@ -3,7 +3,7 @@ import { JSX } from 'react';
 import { Link, usePathname } from '../../i18n/routing';
 import { useLocale } from 'next-intl';
 
-export const LanguageSelector = (): JSX.Element => {
+const LanguageSelector = (): JSX.Element => {
     const locale = useLocale();
     const pathname = usePathname();
 
@@ -55,3 +55,5 @@ export const LanguageSelector = (): JSX.Element => {
         </Link>
     );
 };
+
+export default LanguageSelector;
