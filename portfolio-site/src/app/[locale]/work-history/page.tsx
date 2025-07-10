@@ -1,8 +1,13 @@
 import { FC } from 'react';
 import { useTranslations } from 'next-intl';
-import { appliedSystemsUrl, axaJapanUrl } from '../../utilities/resources';
+import {
+    appliedSystemsUrl,
+    axaJapanUrl,
+    rakutenIchibaUrl,
+} from '../../utilities/resources';
 import appliedSystemsScreenshot from '../../../../public/work-history/applied-systems-screenshot.png';
-import axaScreenShot from '../../../../public/work-history/axa-screenshot.png'
+import axaScreenShot from '../../../../public/work-history/axa-screenshot.png';
+import rakutenScreenShot from '../../../../public/work-history/rakuten-screenshot.png';
 import Accordion from '../../components/accordion/accordion';
 import AccordionNest from '../../components/accordion/accordion-nest';
 
@@ -53,7 +58,10 @@ const WorkHistoryPage: FC = () => {
                         dateRange: t('axa.dateRange'),
                     }}
                     description={[t('axa.descriptionOne')]}
-                    bulletPoints={[t('axa.bulletPointOne'), t('axa.bulletPointTwo')]}
+                    bulletPoints={[
+                        t('axa.bulletPointOne'),
+                        t('axa.bulletPointTwo'),
+                    ]}
                     technologies={t('axa.technologies')}
                     image={{
                         src: axaScreenShot,
@@ -63,21 +71,26 @@ const WorkHistoryPage: FC = () => {
                     isNestedAccordion={true}
                 />
                 <Accordion
-                    id='vero-screening-accordion'
+                    id='rakuten-ichiba-accordion'
                     headerProps={{
-                        jobTitle: t('jrSoftwareDeveloper'),
-                        companyName: 'Vero Screening Ltd.',
-                        location: 'Brighton, UK',
-                        dateRange: 'Aug 19 - Jul 20',
+                        jobTitle: t('frontendEngineer'),
+                        companyName: t('rakuten.companyName'),
+                        location: t('location.tokyo'),
+                        dateRange: t('rakuten.dateRange'),
                     }}
-                    description={['A description of the job']}
-                    bulletPoints={[]}
-                    technologies=''
+                    description={[t('rakuten.descriptionOne')]}
+                    bulletPoints={[
+                        t('rakuten.bulletPointOne'),
+                        t('rakuten.bulletPointTwo'),
+                        t('rakuten.bulletPointThree'),
+                        t('rakuten.bulletPointFour'),
+                    ]}
+                    technologies={t('rakuten.technologies')}
                     image={{
-                        src: appliedSystemsScreenshot,
-                        alt: 'A placeholder image of a screenshot',
+                        src: rakutenScreenShot,
+                        alt: t('rakuten.imageAltText'),
                     }}
-                    href={appliedSystemsUrl}
+                    href={rakutenIchibaUrl}
                     isNestedAccordion={true}
                 />
             </AccordionNest>

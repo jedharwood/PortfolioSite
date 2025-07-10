@@ -13,14 +13,14 @@
             "tokyo": "Tokyo, Japan"
         },
         "appliedSystems": {
-            "companyName": "Applied Systems Inc.", 
+            "companyName": "Applied Systems Inc.",
             "embeddedRating": {
                 "dateRange": "Oct 23 - Aug 25",
-                "descriptionOne": "Working as a full stack engineer in the Phoenix team, responsible for the maintenance and transformation of the embedded rating system for a large insurance broker management product. I occupied the role of UI SME in the team working in compliance with the SOC 2 framework.",
-                "bulletPointOne": "Rearchitecting an overly complex and outdated React/Redux UI into a simpler, more lightweight solution using ContextApi, hooks, component testing with react-testing-library and MSW. Streamlining the architecture of the UI to reduce unnecessary development time overhead, introducing component testing to reduce reliance on expensive, bulky libraries like Specflow for UI testing.",
-                "bulletPointTwo": "Migrating an existing legacy system away from an EventStore driven DDD micro-service cluster into a more streamlined three-layer architecture using gRPC api technology and SQL databases. Simplifying the architecture of the application to speed up development time while reducing the overhead cost of EventStore.",
-                "bulletPointThree": "Mentoring and supporting newer members in an offshore team based in India.",
-                "technologies": ".Net, EventStore, React, react-testing-library, gRPC, SQL",
+                "descriptionOne": "Full-stack engineer in a team responsible for the maintenance and transformaDon of the embedded rating system of a large insurance broker management product. I occupied the role of UI SME in the team. Compliant with SOC 2 standards.",
+                "bulletPointOne": "Rearchitecting a complex, outdated React/Redux UI into a more lightweight solution using ContextApi, hooks, component testing with Cypress and MSW. Streamlining the UI architecture to reduce excessive development time, introducing component testing to reduce reliance on expensive, bulky libraries like Specflow.",
+                "bulletPointTwo": "Migrating existing legacy system away from an EventStore driven DDD micro-service cluster into a concise, three-layer architecture using gRPC api technology and SQL databases. Simplifying the architecture of the applicaDon to accelerate development while reducing the overhead cost of EventStore.",
+                "bulletPointThree": "Mentoring and supporting new hires based in India.",
+                "technologies": ".Net, EventStore, React, react-testing-library, Cypress, gRPC, SQL",
                 "imageAltText": "A screenshot of the Applied Systems UK website"
             }
         },
@@ -31,11 +31,22 @@
         "axa": {
             "companyName": "Axa",
             "dateRange": "Aug 19 - Jul 20",
-            "descriptionOne": "At Axa I worked on the cloud migration of an internal applicant processing system. Because of my previous experience with React I was appointed to lead the UI development within a small, cross functional team. I also worked on backend features using Node/Fastify and MySql.",
-            "bulletPointOne": "I identified the need early on for a design system of regulated, reusable components in order to unify the appearance of the UI while also speeding up delivery and reducing development cost. Alongside developing features I also implemented the design system across the UI.",
-            "bulletPointTwo": "Collaborated with business analysts in order to define requirements and refine user stories to maintain a healthy backlog of workable tickets for our teams to pull from and maximise productive time during sprints.",
-            "technologies": "React, Vite, Typescript, NodeJs, Fastify, Cypress, Storybook, MySql",
+            "descriptionOne": "Working on the cloud migration of an internal broker management system I was appointed to lead the React UI development within a small, cross functional team. I also worked on backend features using Node/Fastify and MySql.",
+            "bulletPointOne": "I identified the need for a design system of components in order to visually unify the UI and accelerate delivery while reducing development cost. Alongside developing features I also implemented the design system across the UI.",
+            "bulletPointTwo": "Collaborated with business analysts to define requirements and refine user stories, maintaining a healthy backlog of tickets for our teams to work from; maximising productive time during sprints.",
+            "technologies": "React, Typescript, NodeJs, FasDfy, Storybook, MySql, react-tesDng-library, vite",
             "imageAltText": "A screenshot of the Axa Japan website"
+        },
+        "rakuten": {
+            "companyName": "Rakuten",
+            "dateRange": "Sept 21 - July 22",
+            "descriptionOne": "Front-end engineer developing features for Rakuten’s flagship e-commerce site. My role advanced into full-stack development as there were backend tasks on our backlog for which I volunteered because of my full stack experience.",
+            "bulletPointOne": "Developed a library of React widgets in collaboration with multiple stakeholders, re-used across multiple Rakuten services standardising the presentaDon and functionality of those pages while reducing the duplication of features.",
+            "bulletPointTwo": "Developed new endpoints for the NodeJs api handling our Bitbucket integration. While reverse engineering this neglected, undocumented api I created documentation to reduce effort for future engineers.",
+            "bulletPointThree": "Voluntarily contributed to a series of internal web accessibility training courses.",
+            "bulletPointFour": "Voluntarily contributed to the Rakuten design system; a regulated, reusable visual component library focused on design, accessibility and performance.",
+            "technologies": "React, Typescript, NodeJs, Express, Jest, Sinon, Chai, Storybook",
+            "imageAltText": "A screenshot of the Rakuten Ichiba website"
         }
     }
 }

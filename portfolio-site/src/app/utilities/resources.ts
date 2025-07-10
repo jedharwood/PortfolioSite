@@ -3,4 +3,5 @@ export const linkedInUrl: string =
 export const githubUrl: string = 'https://github.com/jedharwood';
 export const appliedSystemsUrl: string =
     'https://www1.appliedsystems.com/en-uk/';
-    export const axaJapanUrl: string = 'https://www.axa.co.jp/';
+export const axaJapanUrl: string = 'https://www.axa.co.jp/';
+export const rakutenIchibaUrl: string = 'https://www.rakuten.co.jp/';
