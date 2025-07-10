@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect, JSX, ReactNode } from 'react';
-import { ExpandableHeaderButton } from './expandable-header-button';
-import { CollapsibleContent } from './collapsible-content';
+import CollapsibleContent from './collapsible-content';
+import ExpandableHeaderButton from './expandable-header-button';
 
 type AccordionNestProps = {
     id: string;
@@ -9,7 +9,7 @@ type AccordionNestProps = {
     children: ReactNode;
 };
 
-export const AccordionNest = ({
+const AccordionNest = ({
     id,
     headerProps,
     children,
@@ -42,3 +42,5 @@ export const AccordionNest = ({
         </div>
     );
 };
+
+export default AccordionNest;

@@ -7,7 +7,7 @@ type SvgButtonProps = {
     size?: 'regular' | 'large';
 };
 
-export const SvgButton = ({
+const SvgButton = ({
     onClickFunction,
     label,
     buttonType,
@@ -58,3 +58,5 @@ export const SvgButton = ({
         </button>
     );
 };
+
+export default SvgButton;

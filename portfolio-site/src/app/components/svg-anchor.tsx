@@ -6,7 +6,7 @@ type SvgAnchorProps = {
     buttonType: 'linked-in' | 'github';
 };
 
-export const SvgAnchor = ({
+const SvgAnchor = ({
     href,
     label,
     buttonType,
@@ -71,3 +71,5 @@ export const SvgAnchor = ({
         </a>
     );
 };
+
+export default SvgAnchor;

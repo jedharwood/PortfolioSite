@@ -1,15 +1,15 @@
 'use client';
 import { JSX } from 'react';
-import { SvgButton } from './svg-button';
-import { SvgAnchor } from './svg-anchor';
 import { githubUrl, linkedInUrl } from '../utilities/resources';
+import SvgAnchor from './svg-anchor';
+import SvgButton from './svg-button';
 
 const scrollToTop = (): void => {
     if (typeof window === 'undefined') return;
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
-export const Footer = (): JSX.Element => (
+const Footer = (): JSX.Element => (
     <footer className='flex w-full justify-center gap-2 px-2 py-4'>
         <SvgAnchor
             label='Link to LinkedIn page'
@@ -29,3 +29,5 @@ export const Footer = (): JSX.Element => (
         />
     </footer>
 );
+
+export default Footer;

@@ -8,7 +8,7 @@ type CollapsibleContentProps = {
     isNestingAccordion?: boolean;
 };
 
-export const CollapsibleContent = ({
+const CollapsibleContent = ({
     id,
     children,
     headerProps,
@@ -33,3 +33,5 @@ export const CollapsibleContent = ({
         </div>
     );
 };
+
+export default CollapsibleContent;
