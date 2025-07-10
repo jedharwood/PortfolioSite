@@ -42,7 +42,7 @@ const Accordion = ({
                     src={image.src}
                     alt={image.alt}
                     placeholder='blur'
-                    className='my-2 h-auto w-full rounded-md object-contain'
+                    className='my-2 h-auto w-full rounded-md object-contain shadow-lg'
                 />
             </a>
         );

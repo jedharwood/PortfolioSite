@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useTranslations } from 'next-intl';
 import { appliedSystemsUrl } from '../../utilities/resources';
-import screenshot from '../../../../public/saved-screenshots-desktop.jpg';
+import appliedSystemsScreenshot from '../../../../public/work-history/applied-systems-screenshot.png';
 import Accordion from '../../components/accordion/accordion';
 import AccordionNest from '../../components/accordion/accordion-nest';
 
@@ -15,8 +15,8 @@ const WorkHistoryPage: FC = () => {
                 id='appliedsystems-embeddedrating-accordion'
                 headerProps={{
                     jobTitle: t('softwareEngineer'),
-                    companyName: 'Applied Systems Inc.',
-                    location: 'Brighton, UK',
+                    companyName: t('appliedSystems.companyName'),
+                    location: t('location.brighton'),
                     dateRange: 'Oct 23 - Aug 25',
                 }}
                 description={[
@@ -29,34 +29,17 @@ const WorkHistoryPage: FC = () => {
                 ]}
                 technologies={t('appliedSystems.embeddedRating.technologies')}
                 image={{
-                    src: screenshot,
-                    alt: 'A placeholder image of a screenshot',
-                }}
-                href={appliedSystemsUrl}
-            />
-            <Accordion
-                id='freelance-japan-accordion'
-                headerProps={{
-                    jobTitle: t('frontEndEngineer'),
-                    companyName: 'Contracting/Freelance',
-                    location: 'Japan',
-                    dateRange: 'Sep 21 - Oct 23',
-                }}
-                description={['A description of the job']}
-                bulletPoints={[]}
-                technologies=''
-                image={{
-                    src: screenshot,
-                    alt: 'A placeholder image of a screenshot',
+                    src: appliedSystemsScreenshot,
+                    alt: t('appliedSystems.embeddedRating.imageAltText'),
                 }}
                 href={appliedSystemsUrl}
             />
             <AccordionNest
-                id='vero-screening-accordion'
+                id='freelance-japan-accordion-nest'
                 headerProps={{
-                    jobTitle: 'Nested Accordion',
-                    companyName: 'Vero Screening Ltd.',
-                    location: 'Brighton, UK',
+                    jobTitle: t('frontendEngineer'),
+                    companyName: t('freelanceContracting.companyName'),
+                    location: t('location.japan'),
                     dateRange: 'Aug 19 - Jul 20',
                 }}
             >
@@ -72,7 +55,7 @@ const WorkHistoryPage: FC = () => {
                     bulletPoints={[]}
                     technologies=''
                     image={{
-                        src: screenshot,
+                        src: appliedSystemsScreenshot,
                         alt: 'A placeholder image of a screenshot',
                     }}
                     href={appliedSystemsUrl}
@@ -90,7 +73,7 @@ const WorkHistoryPage: FC = () => {
                     bulletPoints={[]}
                     technologies=''
                     image={{
-                        src: screenshot,
+                        src: appliedSystemsScreenshot,
                         alt: 'A placeholder image of a screenshot',
                     }}
                     href={appliedSystemsUrl}
@@ -109,7 +92,7 @@ const WorkHistoryPage: FC = () => {
                 bulletPoints={[]}
                 technologies=''
                 image={{
-                    src: screenshot,
+                    src: appliedSystemsScreenshot,
                     alt: 'A placeholder image of a screenshot',
                 }}
                 href={appliedSystemsUrl}
@@ -126,7 +109,7 @@ const WorkHistoryPage: FC = () => {
                 bulletPoints={[]}
                 technologies=''
                 image={{
-                    src: screenshot,
+                    src: appliedSystemsScreenshot,
                     alt: 'A placeholder image of a screenshot',
                 }}
                 href={appliedSystemsUrl}

@@ -5,16 +5,33 @@
     "WorkHistory": {
         "title": "Work History",
         "softwareEngineer": "Software Engineer",
-        "frontEndEngineer": "Front End Engineer",
+        "frontendEngineer": "Frontend Engineer",
         "jrSoftwareDeveloper": "Junior Software Developer",
+        "location": {
+            "brighton": "Brighton, UK",
+            "japan": "Japan"
+        },
         "appliedSystems": {
+            "companyName": "Applied Systems Inc.", 
             "embeddedRating": {
-                "descriptionOne": "Working as a full stack engineer in the Phoenix team, responsible for the maintenance and transformation of the embedded ra7ng system for a large insurance broker management product. I occupied the role of UI SME in the team.",
+                "dateRange": "Oct 23 - Aug 25",
+                "descriptionOne": "Working as a full stack engineer in the Phoenix team, responsible for the maintenance and transformation of the embedded rating system for a large insurance broker management product. I occupied the role of UI SME in the team working in compliance with the SOC 2 framework.",
                 "bulletPointOne": "Rearchitecting an overly complex and outdated React/Redux UI into a simpler, more lightweight solution using ContextApi, hooks, component testing with react-testing-library and MSW. Streamlining the architecture of the UI to reduce unnecessary development time overhead, introducing component testing to reduce reliance on expensive, bulky libraries like Specflow for UI testing.",
                 "bulletPointTwo": "Migrating an existing legacy system away from an EventStore driven DDD micro-service cluster into a more streamlined three-layer architecture using gRPC api technology and SQL databases. Simplifying the architecture of the application to speed up development time while reducing the overhead cost of EventStore.",
                 "bulletPointThree": "Mentoring and supporting newer members in an offshore team based in India.",
-                "technologies": ".Net, EventStore, React, react-testing-library, GRPC"
+                "technologies": ".Net, EventStore, React, react-testing-library, gRPC, SQL",
+                "imageAltText": "A screenshot of the Applied Systems UK website"
             }
+        },
+        "freelanceContracting": {
+            "companyName": "Freelance/Contracting"
+        },
+        "axa": {
+            "descriptionOne": "At Axa I worked on the cloud migration of an internal applicant processing system. Because of my previous experience with React I was appointed to lead the UI development within a small, cross functional team. I also worked on backend features using Node/Fastify and MySql.",
+            "bulletPointOne": "I identified the need early on for a design system of regulated, reusable components in order to unify the appearance of the UI while also speeding up delivery and reducing development cost. Alongside developing features I also implemented the design system across the UI.",
+            "bulletPointTwo": "Collaborated with business analysts in order to define requirements and refine user stories to maintain a healthy backlog of workable tickets for our teams to pull from and maximise productive time during sprints.",
+            "technologies": "React, Vite, Typescript, NodeJs, Fastify, Cypress, Storybook, MySql",
+            "imageAltText": "A screenshot of the Axa Japan website"
         }
     }
 }
