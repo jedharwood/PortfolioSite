@@ -8,3 +8,4 @@ export const rakutenIchibaUrl: string = 'https://www.rakuten.co.jp/';
 export const accurateUrl: string = 'https://www.accurate.com/uk/';
 export const soundrawUrl: string = 'https://soundraw.io/';
 export const nycmcUrl: string = 'https://nyc-motorcycles.vercel.app/';
+export const dacJapanUrl: string = 'https://darkartscoffee.jp/';

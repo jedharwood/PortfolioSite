@@ -6,7 +6,8 @@ import {
     rakutenIchibaUrl,
     accurateUrl,
     soundrawUrl,
-    nycmcUrl
+    nycmcUrl,
+    dacJapanUrl,
 } from '../../utilities/resources';
 import appliedSystemsScreenshot from '../../../../public/work-history/applied-systems-screenshot.png';
 import axaScreenshot from '../../../../public/work-history/axa-screenshot.png';
@@ -14,6 +15,7 @@ import rakutenScreenshot from '../../../../public/work-history/rakuten-screensho
 import accurateScreenshot from '../../../../public/work-history/accurate-screenshot.png';
 import soundrawScreenshot from '../../../../public/work-history/soundraw-screenshot.png';
 import nycmcScreenshot from '../../../../public/work-history/nycmc-screenshot.png';
+import dacJapanScreenshot from '../../../../public/work-history/dac-japan-screenshot.png';
 import Accordion from '../../components/accordion/accordion';
 import AccordionNest from '../../components/accordion/accordion-nest';
 
@@ -21,7 +23,8 @@ const WorkHistoryPage: FC = () => {
     const t = useTranslations('WorkHistory');
 
     // focus state for images
-// accordion expansion height
+    // accordion expansion height
+    // image optimisation
 
     return (
         <div className='px-4 lg:px-0'>
@@ -120,6 +123,26 @@ const WorkHistoryPage: FC = () => {
                         alt: t('japan.freelance.nycmc.imageAltText'),
                     }}
                     href={nycmcUrl}
+                    isNestedAccordion={true}
+                />
+                <Accordion
+                    id='dark-arts-coffee-japan-accordion'
+                    headerProps={{
+                        jobTitle: t('frontendEngineer'),
+                        companyName: t('japan.freelance.dac.companyName'),
+                        location: t('japan.freelance.dac.location'),
+                        dateRange: t('japan.freelance.dateRange'),
+                    }}
+                    description={[
+                        t('japan.freelance.freelanceText'),
+                        t('japan.freelance.dac.descriptionOne'),
+                    ]}
+                    technologies={t('japan.freelance.dac.technologies')}
+                    image={{
+                        src: dacJapanScreenshot,
+                        alt: t('japan.freelance.dac.imageAltText'),
+                    }}
+                    href={dacJapanUrl}
                     isNestedAccordion={true}
                 />
                 <Accordion

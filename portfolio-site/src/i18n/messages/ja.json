@@ -74,6 +74,13 @@
                     "descriptionOne": "Developed a multilingual NextJs app integrating their online auctions, replacing their existing site.",
                     "technologies": "NextJs, React, ContextApi, Tailwind",
                     "imageAltText": "A screenshot of the New York City Motorcycles website"
+                },
+                "dac": {
+                    "companyName": "Dark Arts Coffee, Japan",
+                    "location": "Hayama, Japan",
+                    "descriptionOne": "Custom shopify implementation, English/Japanese localisation.",
+                    "technologies": "Shopify/Liquid, Google Analytics",
+                    "imageAltText": "A screenshot of the Dark Arts Coffee, Japan website"
                 }
             }
         },
@@ -86,4 +93,3 @@
         }
     }
 }
-
