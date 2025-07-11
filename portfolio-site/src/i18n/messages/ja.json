@@ -9,7 +9,6 @@
         "jrSoftwareDeveloper": "Junior Software Developer",
         "location": {
             "brighton": "Brighton, UK",
-            "japan": "Japan",
             "tokyo": "Tokyo, Japan"
         },
         "appliedSystems": {
@@ -17,49 +16,64 @@
             "imageAltText": "A screenshot of the Applied Systems UK website",
             "embeddedRating": {
                 "dateRange": "Oct 23 - Aug 25",
-                "description": "Full-stack engineer in a team responsible for the maintenance and transformation of the embedded rating system of a large insurance broker management product. I occupied the role of UI SME in the team. Compliant with SOC 2 standards.",
+                "descriptionOne": "Full-stack engineer in a team responsible for the maintenance and transformation of the embedded rating system of a large insurance broker management product. I occupied the role of UI SME in the team. Compliant with SOC 2 standards.",
                 "bulletPointOne": "Rearchitecting a complex, outdated React/Redux UI into a more lightweight solution using ContextApi, hooks, component testing with Cypress and MSW. Streamlining the UI architecture to reduce excessive development time, introducing component testing to reduce reliance on expensive, bulky libraries like Specflow.",
                 "bulletPointTwo": "Migrating existing legacy system away from an EventStore driven DDD micro-service cluster into a concise, three-layer architecture using gRPC api technology and SQL databases. Simplifying the architecture of the applicaDon to accelerate development while reducing the overhead cost of EventStore.",
                 "bulletPointThree": "Mentoring and supporting new hires based in India.",
                 "technologies": ".Net, EventStore, React, react-testing-library, Cypress, gRPC, SQL"
             },
             "payments": {
-                "dateRange": "Jul 2020 – Jun 2021",
-                "description": "Full-stack engineer in a team responsible for the development of the payment system of a large insurance broker management product. Working on a cluster of micro services and their respective SPA UIs that handled payments from users and integrated our system with card payment and finance providers.",
+                "dateRange": "Jul 20 – Jun 21",
+                "descriptionOne": "Full-stack engineer in a team responsible for the development of the payment system of a large insurance broker management product. Working on a cluster of micro services and their respective SPA UIs that handled payments from users and integrated our system with card payment and finance providers.",
                 "bulletPointOne": "Developed SPA user interfaces using React/Redux in collaboraton with UX designers.",
                 "bulletPointTwo": "Developed internal tools and libraries to enhance our team’s productivity; we collaboratively built a web app to locally run and monitor the services in our cluster.",
                 "bulletPointThree": "Contributed to and maintained excellent written documentation and test coverage.",
                 "technologies": "React, Redux, jQuery, SCSS, Jest, C#, .Net core, Asp.Net.MVC, MsSqlServer, Specflow"
             }
         },
-        "freelanceContracting": {
+        "japan": {
             "companyName": "Freelance/Contracting",
-            "dateRange": "Aug 19 - Jul 20"
-        },
-        "axa": {
-            "companyName": "Axa",
             "dateRange": "Aug 19 - Jul 20",
-            "description": "Working on the cloud migration of an internal broker management system I was appointed to lead the React UI development within a small, cross functional team. I also worked on backend features using Node/Fastify and MySql.",
-            "bulletPointOne": "I identified the need for a design system of components in order to visually unify the UI and accelerate delivery while reducing development cost. Alongside developing features I also implemented the design system across the UI.",
-            "bulletPointTwo": "Collaborated with business analysts to define requirements and refine user stories, maintaining a healthy backlog of tickets for our teams to work from; maximising productive time during sprints.",
-            "technologies": "React, Typescript, NodeJs, FasDfy, Storybook, MySql, react-tesDng-library, vite",
-            "imageAltText": "A screenshot of the Axa Japan website"
-        },
-        "rakuten": {
-            "companyName": "Rakuten",
-            "dateRange": "Sept 21 - Jul 22",
-            "description": "Front-end engineer developing features for Rakuten’s flagship e-commerce site. My role advanced into full-stack development as there were backend tasks on our backlog for which I volunteered because of my full stack experience.",
-            "bulletPointOne": "Developed a library of React widgets in collaboration with multiple stakeholders, re-used across multiple Rakuten services standardising the presentaDon and functionality of those pages while reducing the duplication of features.",
-            "bulletPointTwo": "Developed new endpoints for the NodeJs api handling our Bitbucket integration. While reverse engineering this neglected, undocumented api I created documentation to reduce effort for future engineers.",
-            "bulletPointThree": "Voluntarily contributed to a series of internal web accessibility training courses.",
-            "bulletPointFour": "Voluntarily contributed to the Rakuten design system; a regulated, reusable visual component library focused on design, accessibility and performance.",
-            "technologies": "React, Typescript, NodeJs, Express, Jest, Sinon, Chai, Storybook",
-            "imageAltText": "A screenshot of the Rakuten Ichiba website"
+            "location": "Japan",
+            "contracting": {
+                "axa": {
+                    "companyName": "Axa",
+                    "dateRange": "May 23 - Oct 23",
+                    "descriptionOne": "Contracting via TekSystems",
+                    "descriptionTwo": "Working on the cloud migration of an internal broker management system I was appointed to lead the React UI development within a small, cross functional team. I also worked on backend features using Node/Fastify and MySql.",
+                    "bulletPointOne": "I identified the need for a design system of components in order to visually unify the UI and accelerate delivery while reducing development cost. Alongside developing features I also implemented the design system across the UI.",
+                    "bulletPointTwo": "Collaborated with business analysts to define requirements and refine user stories, maintaining a healthy backlog of tickets for our teams to work from; maximising productive time during sprints.",
+                    "technologies": "React, Typescript, NodeJs, FasDfy, Storybook, MySql, react-tesDng-library, vite",
+                    "imageAltText": "A screenshot of the Axa Japan website"
+                },
+                "rakuten": {
+                    "companyName": "Rakuten",
+                    "dateRange": "Sept 21 - Jul 22",
+                    "descriptionOne": "Contracting via Robert Walters",
+                    "descriptionTwo": "Front-end engineer developing features for Rakuten’s flagship e-commerce site. My role advanced into full-stack development as there were backend tasks on our backlog for which I volunteered because of my full stack experience.",
+                    "bulletPointOne": "Developed a library of React widgets in collaboration with multiple stakeholders, re-used across multiple Rakuten services standardising the presentaDon and functionality of those pages while reducing the duplication of features.",
+                    "bulletPointTwo": "Developed new endpoints for the NodeJs api handling our Bitbucket integration. While reverse engineering this neglected, undocumented api I created documentation to reduce effort for future engineers.",
+                    "bulletPointThree": "Voluntarily contributed to a series of internal web accessibility training courses.",
+                    "bulletPointFour": "Voluntarily contributed to the Rakuten design system; a regulated, reusable visual component library focused on design, accessibility and performance.",
+                    "technologies": "React, Typescript, NodeJs, Express, Jest, Sinon, Chai, Storybook",
+                    "imageAltText": "A screenshot of the Rakuten Ichiba website"
+                }
+            },
+            "freelance": {
+                "soundraw": {
+                    "companyName": "Soundraw",
+                    "dateRange": "Jul 22 - May 23",
+                    "descriptionOne": "Freelance",
+                    "descriptionTwo": "Overhauling the UI (VueJs embedded in Rails views) while performing server side maintenance and updates on their web app.",
+                    "technologies": "VueJs, Ruby-on-Rails, PostgresQl, MongoDb",
+                    "imageAltText": "A screenshot of the Soundraw website"
+                }
+            }
         },
         "vero": {
             "companyName": "Vero Screening Ltd.",
             "dateRange": "Aug 19 - Jul 20",
-            "description": "Developing internal and customer facing systems in an ISO 27001 compliant HR outsourcing company; maintaining/adding to existing products, planning/prototyping new services. Company has subsequently rebranded from Vero to Accurate.",
+            "descriptionOne": "Developing internal and customer facing systems in an ISO 27001 compliant HR outsourcing company; maintaining/adding to existing products, planning/prototyping new services. Company has subsequently rebranded from Vero to Accurate.",
             "technologies": "C#, .Net core, Asp.Net.Mvc, MsSqlServer, React, Redux, jQuery, LESS",
             "imageAltText": "A screenshot of the Accurate website"
         }

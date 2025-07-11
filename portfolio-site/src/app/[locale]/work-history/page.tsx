@@ -4,12 +4,14 @@ import {
     appliedSystemsUrl,
     axaJapanUrl,
     rakutenIchibaUrl,
-    accurateUrl
+    accurateUrl,
+    soundrawUrl,
 } from '../../utilities/resources';
 import appliedSystemsScreenshot from '../../../../public/work-history/applied-systems-screenshot.png';
-import axaScreenShot from '../../../../public/work-history/axa-screenshot.png';
-import rakutenScreenShot from '../../../../public/work-history/rakuten-screenshot.png';
-import accurateScreenshot from '../../../../public/work-history/accurate-screenshot.png'
+import axaScreenshot from '../../../../public/work-history/axa-screenshot.png';
+import rakutenScreenshot from '../../../../public/work-history/rakuten-screenshot.png';
+import accurateScreenshot from '../../../../public/work-history/accurate-screenshot.png';
+import soundrawScreenshot from '../../../../public/work-history/soundraw-screenshot.png';
 import Accordion from '../../components/accordion/accordion';
 import AccordionNest from '../../components/accordion/accordion-nest';
 
@@ -27,7 +29,9 @@ const WorkHistoryPage: FC = () => {
                     location: t('location.brighton'),
                     dateRange: t('appliedSystems.embeddedRating.dateRange'),
                 }}
-                description={t('appliedSystems.embeddedRating.description')}
+                description={[
+                    t('appliedSystems.embeddedRating.descriptionOne'),
+                ]}
                 bulletPoints={[
                     t('appliedSystems.embeddedRating.bulletPointOne'),
                     t('appliedSystems.embeddedRating.bulletPointTwo'),
@@ -44,51 +48,77 @@ const WorkHistoryPage: FC = () => {
                 id='freelance-japan-accordion-nest'
                 headerProps={{
                     jobTitle: t('frontendEngineer'),
-                    companyName: t('freelanceContracting.companyName'),
-                    location: t('location.japan'),
-                    dateRange: t('freelanceContracting.dateRange'),
+                    companyName: t('japan.companyName'),
+                    location: t('japan.location'),
+                    dateRange: t('japan.dateRange'),
                 }}
             >
                 <Accordion
                     id='axa-japan-accordion'
                     headerProps={{
                         jobTitle: t('frontendEngineer'),
-                        companyName: t('axa.companyName'),
+                        companyName: t('japan.contracting.axa.companyName'),
                         location: t('location.tokyo'),
-                        dateRange: t('axa.dateRange'),
+                        dateRange: t('japan.contracting.axa.dateRange'),
                     }}
-                    description={t('axa.description')}
-                    bulletPoints={[
-                        t('axa.bulletPointOne'),
-                        t('axa.bulletPointTwo'),
+                    description={[
+                        t('japan.contracting.axa.descriptionOne'),
+                        t('japan.contracting.axa.descriptionTwo'),
                     ]}
-                    technologies={t('axa.technologies')}
+                    bulletPoints={[
+                        t('japan.contracting.axa.bulletPointOne'),
+                        t('japan.contracting.axa.bulletPointTwo'),
+                    ]}
+                    technologies={t('japan.contracting.axa.technologies')}
                     image={{
-                        src: axaScreenShot,
-                        alt: t('axa.imageAltText'),
+                        src: axaScreenshot,
+                        alt: t('japan.contracting.axa.imageAltText'),
                     }}
                     href={axaJapanUrl}
+                    isNestedAccordion={true}
+                />
+                <Accordion
+                    id='soundraw-accordion'
+                    headerProps={{
+                        jobTitle: t('frontendEngineer'),
+                        companyName: t('japan.freelance.soundraw.companyName'),
+                        location: t('location.tokyo'),
+                        dateRange: t('japan.freelance.soundraw.dateRange'),
+                    }}
+                    description={[
+                        t('japan.freelance.soundraw.descriptionOne'),
+                        t('japan.freelance.soundraw.descriptionTwo'),
+                    ]}
+                    technologies={t('japan.freelance.soundraw.technologies')}
+                    image={{
+                        src: soundrawScreenshot,
+                        alt: t('japan.freelance.soundraw.imageAltText'),
+                    }}
+                    href={soundrawUrl}
                     isNestedAccordion={true}
                 />
                 <Accordion
                     id='rakuten-ichiba-accordion'
                     headerProps={{
                         jobTitle: t('frontendEngineer'),
-                        companyName: t('rakuten.companyName'),
+                        companyName: t('japan.contracting.rakuten.companyName'),
                         location: t('location.tokyo'),
-                        dateRange: t('rakuten.dateRange'),
+                        dateRange: t('japan.contracting.rakuten.dateRange'),
                     }}
-                    description={t('rakuten.description')}
-                    bulletPoints={[
-                        t('rakuten.bulletPointOne'),
-                        t('rakuten.bulletPointTwo'),
-                        t('rakuten.bulletPointThree'),
-                        t('rakuten.bulletPointFour'),
+                    description={[
+                        t('japan.contracting.rakuten.descriptionOne'),
+                        t('japan.contracting.rakuten.descriptionTwo'),
                     ]}
-                    technologies={t('rakuten.technologies')}
+                    bulletPoints={[
+                        t('japan.contracting.rakuten.bulletPointOne'),
+                        t('japan.contracting.rakuten.bulletPointTwo'),
+                        t('japan.contracting.rakuten.bulletPointThree'),
+                        t('japan.contracting.rakuten.bulletPointFour'),
+                    ]}
+                    technologies={t('japan.contracting.rakuten.technologies')}
                     image={{
-                        src: rakutenScreenShot,
-                        alt: t('rakuten.imageAltText'),
+                        src: rakutenScreenshot,
+                        alt: t('japan.contracting.rakuten.imageAltText'),
                     }}
                     href={rakutenIchibaUrl}
                     isNestedAccordion={true}
@@ -102,8 +132,7 @@ const WorkHistoryPage: FC = () => {
                     location: t('location.brighton'),
                     dateRange: t('appliedSystems.payments.dateRange'),
                 }}
-                description={
-                    t('appliedSystems.payments.description')}
+                description={[t('appliedSystems.payments.descriptionOne')]}
                 bulletPoints={[
                     t('appliedSystems.payments.bulletPointOne'),
                     t('appliedSystems.payments.bulletPointTwo'),
@@ -124,7 +153,7 @@ const WorkHistoryPage: FC = () => {
                     location: t('location.brighton'),
                     dateRange: t('vero.dateRange'),
                 }}
-                description={t('vero.description')}
+                description={[t('vero.descriptionOne')]}
                 technologies={t('vero.technologies')}
                 image={{
                     src: accurateScreenshot,

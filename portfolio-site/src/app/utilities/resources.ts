@@ -6,3 +6,4 @@ export const appliedSystemsUrl: string =
 export const axaJapanUrl: string = 'https://www.axa.co.jp/';
 export const rakutenIchibaUrl: string = 'https://www.rakuten.co.jp/';
 export const accurateUrl: string = 'https://www.accurate.com/uk/';
+export const soundrawUrl: string = 'https://soundraw.io/';

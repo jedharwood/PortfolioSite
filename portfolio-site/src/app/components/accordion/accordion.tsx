@@ -7,7 +7,7 @@ import ExpandableHeaderButton from './expandable-header-button';
 type AccordionProps = {
     id: string;
     headerProps: AccordionHeaderProps;
-    description: string;
+    description: string[];
     bulletPoints?: string[];
     technologies: string;
     image: GlobalImage;
@@ -51,7 +51,7 @@ const Accordion = ({
     return (
         <div className='grid grid-cols-3 gap-6'>
             <div
-                className={`accordion col-span-3 space-y-2 py-2 lg:col-span-2 ${isNestedAccordion && 'pl-10'}`}
+                className={`accordion col-span-3 space-y-2 py-2 lg:col-span-2 ${isNestedAccordion && 'pl-6 lg:pl-10'}`}
             >
                 <h2>
                     <ExpandableHeaderButton
@@ -69,12 +69,16 @@ const Accordion = ({
                     accordionIsOpen={accordionIsOpen}
                 >
                     <div className='space-y-2 overflow-hidden'>
-                        <p>{description}</p>
-                        {bulletPoints && <ul className='list-inside list-disc space-y-1'>
-                            {bulletPoints.map((point, i) => (
-                                <li key={i}>{point}</li>
-                            ))}
-                        </ul>}
+                        {description.map((text, i) => (
+                            <p key={i}>{text}</p>
+                        ))}
+                        {bulletPoints && (
+                            <ul className='list-inside list-disc space-y-1'>
+                                {bulletPoints.map((point, i) => (
+                                    <li key={i}>{point}</li>
+                                ))}
+                            </ul>
+                        )}
                         <p className='pb-2'>
                             <span className='font-semibold'>
                                 Technologies:{' '}
