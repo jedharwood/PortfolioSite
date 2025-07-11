@@ -60,13 +60,20 @@
                 }
             },
             "freelance": {
+                "dateRange": "Jul 22 - May 23",
+                "freelanceText": "Freelance",
                 "soundraw": {
                     "companyName": "Soundraw",
-                    "dateRange": "Jul 22 - May 23",
-                    "descriptionOne": "Freelance",
-                    "descriptionTwo": "Overhauling the UI (VueJs embedded in Rails views) while performing server side maintenance and updates on their web app.",
+                    "descriptionOne": "Overhauling the UI (VueJs embedded in Rails views) while performing server side maintenance and updates on their web app.",
                     "technologies": "VueJs, Ruby-on-Rails, PostgresQl, MongoDb",
                     "imageAltText": "A screenshot of the Soundraw website"
+                },
+                "nycmc": {
+                    "companyName": "New York City Motorcycles",
+                    "location": "Zushi, Japan",
+                    "descriptionOne": "Developed a multilingual NextJs app integrating their online auctions, replacing their existing site.",
+                    "technologies": "NextJs, React, ContextApi, Tailwind",
+                    "imageAltText": "A screenshot of the New York City Motorcycles website"
                 }
             }
         },
@@ -79,3 +86,4 @@
         }
     }
 }
+

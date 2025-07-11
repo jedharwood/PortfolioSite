@@ -6,17 +6,22 @@ import {
     rakutenIchibaUrl,
     accurateUrl,
     soundrawUrl,
+    nycmcUrl
 } from '../../utilities/resources';
 import appliedSystemsScreenshot from '../../../../public/work-history/applied-systems-screenshot.png';
 import axaScreenshot from '../../../../public/work-history/axa-screenshot.png';
 import rakutenScreenshot from '../../../../public/work-history/rakuten-screenshot.png';
 import accurateScreenshot from '../../../../public/work-history/accurate-screenshot.png';
 import soundrawScreenshot from '../../../../public/work-history/soundraw-screenshot.png';
+import nycmcScreenshot from '../../../../public/work-history/nycmc-screenshot.png';
 import Accordion from '../../components/accordion/accordion';
 import AccordionNest from '../../components/accordion/accordion-nest';
 
 const WorkHistoryPage: FC = () => {
     const t = useTranslations('WorkHistory');
+
+    // focus state for images
+// accordion expansion height
 
     return (
         <div className='px-4 lg:px-0'>
@@ -83,11 +88,11 @@ const WorkHistoryPage: FC = () => {
                         jobTitle: t('frontendEngineer'),
                         companyName: t('japan.freelance.soundraw.companyName'),
                         location: t('location.tokyo'),
-                        dateRange: t('japan.freelance.soundraw.dateRange'),
+                        dateRange: t('japan.freelance.dateRange'),
                     }}
                     description={[
+                        t('japan.freelance.freelanceText'),
                         t('japan.freelance.soundraw.descriptionOne'),
-                        t('japan.freelance.soundraw.descriptionTwo'),
                     ]}
                     technologies={t('japan.freelance.soundraw.technologies')}
                     image={{
@@ -95,6 +100,26 @@ const WorkHistoryPage: FC = () => {
                         alt: t('japan.freelance.soundraw.imageAltText'),
                     }}
                     href={soundrawUrl}
+                    isNestedAccordion={true}
+                />
+                <Accordion
+                    id='new-york-city-motorcycles-accordion'
+                    headerProps={{
+                        jobTitle: t('frontendEngineer'),
+                        companyName: t('japan.freelance.nycmc.companyName'),
+                        location: t('japan.freelance.nycmc.location'),
+                        dateRange: t('japan.freelance.dateRange'),
+                    }}
+                    description={[
+                        t('japan.freelance.freelanceText'),
+                        t('japan.freelance.nycmc.descriptionOne'),
+                    ]}
+                    technologies={t('japan.freelance.nycmc.technologies')}
+                    image={{
+                        src: nycmcScreenshot,
+                        alt: t('japan.freelance.nycmc.imageAltText'),
+                    }}
+                    href={nycmcUrl}
                     isNestedAccordion={true}
                 />
                 <Accordion
