@@ -4,10 +4,12 @@ import {
     appliedSystemsUrl,
     axaJapanUrl,
     rakutenIchibaUrl,
+    accurateUrl
 } from '../../utilities/resources';
 import appliedSystemsScreenshot from '../../../../public/work-history/applied-systems-screenshot.png';
 import axaScreenShot from '../../../../public/work-history/axa-screenshot.png';
 import rakutenScreenShot from '../../../../public/work-history/rakuten-screenshot.png';
+import accurateScreenshot from '../../../../public/work-history/accurate-screenshot.png'
 import Accordion from '../../components/accordion/accordion';
 import AccordionNest from '../../components/accordion/accordion-nest';
 
@@ -25,9 +27,7 @@ const WorkHistoryPage: FC = () => {
                     location: t('location.brighton'),
                     dateRange: t('appliedSystems.embeddedRating.dateRange'),
                 }}
-                description={[
-                    t('appliedSystems.embeddedRating.descriptionOne'),
-                ]}
+                description={t('appliedSystems.embeddedRating.description')}
                 bulletPoints={[
                     t('appliedSystems.embeddedRating.bulletPointOne'),
                     t('appliedSystems.embeddedRating.bulletPointTwo'),
@@ -57,7 +57,7 @@ const WorkHistoryPage: FC = () => {
                         location: t('location.tokyo'),
                         dateRange: t('axa.dateRange'),
                     }}
-                    description={[t('axa.descriptionOne')]}
+                    description={t('axa.description')}
                     bulletPoints={[
                         t('axa.bulletPointOne'),
                         t('axa.bulletPointTwo'),
@@ -78,7 +78,7 @@ const WorkHistoryPage: FC = () => {
                         location: t('location.tokyo'),
                         dateRange: t('rakuten.dateRange'),
                     }}
-                    description={[t('rakuten.descriptionOne')]}
+                    description={t('rakuten.description')}
                     bulletPoints={[
                         t('rakuten.bulletPointOne'),
                         t('rakuten.bulletPointTwo'),
@@ -102,9 +102,8 @@ const WorkHistoryPage: FC = () => {
                     location: t('location.brighton'),
                     dateRange: t('appliedSystems.payments.dateRange'),
                 }}
-                description={[
-                    t('appliedSystems.payments.descriptionOne'),
-                ]}
+                description={
+                    t('appliedSystems.payments.description')}
                 bulletPoints={[
                     t('appliedSystems.payments.bulletPointOne'),
                     t('appliedSystems.payments.bulletPointTwo'),
@@ -121,18 +120,17 @@ const WorkHistoryPage: FC = () => {
                 id='vero-screening-accordion'
                 headerProps={{
                     jobTitle: t('jrSoftwareDeveloper'),
-                    companyName: 'Vero Screening Ltd.',
-                    location: 'Brighton, UK',
-                    dateRange: 'Aug 19 - Jul 20',
+                    companyName: t('vero.companyName'),
+                    location: t('location.brighton'),
+                    dateRange: t('vero.dateRange'),
                 }}
-                description={['A description of the job']}
-                bulletPoints={[]}
-                technologies=''
+                description={t('vero.description')}
+                technologies={t('vero.technologies')}
                 image={{
-                    src: appliedSystemsScreenshot,
-                    alt: 'A placeholder image of a screenshot',
+                    src: accurateScreenshot,
+                    alt: t('vero.imageAltText'),
                 }}
-                href={appliedSystemsUrl}
+                href={accurateUrl}
             />
         </div>
     );

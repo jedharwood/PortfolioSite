@@ -7,8 +7,8 @@ import ExpandableHeaderButton from './expandable-header-button';
 type AccordionProps = {
     id: string;
     headerProps: AccordionHeaderProps;
-    description: string[];
-    bulletPoints: string[];
+    description: string;
+    bulletPoints?: string[];
     technologies: string;
     image: GlobalImage;
     href: string;
@@ -69,14 +69,12 @@ const Accordion = ({
                     accordionIsOpen={accordionIsOpen}
                 >
                     <div className='space-y-2 overflow-hidden'>
-                        {description.map((text, i) => (
-                            <p key={i}>{text}</p>
-                        ))}
-                        <ul className='list-inside list-disc space-y-1'>
+                        <p>{description}</p>
+                        {bulletPoints && <ul className='list-inside list-disc space-y-1'>
                             {bulletPoints.map((point, i) => (
                                 <li key={i}>{point}</li>
                             ))}
-                        </ul>
+                        </ul>}
                         <p className='pb-2'>
                             <span className='font-semibold'>
                                 Technologies:{' '}
