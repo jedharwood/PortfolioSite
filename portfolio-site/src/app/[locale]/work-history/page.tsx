@@ -1,13 +1,7 @@
 import { FC } from 'react';
 import { useTranslations } from 'next-intl';
 import {
-    appliedSystemsUrl,
-    axaJapanUrl,
-    rakutenIchibaUrl,
-    accurateUrl,
-    soundrawUrl,
-    nycmcUrl,
-    dacJapanUrl,
+workHistoryPageUrls as urls
 } from '../../utilities/resources';
 import appliedSystemsScreenshot from '../../../../public/work-history/applied-systems-screenshot.png';
 import axaScreenshot from '../../../../public/work-history/axa-screenshot.png';
@@ -50,7 +44,7 @@ const WorkHistoryPage: FC = () => {
                     src: appliedSystemsScreenshot,
                     alt: t('appliedSystems.imageAltText'),
                 }}
-                href={appliedSystemsUrl}
+                href={urls.appliedSystemsUrl}
             />
             <AccordionNest
                 id='freelance-japan-accordion-nest'
@@ -82,7 +76,7 @@ const WorkHistoryPage: FC = () => {
                         src: axaScreenshot,
                         alt: t('japan.contracting.axa.imageAltText'),
                     }}
-                    href={axaJapanUrl}
+                    href={urls.axaJapanUrl}
                     isNestedAccordion={true}
                 />
                 <Accordion
@@ -102,7 +96,7 @@ const WorkHistoryPage: FC = () => {
                         src: soundrawScreenshot,
                         alt: t('japan.freelance.soundraw.imageAltText'),
                     }}
-                    href={soundrawUrl}
+                    href={urls.soundrawUrl}
                     isNestedAccordion={true}
                 />
                 <Accordion
@@ -122,7 +116,7 @@ const WorkHistoryPage: FC = () => {
                         src: nycmcScreenshot,
                         alt: t('japan.freelance.nycmc.imageAltText'),
                     }}
-                    href={nycmcUrl}
+                    href={urls.nycmcUrl}
                     isNestedAccordion={true}
                 />
                 <Accordion
@@ -142,7 +136,7 @@ const WorkHistoryPage: FC = () => {
                         src: dacJapanScreenshot,
                         alt: t('japan.freelance.dac.imageAltText'),
                     }}
-                    href={dacJapanUrl}
+                    href={urls.dacJapanUrl}
                     isNestedAccordion={true}
                 />
                 <Accordion
@@ -168,7 +162,7 @@ const WorkHistoryPage: FC = () => {
                         src: rakutenScreenshot,
                         alt: t('japan.contracting.rakuten.imageAltText'),
                     }}
-                    href={rakutenIchibaUrl}
+                    href={urls.rakutenIchibaUrl}
                     isNestedAccordion={true}
                 />
             </AccordionNest>
@@ -191,7 +185,7 @@ const WorkHistoryPage: FC = () => {
                     src: appliedSystemsScreenshot,
                     alt: t('appliedSystems.imageAltText'),
                 }}
-                href={appliedSystemsUrl}
+                href={urls.appliedSystemsUrl}
             />
             <Accordion
                 id='vero-screening-accordion'
@@ -207,7 +201,7 @@ const WorkHistoryPage: FC = () => {
                     src: accurateScreenshot,
                     alt: t('vero.imageAltText'),
                 }}
-                href={accurateUrl}
+                href={urls.accurateUrl}
             />
         </div>
     );
