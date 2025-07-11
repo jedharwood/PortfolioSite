@@ -14,14 +14,22 @@
         },
         "appliedSystems": {
             "companyName": "Applied Systems Inc.",
+            "imageAltText": "A screenshot of the Applied Systems UK website",
             "embeddedRating": {
                 "dateRange": "Oct 23 - Aug 25",
-                "descriptionOne": "Full-stack engineer in a team responsible for the maintenance and transformaDon of the embedded rating system of a large insurance broker management product. I occupied the role of UI SME in the team. Compliant with SOC 2 standards.",
+                "descriptionOne": "Full-stack engineer in a team responsible for the maintenance and transformation of the embedded rating system of a large insurance broker management product. I occupied the role of UI SME in the team. Compliant with SOC 2 standards.",
                 "bulletPointOne": "Rearchitecting a complex, outdated React/Redux UI into a more lightweight solution using ContextApi, hooks, component testing with Cypress and MSW. Streamlining the UI architecture to reduce excessive development time, introducing component testing to reduce reliance on expensive, bulky libraries like Specflow.",
                 "bulletPointTwo": "Migrating existing legacy system away from an EventStore driven DDD micro-service cluster into a concise, three-layer architecture using gRPC api technology and SQL databases. Simplifying the architecture of the applicaDon to accelerate development while reducing the overhead cost of EventStore.",
                 "bulletPointThree": "Mentoring and supporting new hires based in India.",
-                "technologies": ".Net, EventStore, React, react-testing-library, Cypress, gRPC, SQL",
-                "imageAltText": "A screenshot of the Applied Systems UK website"
+                "technologies": ".Net, EventStore, React, react-testing-library, Cypress, gRPC, SQL"
+            },
+            "payments": {
+                "dateRange": "Jul 2020 – Jun 2021",
+                "descriptionOne": "Full-stack engineer in a team responsible for the development of the payment system of a large insurance broker management product. Working on a cluster of micro services and their respective SPA UIs that handled payments from users and integrated our system with card payment and finance providers.",
+                "bulletPointOne": "Developed SPA user interfaces using React/Redux in collaboraton with UX designers.",
+                "bulletPointTwo": "Developed internal tools and libraries to enhance our team’s productivity; we collaboratively built a web app to locally run and monitor the services in our cluster.",
+                "bulletPointThree": "Contributed to and maintained excellent written documentation and test coverage.",
+                "technologies": "React, Redux, jQuery, SCSS, Jest, C#, .Net core, Asp.Net.MVC, MsSqlServer, Specflow"
             }
         },
         "freelanceContracting": {
@@ -39,7 +47,7 @@
         },
         "rakuten": {
             "companyName": "Rakuten",
-            "dateRange": "Sept 21 - July 22",
+            "dateRange": "Sept 21 - Jul 22",
             "descriptionOne": "Front-end engineer developing features for Rakuten’s flagship e-commerce site. My role advanced into full-stack development as there were backend tasks on our backlog for which I volunteered because of my full stack experience.",
             "bulletPointOne": "Developed a library of React widgets in collaboration with multiple stakeholders, re-used across multiple Rakuten services standardising the presentaDon and functionality of those pages while reducing the duplication of features.",
             "bulletPointTwo": "Developed new endpoints for the NodeJs api handling our Bitbucket integration. While reverse engineering this neglected, undocumented api I created documentation to reduce effort for future engineers.",

@@ -36,7 +36,7 @@ const WorkHistoryPage: FC = () => {
                 technologies={t('appliedSystems.embeddedRating.technologies')}
                 image={{
                     src: appliedSystemsScreenshot,
-                    alt: t('appliedSystems.embeddedRating.imageAltText'),
+                    alt: t('appliedSystems.imageAltText'),
                 }}
                 href={appliedSystemsUrl}
             />
@@ -98,16 +98,22 @@ const WorkHistoryPage: FC = () => {
                 id='appliedsystems-payments-accordion'
                 headerProps={{
                     jobTitle: t('softwareEngineer'),
-                    companyName: 'Applied Systems Inc.',
-                    location: 'Brighton, UK',
-                    dateRange: 'Jul 20 - Jun 21',
+                    companyName: t('appliedSystems.companyName'),
+                    location: t('location.brighton'),
+                    dateRange: t('appliedSystems.payments.dateRange'),
                 }}
-                description={['A description of the job']}
-                bulletPoints={[]}
-                technologies=''
+                description={[
+                    t('appliedSystems.payments.descriptionOne'),
+                ]}
+                bulletPoints={[
+                    t('appliedSystems.payments.bulletPointOne'),
+                    t('appliedSystems.payments.bulletPointTwo'),
+                    t('appliedSystems.payments.bulletPointThree'),
+                ]}
+                technologies={t('appliedSystems.payments.technologies')}
                 image={{
                     src: appliedSystemsScreenshot,
-                    alt: 'A placeholder image of a screenshot',
+                    alt: t('appliedSystems.imageAltText'),
                 }}
                 href={appliedSystemsUrl}
             />
