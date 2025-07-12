@@ -3,10 +3,12 @@
 :root {
     --background: #cececc;
     --foreground: #292320;
+    --foreground-hover: #5a4d46;
     --svg-path: #c32b2e;
     --svg-path-hover: #e69092;
     --svg-path-focus: #8c1f21;
-    --border: #665c45;
+    --accent: #665c45;
+    --accent-hover: #8e8060;
 }
 
 /*
@@ -20,6 +22,7 @@ Delta
 
 Cocoa Brown
 --foreground: #292320; 0%
+--foreground: #5a4d46; 20%
 
 Old Brick
 --svg-path-focus: #8C1F21; 0%
@@ -29,7 +32,8 @@ Old Brick
 --svg-path-focus: #e69092; 60%
 
 Tobacco Brown
-#665C45
+# --accent: #665C45; 0%
+# --accent: #8e8060; 20%
 */
 
 @theme inline {
@@ -39,16 +43,18 @@ Tobacco Brown
     --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --background: #351815;
         --foreground: #fbe2a3;
+        --foreground-hover: #fdf3da;
         --svg-path: #ec7d4e;
         --svg-path-hover: #f5bca3;
         --svg-path-focus: #df5418;
-        --border: #62647d;
+        --accent: #7e809a;
+        --accent-hover: #9ea0b3;
     }
-}
+} */
 
 /* 
 Dark Theme
@@ -60,6 +66,8 @@ Casablanca
 --foreground: #F7C548; 0%
 --foreground: #fadc91; 40% 
 --foreground: #fbe2a3; 50%
+--foreground: #fdeec8; 70%
+--foreground: #fdf3da; 80%
 
 Tabasco
 --svg-path: #A43E12; 0%
@@ -71,7 +79,11 @@ Tabasco
 --svg-path: #f5bca3; 70%
 
 Comet 
-# 62647D
+# --accent: #62647D; 0%
+# --accent: #6f718d; 10%
+# --accent: #7e809a; 20%
+# --accent: #8e90a7; 30%
+# --accent: #9ea0b3; 40%
 */
 
 body {
@@ -109,6 +121,22 @@ body {
     color: var(--svg-path-hover);
 }
 
+.svg-icon {
+    color: var(--accent);
+}
+
+.svg-icon:hover {
+    color: var(--accent-hover);
+}
+
 .accordion {
-    border-bottom: solid 2px var(--border);
+    border-bottom: solid 2px var(--accent);
+}
+
+.primary-text-hoverable {
+    color: var(--foreground);
+}
+
+.primary-text-hoverable:hover {
+    color: var(--foreground-hover);
 }
