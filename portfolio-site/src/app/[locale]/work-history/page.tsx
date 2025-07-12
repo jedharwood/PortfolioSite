@@ -3,13 +3,13 @@ import { useTranslations } from 'next-intl';
 import {
 workHistoryPageUrls as urls
 } from '../../utilities/resources';
-import appliedSystemsScreenshot from '../../../../public/work-history/applied-systems-screenshot.png';
-import axaScreenshot from '../../../../public/work-history/axa-screenshot.png';
-import rakutenScreenshot from '../../../../public/work-history/rakuten-screenshot.png';
-import accurateScreenshot from '../../../../public/work-history/accurate-screenshot.png';
-import soundrawScreenshot from '../../../../public/work-history/soundraw-screenshot.png';
-import nycmcScreenshot from '../../../../public/work-history/nycmc-screenshot.png';
-import dacJapanScreenshot from '../../../../public/work-history/dac-japan-screenshot.png';
+import accurateScreenshot from '../../../../public/work-history/accurate-screenshot.webp';
+import appliedSystemsScreenshot from '../../../../public/work-history/applied-systems-screenshot.webp';
+import axaScreenshot from '../../../../public/work-history/axa-screenshot.webp';
+import dacJapanScreenshot from '../../../../public/work-history/dac-japan-screenshot.webp';
+import nycmcScreenshot from '../../../../public/work-history/nycmc-screenshot.webp';
+import rakutenScreenshot from '../../../../public/work-history/rakuten-screenshot.webp';
+import soundrawScreenshot from '../../../../public/work-history/soundraw-screenshot.webp';
 import Accordion from '../../components/accordion/accordion';
 import AccordionNest from '../../components/accordion/accordion-nest';
 
@@ -17,7 +17,6 @@ const WorkHistoryPage: FC = () => {
     const t = useTranslations('WorkHistory');
 
     // focus state for images
-    // image optimisation
 
     return (
         <div className='px-4 lg:px-0'>
