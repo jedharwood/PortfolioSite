@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
 type SvgIconProps = {
-    type: 'typescript' | 'javascript' | 'react' | 'vue' | 'node';
+    type: 'typescript' | 'javascript' | 'react' | 'vue' | 'node' | 'next';
 };
 
 const typescriptSvg: JSX.Element = (
@@ -65,7 +65,7 @@ const vueSvg: JSX.Element = (
         xmlns='http://www.w3.org/2000/svg'
         fill='currentColor'
         role='img'
-        aria-label='Vue'
+        aria-label='Vue.js'
         viewBox='0 0 15 15'
     >
         <g strokeWidth='0' strokeLinecap='round' strokeLinejoin='round'>
@@ -80,7 +80,7 @@ const nodeSvg: JSX.Element = (
         xmlns='http://www.w3.org/2000/svg'
         fill='currentColor'
         role='img'
-        aria-label='Node'
+        aria-label='Node.js'
         viewBox='0 0 16 16'
     >
         <path
@@ -94,6 +94,23 @@ const nodeSvg: JSX.Element = (
     </svg>
 );
 
+const nextSvg: JSX.Element = (
+    <svg
+        xmlns='http://www.w3.org/2000/svg'
+        fill='currentColor'
+        role='img'
+        aria-label='Next.js'
+        viewBox='0 0 15 15'
+    >
+        <g strokeWidth='0' strokeLinecap='round' strokeLinejoin='round'></g>
+        <path
+            fillRule='evenodd'
+            clipRule='evenodd'
+            d='M0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15 10.087 13.6902 12.3681 11.6975 13.7163L4.90687 4.20942C4.78053 4.03255 4.5544 3.95756 4.34741 4.02389C4.14042 4.09022 4 4.28268 4 4.50004V12H5V6.06027L10.8299 14.2221C9.82661 14.7201 8.696 15 7.5 15C3.35786 15 0 11.6421 0 7.5ZM10 10V4H11V10H10Z'
+        />
+    </svg>
+);
+
 const svgIconContentMap: Record<
     SvgIconProps['type'],
     { label: string; icon: JSX.Element }
@@ -101,8 +118,9 @@ const svgIconContentMap: Record<
     typescript: { label: 'Typescript', icon: typescriptSvg },
     javascript: { label: 'Javascript', icon: javascriptSvg },
     react: { label: 'React', icon: reactSvg },
-    vue: { label: 'Vue', icon: vueSvg },
-    node: { label: 'Node', icon: nodeSvg },
+    vue: { label: 'Vue.js', icon: vueSvg },
+    node: { label: 'Node.js', icon: nodeSvg },
+    next: { label: 'Next.js', icon: nextSvg },
 };
 
 const SvgIcon = ({ type }: SvgIconProps): JSX.Element => {
