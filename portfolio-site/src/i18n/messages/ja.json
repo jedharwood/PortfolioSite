@@ -1,6 +1,11 @@
 {
     "Home": {
-        "title": "Banana EN"
+        "title": "Jed Harwood",
+        "subTitle": "Software Engineer from a design background.",
+        "paragraphOne": "Experienced in creating accessible, attractive, performant multilingual web applications with ReactJs.",
+        "paragraphTwo": "Specialised in English>Japanese and Japanese>English localisation.",
+        "paragraphThree": "Email me to discuss how I can help bring your project to life.",
+        "experiencedWith": "Experienced with;"
     },
     "WorkHistory": {
         "title": "Work History",
