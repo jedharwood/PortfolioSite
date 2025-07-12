@@ -17,7 +17,6 @@ const WorkHistoryPage: FC = () => {
     const t = useTranslations('WorkHistory');
 
     // focus state for images
-    // accordion expansion height
     // image optimisation
 
     return (
