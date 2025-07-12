@@ -8,7 +8,7 @@ type AccordionProps = {
     id: string;
     headerProps: AccordionHeaderProps;
     description: string[];
-    bulletPoints: string[];
+    bulletPoints?: string[];
     technologies: string;
     image: GlobalImage;
     href: string;
@@ -34,15 +34,21 @@ const Accordion = ({
     const renderAccordionImageAnchor = (
         screenSize: 'mobile' | 'desktop',
     ): JSX.Element | null => {
-        const accordionImageClassNames: string = `relative col-span-1 overflow-hidden transition-all duration-300 ease-in-out ${screenSize === 'mobile' ? 'lg:hidden' : 'hidden lg:block'} ${accordionIsOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'} hover:scale-98`;
+        const baseClasses: string = 'relative overflow-hidden';
+        const visibilityClasses: string =
+            screenSize === 'mobile' ? 'lg:hidden' : 'hidden lg:block';
+        const openStateClasses: string = `transition-all duration-300 ease-in-out ${accordionIsOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`;
 
         return (
-            <a className={accordionImageClassNames} href={href}>
+            <a
+                className={`${baseClasses} ${visibilityClasses} ${openStateClasses}`}
+                href={href}
+            >
                 <Image
                     src={image.src}
                     alt={image.alt}
                     placeholder='blur'
-                    className='my-2 h-auto w-full rounded-md object-contain'
+                    className='my-2 h-auto w-full rounded-md object-contain shadow-md hover:scale-98'
                 />
             </a>
         );
@@ -51,7 +57,7 @@ const Accordion = ({
     return (
         <div className='grid grid-cols-3 gap-6'>
             <div
-                className={`accordion col-span-3 space-y-2 py-2 lg:col-span-2 ${isNestedAccordion && 'pl-10'}`}
+                className={`accordion col-span-3 space-y-2 py-2 lg:col-span-2 ${isNestedAccordion && 'pl-6 lg:pl-10'}`}
             >
                 <h2>
                     <ExpandableHeaderButton
@@ -72,11 +78,13 @@ const Accordion = ({
                         {description.map((text, i) => (
                             <p key={i}>{text}</p>
                         ))}
-                        <ul className='list-inside list-disc space-y-1'>
-                            {bulletPoints.map((point, i) => (
-                                <li key={i}>{point}</li>
-                            ))}
-                        </ul>
+                        {bulletPoints && (
+                            <ul className='list-inside list-disc space-y-1'>
+                                {bulletPoints.map((point, i) => (
+                                    <li key={i}>{point}</li>
+                                ))}
+                            </ul>
+                        )}
                         <p className='pb-2'>
                             <span className='font-semibold'>
                                 Technologies:{' '}

@@ -19,7 +19,7 @@ const CollapsibleContent = ({
     const baseClasses: string = 'overflow-hidden transition-all duration-300';
     const nestedClasses: string = isNestingAccordion ? 'col-span-3' : '';
     const openStateClasses: string = accordionIsOpen
-        ? 'max-h-[1000px] opacity-100'
+        ? 'max-h-[4300px] opacity-100'
         : 'max-h-0 opacity-0';
 
     return (
