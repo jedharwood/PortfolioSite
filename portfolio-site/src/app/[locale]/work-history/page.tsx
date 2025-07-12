@@ -1,8 +1,6 @@
 import { FC } from 'react';
 import { useTranslations } from 'next-intl';
-import {
-workHistoryPageUrls as urls
-} from '../../utilities/resources';
+import { workHistoryPageUrls as urls } from '../../utilities/resources';
 import accurateScreenshot from '../../../../public/work-history/accurate-screenshot.webp';
 import appliedSystemsScreenshot from '../../../../public/work-history/applied-systems-screenshot.webp';
 import axaScreenshot from '../../../../public/work-history/axa-screenshot.webp';
@@ -15,8 +13,6 @@ import AccordionNest from '../../components/accordion/accordion-nest';
 
 const WorkHistoryPage: FC = () => {
     const t = useTranslations('WorkHistory');
-
-    // focus state for images
 
     return (
         <div className='px-4 lg:px-0'>

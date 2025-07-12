@@ -34,15 +34,21 @@ const Accordion = ({
     const renderAccordionImageAnchor = (
         screenSize: 'mobile' | 'desktop',
     ): JSX.Element | null => {
-        const accordionImageClassNames: string = `relative col-span-1 overflow-hidden transition-all duration-300 ease-in-out ${screenSize === 'mobile' ? 'lg:hidden' : 'hidden lg:block'} ${accordionIsOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'} hover:scale-98`;
+        const baseClasses: string = 'relative overflow-hidden';
+        const visibilityClasses: string =
+            screenSize === 'mobile' ? 'lg:hidden' : 'hidden lg:block';
+        const openStateClasses: string = `transition-all duration-300 ease-in-out ${accordionIsOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`;
 
         return (
-            <a className={accordionImageClassNames} href={href}>
+            <a
+                className={`${baseClasses} ${visibilityClasses} ${openStateClasses}`}
+                href={href}
+            >
                 <Image
                     src={image.src}
                     alt={image.alt}
                     placeholder='blur'
-                    className='my-2 h-auto w-full rounded-md object-contain shadow-md'
+                    className='my-2 h-auto w-full rounded-md object-contain shadow-md hover:scale-98'
                 />
             </a>
         );

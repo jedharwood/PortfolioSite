@@ -8,5 +8,5 @@ export const workHistoryPageUrls = {
     accurateUrl: 'https://www.accurate.com/uk/',
     soundrawUrl: 'https://soundraw.io/',
     nycmcUrl: 'https://nyc-motorcycles.vercel.app/',
-    dacJapanUrl: 'https://darkartscoffee.jp/'
+    dacJapanUrl: 'https://darkartscoffee.jp/',
 };
