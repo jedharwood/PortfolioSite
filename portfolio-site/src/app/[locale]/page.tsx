@@ -13,19 +13,19 @@ const HomePage: FC = () => {
             <p>{t('paragraphTwo')}</p>
             <p>{t('paragraphThree')}</p>
             <p>{t('experiencedWith')}</p>
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
-                <div className='space-y-2 flex flex-col'>
+            <div className='grid grid-cols-1 gap-6 lg:grid-cols-3'>
+                <div className='flex flex-col space-y-2'>
                     <SvgIcon type='typescript' />
                     <SvgIcon type='javascript' />
-                    <SvgIcon type='typescript' />
+                    <SvgIcon type='react' />
                     <SvgIcon type='javascript' />
                 </div>
-                <div className='space-y-2 flex flex-col'>
+                <div className='flex flex-col space-y-2'>
                     <SvgIcon type='typescript' />
                     <SvgIcon type='javascript' />
                     <SvgIcon type='typescript' />
                 </div>
-                <div className='space-y-2 flex flex-col'>
+                <div className='flex flex-col space-y-2'>
                     <SvgIcon type='javascript' />
                     <SvgIcon type='typescript' />
                     <SvgIcon type='javascript' />
