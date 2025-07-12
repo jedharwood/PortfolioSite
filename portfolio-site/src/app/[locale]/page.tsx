@@ -15,20 +15,20 @@ const HomePage: FC = () => {
             <p>{t('experiencedWith')}</p>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
                 <div className='space-y-2 flex flex-col'>
-                    <SvgIcon text={'Typescript'} />
-                    <SvgIcon text={'Javascript'} />
-                    <SvgIcon text={'NodeJs'} />
-                    <SvgIcon text={'Fastify'} />
+                    <SvgIcon type='typescript' />
+                    <SvgIcon type='javascript' />
+                    <SvgIcon type='typescript' />
+                    <SvgIcon type='javascript' />
                 </div>
                 <div className='space-y-2 flex flex-col'>
-                    <SvgIcon text={'ReactJs'} />
-                    <SvgIcon text={'VueJs'} />
-                    <SvgIcon text={'.Net'} />
+                    <SvgIcon type='typescript' />
+                    <SvgIcon type='javascript' />
+                    <SvgIcon type='typescript' />
                 </div>
                 <div className='space-y-2 flex flex-col'>
-                    <SvgIcon text={'Rails'} />
-                    <SvgIcon text={'MongoDb'} />
-                    <SvgIcon text={'MySql'} />
+                    <SvgIcon type='javascript' />
+                    <SvgIcon type='typescript' />
+                    <SvgIcon type='javascript' />
                 </div>
             </div>
         </div>
