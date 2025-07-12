@@ -18,7 +18,7 @@ const HomePage: FC = () => {
                     <SvgIcon type='typescript' />
                     <SvgIcon type='javascript' />
                     <SvgIcon type='react' />
-                    <SvgIcon type='javascript' />
+                    <SvgIcon type='vue' />
                 </div>
                 <div className='flex flex-col space-y-2'>
                     <SvgIcon type='typescript' />
