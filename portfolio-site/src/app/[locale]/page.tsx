@@ -24,8 +24,8 @@ const HomePage: FC = () => {
                 <div className='flex flex-col space-y-2'>
                     <SvgIcon type='node' />
                     <SvgIcon type='dotnet' />
+                    <SvgIcon type='fastify' />
                     <SvgIcon type='rails' />
-                    <SvgIcon type='typescript' />
                 </div>
                 <div className='flex flex-col space-y-2'>
                     <SvgIcon type='javascript' />
