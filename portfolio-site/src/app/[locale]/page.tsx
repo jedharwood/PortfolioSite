@@ -20,6 +20,8 @@ const HomePage: FC = () => {
                     <SvgIcon type='react' />
                     <SvgIcon type='vue' />
                     <SvgIcon type='next' />
+                    <SvgIcon type='html' />
+                    <SvgIcon type='a11y' />
                 </div>
                 <div className='flex flex-col space-y-2'>
                     <SvgIcon type='node' />
