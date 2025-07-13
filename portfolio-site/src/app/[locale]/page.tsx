@@ -30,8 +30,8 @@ const HomePage: FC = () => {
                     <SvgIcon type='rails' />
                 </div>
                 <div className='flex flex-col space-y-2'>
+                    <SvgIcon type='css' />
                     <SvgIcon type='tailwind' />
-                    <SvgIcon type='typescript' />
                     <SvgIcon type='javascript' />
                 </div>
             </div>
