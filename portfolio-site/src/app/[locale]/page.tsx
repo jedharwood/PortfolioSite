@@ -35,6 +35,11 @@ const HomePage: FC = () => {
                     <SvgIcon type='bootstrap' />
                     <SvgIcon type='sass' />
                     <SvgIcon type='less' />
+                    <SvgIcon type='styledcomponents' />
+                </div>
+                <div className='flex flex-col space-y-2'>
+                    <SvgIcon type='sequelize' />
+                    <SvgIcon type='mongo' />
                 </div>
             </div>
         </div>
