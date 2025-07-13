@@ -40,6 +40,7 @@ const HomePage: FC = () => {
                 <div className='flex flex-col space-y-2'>
                     <SvgIcon type='sequelize' />
                     <SvgIcon type='mongo' />
+                    <SvgIcon type='mysql' />
                 </div>
             </div>
         </div>
