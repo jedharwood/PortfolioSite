@@ -23,7 +23,7 @@ const HomePage: FC = () => {
                     <SvgIcon type='next' />
                 </div>
                 <div className='flex flex-col space-y-2'>
-                    <SvgIcon type='typescript' />
+                    <SvgIcon type='dotnet' />
                     <SvgIcon type='javascript' />
                     <SvgIcon type='typescript' />
                 </div>
