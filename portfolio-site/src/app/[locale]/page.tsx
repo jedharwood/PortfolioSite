@@ -32,7 +32,7 @@ const HomePage: FC = () => {
                 <div className='flex flex-col space-y-2'>
                     <SvgIcon type='css' />
                     <SvgIcon type='tailwind' />
-                    <SvgIcon type='javascript' />
+                    <SvgIcon type='bootstrap' />
                 </div>
             </div>
         </div>
