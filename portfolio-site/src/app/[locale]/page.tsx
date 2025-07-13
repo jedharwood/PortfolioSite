@@ -42,6 +42,7 @@ const HomePage: FC = () => {
                     <SvgIcon type='mongo' />
                     <SvgIcon type='mysql' />
                     <SvgIcon type='tsql' />
+                    <SvgIcon type='postgres' />
                 </div>
             </div>
         </div>
