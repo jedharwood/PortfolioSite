@@ -21,7 +21,6 @@ const HomePage: FC = () => {
                     <SvgIcon type='vue' />
                     <SvgIcon type='next' />
                     <SvgIcon type='html' />
-                    <SvgIcon type='a11y' />
                 </div>
                 <div className='flex flex-col space-y-2'>
                     <SvgIcon type='node' />
@@ -43,6 +42,10 @@ const HomePage: FC = () => {
                     <SvgIcon type='mysql' />
                     <SvgIcon type='tsql' />
                     <SvgIcon type='postgres' />
+                </div>
+                <div className='flex flex-col space-y-2'>
+                    <SvgIcon type='a11y' />
+                    <SvgIcon type='responsivedesign' />
                 </div>
             </div>
         </div>
