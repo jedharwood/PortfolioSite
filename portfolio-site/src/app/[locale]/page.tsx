@@ -47,6 +47,11 @@ const HomePage: FC = () => {
                     <SvgIcon type='a11y' />
                     <SvgIcon type='responsivedesign' />
                 </div>
+
+                <div className='flex flex-col space-y-2'>
+                    <SvgIcon type='cypress' />
+                    <SvgIcon type='specflow' />
+                </div>
             </div>
         </div>
     );
