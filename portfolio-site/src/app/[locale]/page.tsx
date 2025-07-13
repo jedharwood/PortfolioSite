@@ -33,6 +33,7 @@ const HomePage: FC = () => {
                     <SvgIcon type='css' />
                     <SvgIcon type='tailwind' />
                     <SvgIcon type='bootstrap' />
+                    <SvgIcon type='sass' />
                 </div>
             </div>
         </div>
