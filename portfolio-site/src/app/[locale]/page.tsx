@@ -19,12 +19,12 @@ const HomePage: FC = () => {
                     <SvgIcon type='javascript' />
                     <SvgIcon type='react' />
                     <SvgIcon type='vue' />
-                    <SvgIcon type='node' />
                     <SvgIcon type='next' />
                 </div>
                 <div className='flex flex-col space-y-2'>
+                    <SvgIcon type='node' />
                     <SvgIcon type='dotnet' />
-                    <SvgIcon type='javascript' />
+                    <SvgIcon type='rails' />
                     <SvgIcon type='typescript' />
                 </div>
                 <div className='flex flex-col space-y-2'>
