@@ -40,12 +40,10 @@ const SvgAnchor = ({
     href,
     label,
     buttonType,
-}: SvgAnchorProps): JSX.Element => {
-    return (
-        <a href={href} className='svg-button h-20 w-20' aria-label={label}>
-            {buttonType === 'linked-in' ? linkedInSvg : githubSvg}
-        </a>
-    );
-};
+}: SvgAnchorProps): JSX.Element => (
+    <a href={href} className='svg-button h-20 w-20' aria-label={label}>
+        {buttonType === 'linked-in' ? linkedInSvg : githubSvg}
+    </a>
+);
 
 export default SvgAnchor;

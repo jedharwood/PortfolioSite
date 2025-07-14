@@ -41,19 +41,17 @@ const SvgButton = ({
     label,
     buttonType,
     size = 'regular',
-}: SvgButtonProps): JSX.Element => {
-    return (
-        <button
-            type='button'
-            className={`svg-button p-2 ${size === 'large' ? 'h-20 w-20' : 'h-12 w-12'}`}
-            aria-controls={buttonType}
-            aria-expanded='false'
-            aria-label={label}
-            onClick={onClickFunction}
-        >
-            {buttonType === 'burger-menu' ? burgerMenuSvg : upChevronSvg}
-        </button>
-    );
-};
+}: SvgButtonProps): JSX.Element => (
+    <button
+        type='button'
+        className={`svg-button p-2 ${size === 'large' ? 'h-20 w-20' : 'h-12 w-12'}`}
+        aria-controls={buttonType}
+        aria-expanded='false'
+        aria-label={label}
+        onClick={onClickFunction}
+    >
+        {buttonType === 'burger-menu' ? burgerMenuSvg : upChevronSvg}
+    </button>
+);
 
 export default SvgButton;
