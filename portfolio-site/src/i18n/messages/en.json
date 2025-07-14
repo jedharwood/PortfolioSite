@@ -1,6 +1,22 @@
 {
     "Home": {
-        "title": "Banana EN"
+        "title": "Jed Harwood",
+        "subTitle": "Software Engineer from a design background",
+        "paragraphOne": "Experienced in creating accessible, attractive, performant multilingual web applications with ReactJs.",
+        "paragraphTwo": "Specialised in English>Japanese and Japanese>English localisation.",
+        "paragraphThree": "Email me to discuss how I can help bring your project to life.",
+        "experiencedWith": {
+            "subTitle": "Experienced with;",
+            "sections": {
+                "frontendFrameworks": "Frontend frameworks",
+                "stylingLibraries": "Styling libraries",
+                "databaseTechnologies": "Database technologies",
+                "backendFrameworks": "Backend frameworks",
+                "designConsiderations": "Design considerations",
+                "endToEndtestLibraries": "End-to-end testing libraries"
+            }
+        },
+        "emailLabel": "Go to contact page"
     },
     "WorkHistory": {
         "title": "Work History",

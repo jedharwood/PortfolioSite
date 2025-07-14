@@ -58,15 +58,15 @@ const Navbar = (): JSX.Element => {
                 </div>
 
                 <div className={navMenuClasses} id='burger-menu'>
-                    <ul className='mt-4 flex flex-col font-medium'>
+                    <ul className='mt-4 flex flex-col space-y-3 text-xl font-semibold'>
                         {navLinks.map((link, index) => (
                             <li
                                 key={index}
-                                className='flex justify-center lg:justify-end'
+                                className='primary-text-hoverable flex justify-center lg:justify-end'
                             >
                                 <Link
                                     href={link.href}
-                                    className={`block py-2 ${
+                                    className={`block ${
                                         pathname === link.href
                                             ? 'underline'
                                             : ''
