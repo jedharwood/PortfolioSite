@@ -284,4 +284,3 @@ export const specFlowSvg: JSX.Element = (
         />
     </svg>
 );
-

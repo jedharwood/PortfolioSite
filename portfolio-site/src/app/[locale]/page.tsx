@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import { useTranslations } from 'next-intl';
+import ExperienceSection from '../components/experience-section';
 import SvgIcon from '../components/svg-icon/svg-icon';
 
 const HomePage: FC = () => {
     const t = useTranslations('Home');
-    // might need to translate the aria labels
 
     return (
         <div className='px-4 lg:px-0'>
@@ -13,11 +13,10 @@ const HomePage: FC = () => {
             <p>{t('paragraphOne')}</p>
             <p>{t('paragraphTwo')}</p>
             <p>{t('paragraphThree')}</p>
-            <p>{t('experiencedWith')}</p>
+            <p>{t('experiencedWith.subTitle')}</p>
             <div className='grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-                <section
-                    className='flex flex-col space-y-2'
-                    aria-label='Frontend frameworks'
+                <ExperienceSection
+                    label={t('experiencedWith.sections.frontendFrameworks')}
                 >
                     <SvgIcon type='react' />
                     <SvgIcon type='next' />
@@ -25,10 +24,9 @@ const HomePage: FC = () => {
                     <SvgIcon type='javascript' />
                     <SvgIcon type='vue' />
                     <SvgIcon type='html' />
-                </section>
-                <section
-                    className='flex flex-col space-y-2'
-                    aria-label='Styling libraries'
+                </ExperienceSection>
+                <ExperienceSection
+                    label={t('experiencedWith.sections.stylingLibraries')}
                 >
                     <SvgIcon type='css' />
                     <SvgIcon type='styledcomponents' />
@@ -36,40 +34,36 @@ const HomePage: FC = () => {
                     <SvgIcon type='bootstrap' />
                     <SvgIcon type='sass' />
                     <SvgIcon type='less' />
-                </section>
-                <section
-                    className='flex flex-col space-y-2'
-                    aria-label='Database technologies'
+                </ExperienceSection>
+                <ExperienceSection
+                    label={t('experiencedWith.sections.databaseTechnologies')}
                 >
                     <SvgIcon type='sequelize' />
                     <SvgIcon type='mysql' />
                     <SvgIcon type='mongo' />
                     <SvgIcon type='postgres' />
                     <SvgIcon type='tsql' />
-                </section>
-                <section
-                    className='flex flex-col space-y-2'
-                    aria-label='Backend frameworks'
+                </ExperienceSection>
+                <ExperienceSection
+                    label={t('experiencedWith.sections.backendFrameworks')}
                 >
                     <SvgIcon type='node' />
                     <SvgIcon type='dotnet' />
                     <SvgIcon type='fastify' />
                     <SvgIcon type='rails' />
-                </section>
-                <section
-                    className='flex flex-col space-y-2'
-                    aria-label='Design considerations'
+                </ExperienceSection>
+                <ExperienceSection
+                    label={t('experiencedWith.sections.designConsiderations')}
                 >
                     <SvgIcon type='a11y' />
                     <SvgIcon type='responsivedesign' />
-                </section>
-                <section
-                    className='flex flex-col space-y-2'
-                    aria-label='End-to-end testing libraries'
+                </ExperienceSection>
+                <ExperienceSection
+                    label={t('experiencedWith.sections.endToEndtestLibraries')}
                 >
                     <SvgIcon type='cypress' />
                     <SvgIcon type='specflow' />
-                </section>
+                </ExperienceSection>
             </div>
         </div>
     );

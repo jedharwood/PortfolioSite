@@ -50,13 +50,19 @@ const svgIconContentMap: Record<
     bootstrap: { label: 'Bootstrap', icon: images.bootstrapIcon },
     sass: { label: 'SASS', icon: images.sassSvg },
     less: { label: 'LESS', icon: images.lessSvg },
-    styledcomponents: { label: 'Styled Components', icon: images.styledComponentsSvg },
+    styledcomponents: {
+        label: 'Styled Components',
+        icon: images.styledComponentsSvg,
+    },
     sequelize: { label: 'Sequelize', icon: images.sequelizeSvg },
     mongo: { label: 'MongoDB', icon: images.mongoSvg },
     mysql: { label: 'MySQL', icon: images.mySqlSvg },
     tsql: { label: 'Transact-SQL', icon: images.tSqlSvg },
     postgres: { label: 'PostgreSQl', icon: images.postgresQlSvg },
-    responsivedesign: { label: 'Responsive Design', icon: images.responsiveDesignSvg },
+    responsivedesign: {
+        label: 'Responsive Design',
+        icon: images.responsiveDesignSvg,
+    },
     cypress: { label: 'Cypress', icon: images.cypressSvg },
     specflow: { label: 'SpecFlow', icon: images.specFlowSvg },
 };
