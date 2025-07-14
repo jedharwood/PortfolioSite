@@ -72,7 +72,9 @@ const SvgIcon = ({ type }: SvgIconProps): JSX.Element => {
 
     return (
         <div className='svg-icon inline-flex origin-center transform gap-4 transition-transform duration-300 hover:scale-105'>
-            <div className='h-10 w-10'>{svgIconContent.icon}</div>
+            <div className='flex items-center'>
+                <div className='h-10 w-10'>{svgIconContent.icon}</div>
+            </div>
             <span className='primary-text-hoverable content-center text-xl font-semibold'>
                 {svgIconContent.label}
             </span>
