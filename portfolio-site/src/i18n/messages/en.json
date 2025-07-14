@@ -1,7 +1,7 @@
 {
     "Home": {
         "title": "Jed Harwood",
-        "subTitle": "Software Engineer from a design background.",
+        "subTitle": "Software Engineer from a design background",
         "paragraphOne": "Experienced in creating accessible, attractive, performant multilingual web applications with ReactJs.",
         "paragraphTwo": "Specialised in English>Japanese and Japanese>English localisation.",
         "paragraphThree": "Email me to discuss how I can help bring your project to life.",
@@ -15,7 +15,8 @@
                 "designConsiderations": "Design considerations",
                 "endToEndtestLibraries": "End-to-end testing libraries"
             }
-        }
+        },
+        "emailLabel": "Go to contact page"
     },
     "WorkHistory": {
         "title": "Work History",

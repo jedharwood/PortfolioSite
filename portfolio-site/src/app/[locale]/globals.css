@@ -43,7 +43,7 @@ Tobacco Brown
     --font-mono: var(--font-geist-mono);
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
         --background: #351815;
         --foreground: #fbe2a3;
@@ -54,7 +54,7 @@ Tobacco Brown
         --accent: #7e809a;
         --accent-hover: #9ea0b3;
     }
-} */
+}
 
 /* 
 Dark Theme
@@ -95,6 +95,14 @@ body {
 .nav-bar {
     background: var(--background);
     color: var(--foreground);
+}
+
+.email-svg {
+    color: var(--svg-path);
+}
+
+.email-svg:hover {
+    color: var(--svg-path-hover);
 }
 
 .svg-button {
