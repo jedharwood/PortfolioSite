@@ -1,4 +1,5 @@
 import { z } from 'zod';
+// maybe I need to move this to a shared space
 
 export const contactFormSchema = z.object({
     name: z.string().min(2, 'Too short').max(50, 'Too long'),
