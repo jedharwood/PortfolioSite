@@ -107,5 +107,32 @@
             "technologies": "C#, .Net core, Asp.Net.Mvc, MsSqlServer, React, Redux, jQuery, LESS",
             "imageAltText": "A screenshot of the Accurate website"
         }
+    },
+    "Contact": {
+        "title": "Email me",
+        "form": {
+            "inputs": {
+                "name": {
+                    "label": "Name",
+                    "placeholder": "John Doe"
+                },
+                "email": {
+                    "label": "Email address",
+                    "placeholder": "john@domain.com"
+                },
+                "subject": {
+                    "label": "Subject",
+                    "placeholder": "What do you want?"
+                },
+                "message": {
+                    "label": "Subject",
+                    "placeholder": "What do you really want?"
+                }
+            },
+            "buttons": {
+                "send": "Send",
+                "sending": "Sending..."
+            }
+        }
     }
 }
