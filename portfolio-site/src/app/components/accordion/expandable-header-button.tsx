@@ -19,7 +19,7 @@ const ExpandableHeaderButton = ({
     const { jobTitle, companyName, location, dateRange } = headerProps;
 
     const accordionHeader: JSX.Element = (
-        <div className='flex w-full flex-col gap-1 font-semibold text-xl'>
+        <div className='flex w-full flex-col gap-1 text-xl font-semibold'>
             <div className='flex w-full flex-wrap space-x-2'>
                 <span className='whitespace-nowrap'>{`${jobTitle},`}</span>
                 <span className='whitespace-nowrap'>{companyName}</span>
