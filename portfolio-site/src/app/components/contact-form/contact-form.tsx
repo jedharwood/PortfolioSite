@@ -6,8 +6,7 @@ import { useForm } from 'react-hook-form';
 import { contactFormSubmitHandler } from '@/actions';
 import { useTranslations } from 'next-intl';
 import Spinner from './spinner';
-
-// error styling
+import FormInput from './input-field';
 
 const ContactForm = () => {
     const {
@@ -36,47 +35,6 @@ const ContactForm = () => {
     const focusClasses: string =
         'focus:ring-3 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--background)]';
 
-    const formInput = (
-        inputId: 'name' | 'email' | 'subject' | 'message',
-        inputType: 'text' | 'email' | 'text-area',
-    ): JSX.Element => {
-        const inputBaseClasses: string =
-            'bg-[var(--background)] py-2.5 px-5 w-full rounded-4xl border-2 border-[var(--accent)] outline-none text-lg';
-        const inputHoverClasses: string =
-            'hover:border-[var(--accent-hover)] hover:ring-3 hover:ring-offset-2 hover:ring-[var(--accent-hover)] hover:ring-offset-[var(--background)]';
-        const placeholder: string = t(`form.inputs.${inputId}.placeholder`);
-
-        return (
-            <div className='mb-3'>
-                <label htmlFor={inputId} className='text-md mb-1 block pl-6'>
-                    {t(`form.inputs.${inputId}.label`)}
-                </label>
-                {inputType === 'text-area' ? (
-                    <textarea
-                        rows={6}
-                        id={inputId}
-                        className={`${inputBaseClasses} ${inputHoverClasses} ${focusClasses} min-h-13`}
-                        placeholder={placeholder}
-                        {...register(inputId)}
-                    />
-                ) : (
-                    <input
-                        type={inputType}
-                        id={inputId}
-                        className={`${inputBaseClasses} ${inputHoverClasses} ${focusClasses}`}
-                        placeholder={placeholder}
-                        {...register(inputId)}
-                    />
-                )}
-                {errors[inputId] && (
-                    <span className='pl-6 text-sm'>
-                        {errors[inputId].message}
-                    </span>
-                )}
-            </div>
-        );
-    };
-
     // Maybe I move this out...
     const submitButton = (): JSX.Element => {
         const buttonBaseClasses: string =
@@ -104,11 +62,35 @@ const ContactForm = () => {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className='grid gap-x-6 md:grid-cols-2'>
-                {formInput('name', 'text')}
-                {formInput('email', 'email')}
-            </div>
-            {formInput('subject', 'text')}
-            {formInput('message', 'text-area')}
+                <FormInput
+                    inputId='name'
+                    inputType='text'
+                    register={register}
+                    errors={errors}
+                    focusClasses={focusClasses}
+                />
+                <FormInput
+                    inputId='email'
+                    inputType='email'
+                    register={register}
+                    errors={errors}
+                    focusClasses={focusClasses}
+                />
+            </div>{' '}
+            <FormInput
+                inputId='subject'
+                inputType='text'
+                register={register}
+                errors={errors}
+                focusClasses={focusClasses}
+            />
+            <FormInput
+                inputId='message'
+                inputType='text-area'
+                register={register}
+                errors={errors}
+                focusClasses={focusClasses}
+            />
             {submitButton()}
         </form>
     );

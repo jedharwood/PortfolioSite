@@ -125,7 +125,7 @@
                     "placeholder": "What do you want?"
                 },
                 "message": {
-                    "label": "Subject",
+                    "label": "Message",
                     "placeholder": "What do you really want?"
                 }
             },
