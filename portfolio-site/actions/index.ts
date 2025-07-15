@@ -1,8 +1,5 @@
 'use server';
-import {
-    ContactFormData,
-    contactFormSchema,
-} from '../src/app/components/contact-form/schema';
+import { ContactFormData, contactFormSchema } from '../schemas/contact-form';
 import nodemailer from 'nodemailer';
 
 type FormResponse = {

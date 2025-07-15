@@ -1,5 +1,8 @@
 'use client';
-import { ContactFormData, contactFormSchema } from './schema';
+import {
+    ContactFormData,
+    contactFormSchema,
+} from '../../../../schemas/contact-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -17,7 +20,7 @@ const ContactForm = () => {
         resolver: zodResolver(contactFormSchema),
         mode: 'onChange',
     });
-    const [isSending, setIsSending] = useState(false);
+    const [isSending, setIsSending] = useState<boolean>(false);
 
     const onSubmit = async (data: ContactFormData) => {
         console.log({ data });

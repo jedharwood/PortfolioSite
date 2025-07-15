@@ -13,7 +13,7 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
     const t = useTranslations('Contact.form.buttons');
 
     const buttonBaseClasses =
-        'min-w-3xs rounded-4xl bg-[var(--accent)] px-5 py-2.5 text-center text-white sm:w-auto outline-none';
+        'w-full min-w-3xs rounded-4xl bg-[var(--accent)] px-5 py-2.5 text-center text-white sm:w-auto outline-none';
     const buttonHoverClasses = 'hover:bg-[var(--accent-hover)]';
 
     return (
@@ -35,4 +35,3 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
 };
 
 export default SubmitButton;
-
