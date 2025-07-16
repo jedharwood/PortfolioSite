@@ -1,6 +1,7 @@
 import { FC, JSX } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '../../i18n/routing';
+import CommonMainLayout from '../components/common-main-layout';
 import ExperienceSection from '../components/experience-section';
 import SvgIcon from '../components/svg-icon/svg-icon';
 
@@ -19,11 +20,7 @@ const HomePage: FC = () => {
     const t = useTranslations('Home');
 
     return (
-        <div className='mb-4 space-y-4 px-4 text-lg lg:px-0'>
-            <header>
-                <h1 className='text-4xl font-bold'>{t('title')}</h1>
-                <h2 className='text-2xl font-semibold'>{t('subTitle')}</h2>
-            </header>
+        <CommonMainLayout title={t('title')} subTitle={t('subTitle')}>
             <section className='space-y-1'>
                 <p>{t('paragraphOne')}</p>
                 <p>{t('paragraphTwo')}</p>
@@ -92,7 +89,7 @@ const HomePage: FC = () => {
                     <SvgIcon type='specflow' />
                 </ExperienceSection>
             </div>
-        </div>
+        </CommonMainLayout>
     );
 };
 

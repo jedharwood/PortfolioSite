@@ -1,14 +1,9 @@
-import { JSX, ReactNode } from 'react';
+import { FC, PropsWithChildren } from 'react';
 
-type ExperienceSectionProps = {
-    label: string;
-    children: ReactNode;
-};
-
-const ExperienceSection = ({
+const ExperienceSection: FC<PropsWithChildren<{ label: string }>> = ({
     label,
     children,
-}: ExperienceSectionProps): JSX.Element => (
+}) => (
     <section className='flex flex-col space-y-2' aria-label={label}>
         {children}
     </section>

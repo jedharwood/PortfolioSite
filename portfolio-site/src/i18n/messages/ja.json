@@ -134,5 +134,27 @@
                 "sending": "Sending..."
             }
         }
+    },
+    "Components": {
+        "navBar": {
+            "openBurgerMenu": "Open main menu"
+        },
+        "languageSelector": {
+            "en": "Switch language to English",
+            "ja": "Switch language to Japanese"
+        },
+        "jumbotron": {
+            "gotokuji": "Manekineko at Gotokuji shrine, Tokyo",
+            "hakkei": "Lanterns outside Seto shrine, Kanazawa Hakkei"
+        },
+        "footer": {
+            "linkedIn": "Link to LinkedIn page",
+            "github": "Link to github page",
+            "scrollToTop": "Scroll to top"
+        }
+    },
+    "Projects": {
+        "title": "Projects",
+        "subTitle": "Page under construction - come back soon"
     }
 }

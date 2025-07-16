@@ -1,12 +1,12 @@
 import { FC } from 'react';
+import { useTranslations } from 'next-intl';
+import CommonMainLayout from '../../components/common-main-layout';
 
 const ProjectsPage: FC = () => {
+    const t = useTranslations('Projects');
+
     return (
-        <div className='mb-4 space-y-4 px-4 text-lg lg:px-0'>
-            <header>
-                <h1 className='text-4xl font-bold'>Projects Page</h1>
-            </header>
-        </div>
+        <CommonMainLayout title={t('title')} subTitle={t('subTitle')} />
     );
 };
 

@@ -1,10 +1,12 @@
 'use client';
 import { useState, useRef, useEffect, JSX } from 'react';
 import { Link, usePathname } from '../../i18n/routing';
+import { useTranslations } from 'next-intl';
 import LanguageSelector from './language-selector';
 import SvgButton from './svg-button';
 
 const Navbar = (): JSX.Element => {
+    const t = useTranslations('Components.navBar');
     const menuRef = useRef<HTMLDivElement>(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => {
@@ -52,7 +54,7 @@ const Navbar = (): JSX.Element => {
                     <LanguageSelector />
                     <SvgButton
                         onClickFunction={toggleMenu}
-                        label='Open main menu'
+                        label={t('openBurgerMenu')}
                         buttonType='burger-menu'
                     />
                 </div>

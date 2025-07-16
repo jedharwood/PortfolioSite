@@ -37,13 +37,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 Write up README
 Tests
-Element or FC
-Env Vars
 i18n validation messages
-i18n components
+Do I need to I18n any of the svgIcons?
 Translation
 Image optimisation
-Project page
+Project page Content
 Favicon
 Metadata - SEO
 Sent Email confirmation

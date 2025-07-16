@@ -4,13 +4,13 @@ import {
     contactFormSchema,
 } from '../../../../schemas/contact-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useState } from 'react';
+import { useState, JSX } from 'react';
 import { useForm } from 'react-hook-form';
 import { contactFormSubmitHandler } from '@/actions';
 import FormInput from './input-field';
 import SubmitButton from './submit-button';
 
-const ContactForm = () => {
+const ContactForm = (): JSX.Element => {
     const {
         register,
         handleSubmit,

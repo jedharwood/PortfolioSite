@@ -1,19 +1,18 @@
 'use client';
-import { useState, useEffect, JSX, ReactNode } from 'react';
+import { useState, useEffect, FC, PropsWithChildren } from 'react';
 import CollapsibleContent from './collapsible-content';
 import ExpandableHeaderButton from './expandable-header-button';
 
 type AccordionNestProps = {
     id: string;
     headerProps: AccordionHeaderProps;
-    children: ReactNode;
 };
 
-const AccordionNest = ({
+const AccordionNest: FC<PropsWithChildren<AccordionNestProps>> = ({
     id,
     headerProps,
     children,
-}: AccordionNestProps): JSX.Element => {
+}) => {
     const [accordionIsOpen, setAccordionIsOpen] = useState<boolean>(false);
 
     useEffect(() => {
