@@ -122,11 +122,11 @@
                 },
                 "subject": {
                     "label": "Subject",
-                    "placeholder": "What do you want?"
+                    "placeholder": "What's your message about?"
                 },
                 "message": {
                     "label": "Message",
-                    "placeholder": "What do you really want?"
+                    "placeholder": "What's your message'?"
                 }
             },
             "buttons": {

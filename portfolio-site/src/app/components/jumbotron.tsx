@@ -3,7 +3,7 @@ import { JSX, useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import gotokuji from '../../../public/gotokuji-cats.webp';
-import hakkei from '../../../public/hakkei-lanterns.jpg';
+import hakkei from '../../../public/hakkei-lanterns.webp';
 
 const Jumbotron = (): JSX.Element | null => {
     const t = useTranslations('Components.jumbotron');
