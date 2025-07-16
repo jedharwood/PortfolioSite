@@ -19,7 +19,7 @@ const HomePage: FC = () => {
     const t = useTranslations('Home');
 
     return (
-        <div className='mb-4 space-y-4 px-4 lg:px-0 text-lg'>
+        <div className='mb-4 space-y-4 px-4 text-lg lg:px-0'>
             <header>
                 <h1 className='text-4xl font-bold'>{t('title')}</h1>
                 <h2 className='text-2xl font-semibold'>{t('subTitle')}</h2>

@@ -148,3 +148,15 @@ body {
 .primary-text-hoverable:hover {
     color: var(--foreground-hover);
 }
+
+/* input {
+  font-size: 1.125rem !important;
+  font-family: var(--your-font-stack, sans-serif) !important;
+} */
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px var(--background) inset !important;
+    -webkit-text-fill-color: var(--foreground) !important;
+    /* font-size: 1.125rem !important;  */
+    transition: background-color 5000s ease-in-out 0s; /* Prevent flash */
+}
