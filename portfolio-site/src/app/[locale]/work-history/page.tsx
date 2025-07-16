@@ -10,15 +10,13 @@ import rakutenScreenshot from '../../../../public/work-history/rakuten-screensho
 import soundrawScreenshot from '../../../../public/work-history/soundraw-screenshot.webp';
 import Accordion from '../../components/accordion/accordion';
 import AccordionNest from '../../components/accordion/accordion-nest';
+import CommonMainLayout from '../../components/common-main-layout';
 
 const WorkHistoryPage: FC = () => {
     const t = useTranslations('WorkHistory');
 
     return (
-        <div className='mb-4 space-y-4 px-4 text-lg lg:px-0'>
-            <header>
-                <h1 className='text-4xl font-bold'>{t('title')}</h1>
-            </header>
+        <CommonMainLayout title={t('title')}>
             <Accordion
                 id='appliedsystems-embeddedrating-accordion'
                 headerProps={{
@@ -199,7 +197,7 @@ const WorkHistoryPage: FC = () => {
                 }}
                 href={urls.accurateUrl}
             />
-        </div>
+        </CommonMainLayout>
     );
 };
 

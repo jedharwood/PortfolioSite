@@ -152,5 +152,9 @@
             "github": "Link to github page",
             "scrollToTop": "Scroll to top"
         }
+    },
+    "Projects": {
+        "title": "Projects",
+        "subTitle": "Page under construction - come back soon"
     }
 }
