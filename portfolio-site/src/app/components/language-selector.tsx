@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname } from '../../i18n/routing';
 
 const LanguageSelector = (): JSX.Element => {
-    const t = useTranslations('Components.languageSelector')
+    const t = useTranslations('Components.languageSelector');
     const locale = useLocale();
     const pathname = usePathname();
 

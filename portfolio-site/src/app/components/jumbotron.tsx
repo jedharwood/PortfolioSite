@@ -6,7 +6,7 @@ import gotokuji from '../../../public/gotokuji-cats.webp';
 import hakkei from '../../../public/hakkei-lanterns.jpg';
 
 const Jumbotron = (): JSX.Element | null => {
-    const t = useTranslations('Components.jumbotron')
+    const t = useTranslations('Components.jumbotron');
     const [isMounted, setIsMounted] = useState(false);
     const [isDarkMode, setIsDarkMode] = useState(false);
 
