@@ -5,7 +5,7 @@ import Spinner from './spinner';
 type SubmitButtonProps = {
     isSending: boolean;
     focusClasses: string;
-}
+};
 
 const SubmitButton = ({
     isSending,

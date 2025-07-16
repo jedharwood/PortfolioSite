@@ -1,9 +1,10 @@
 'use client';
 import { JSX } from 'react';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname } from '../../i18n/routing';
 
 const LanguageSelector = (): JSX.Element => {
+    const t = useTranslations('Components.languageSelector')
     const locale = useLocale();
     const pathname = usePathname();
 
@@ -14,12 +15,12 @@ const LanguageSelector = (): JSX.Element => {
         en: {
             code: 'en',
             name: 'English',
-            ariaLabel: 'Switch langiage to English',
+            ariaLabel: t('en'),
         },
         ja: {
             code: 'ja',
             name: '日本語',
-            ariaLabel: 'Switch language to Japanese',
+            ariaLabel: t('ja'),
         },
     };
 

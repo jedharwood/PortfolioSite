@@ -38,7 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 Write up README
 Tests
 i18n validation messages
-i18n components
+Do I need to I18n any of the svgIcons?
 Translation
 Image optimisation
 Project page

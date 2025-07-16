@@ -1,4 +1,4 @@
-import React, {JSX} from 'react';
+import React, { JSX } from 'react';
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
 import { useTranslations } from 'next-intl';
 import { ContactFormData } from '../../../../schemas/contact-form';
@@ -9,7 +9,7 @@ type InputFieldProps = {
     register: UseFormRegister<ContactFormData>;
     errors: FieldErrors;
     focusClasses: string;
-}
+};
 
 const InputField = ({
     inputId,
