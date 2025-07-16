@@ -42,7 +42,7 @@ Tobacco Brown
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
 }
-/* 
+
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #351815;
@@ -54,7 +54,7 @@ Tobacco Brown
         --accent: #7e809a;
         --accent-hover: #9ea0b3;
     }
-} */
+}
 
 /* 
 Dark Theme

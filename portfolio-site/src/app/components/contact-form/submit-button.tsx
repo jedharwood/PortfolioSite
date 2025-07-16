@@ -11,16 +11,15 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
     focusClasses,
 }) => {
     const t = useTranslations('Contact.form.buttons');
-
-    const buttonBaseClasses =
+    const baseClasses: string =
         'w-full min-w-3xs rounded-4xl bg-[var(--accent)] px-5 py-2.5 text-center text-white sm:w-auto outline-none';
-    const buttonHoverClasses = 'hover:bg-[var(--accent-hover)]';
+    const hoverClasses: string = 'hover:bg-[var(--accent-hover)]';
 
     return (
         <button
             type='submit'
             disabled={isSending}
-            className={`${buttonBaseClasses} ${buttonHoverClasses} ${focusClasses}`}
+            className={`${baseClasses} ${hoverClasses} ${focusClasses} cursor-pointer`}
         >
             {isSending ? (
                 <div className='flex items-center justify-center gap-x-2'>

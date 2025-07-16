@@ -1,7 +1,7 @@
 import React from 'react';
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
 import { useTranslations } from 'next-intl';
-import { ContactFormData } from './schema';
+import { ContactFormData } from '../../../../schemas/contact-form';
 
 interface InputFieldProps {
     inputId: 'name' | 'email' | 'subject' | 'message';
@@ -19,22 +19,25 @@ const InputField: React.FC<InputFieldProps> = ({
     focusClasses,
 }) => {
     const t = useTranslations('Contact.form.inputs');
-    const inputBaseClasses =
-        'bg-[var(--background)] py-2.5 px-5 w-full rounded-4xl border-2 border-[var(--accent)] outline-none text-lg';
-    const inputHoverClasses =
+    const error = errors[inputId]?.message;
+    const baseClasses = `${error ? 'bg-red-500 text-white' : 'bg-[var(--background)]'} py-2.5 px-5 w-full rounded-4xl border-2 border-[var(--accent)] outline-none text-lg`;
+    const hoverClasses =
         'hover:border-[var(--accent-hover)] hover:ring-3 hover:ring-offset-2 hover:ring-[var(--accent-hover)] hover:ring-offset-[var(--background)]';
     const placeholder = t(`${inputId}.placeholder`);
 
     return (
         <div className='mb-3'>
-            <label htmlFor={inputId} className='text-md mb-1 block pl-6'>
+            <label
+                htmlFor={inputId}
+                className={`text-md mb-1 block pl-6 ${error && 'text-red-500'}`}
+            >
                 {t(`${inputId}.label`)}
             </label>
             {inputType === 'text-area' ? (
                 <textarea
                     rows={6}
                     id={inputId}
-                    className={`${inputBaseClasses} ${inputHoverClasses} ${focusClasses} min-h-13`}
+                    className={`${baseClasses} ${hoverClasses} ${focusClasses} min-h-13`}
                     placeholder={placeholder}
                     {...register(inputId)}
                 />
@@ -42,15 +45,14 @@ const InputField: React.FC<InputFieldProps> = ({
                 <input
                     type={inputType}
                     id={inputId}
-                    className={`${inputBaseClasses} ${inputHoverClasses} ${focusClasses}`}
+                    className={`${baseClasses} ${hoverClasses} ${focusClasses}`}
                     placeholder={placeholder}
                     {...register(inputId)}
                 />
             )}
             {errors[inputId] && (
-                // Sort out error classes
                 <span className='pl-6 text-sm text-red-500'>
-                    {errors[inputId]?.message?.toString()}
+                    {error?.toString()}
                 </span>
             )}
         </div>
