@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {JSX} from 'react';
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
 import { useTranslations } from 'next-intl';
 import { ContactFormData } from '../../../../schemas/contact-form';
 
-interface InputFieldProps {
+type InputFieldProps = {
     inputId: 'name' | 'email' | 'subject' | 'message';
     inputType: 'text' | 'email' | 'text-area';
     register: UseFormRegister<ContactFormData>;
@@ -11,13 +11,13 @@ interface InputFieldProps {
     focusClasses: string;
 }
 
-const InputField: React.FC<InputFieldProps> = ({
+const InputField = ({
     inputId,
     inputType,
     register,
     errors,
     focusClasses,
-}) => {
+}: InputFieldProps): JSX.Element => {
     const t = useTranslations('Contact.form.inputs');
     const error = errors[inputId]?.message;
     const baseClasses = `${error ? 'bg-red-500 text-white' : 'bg-[var(--background)]'} py-2.5 px-5 w-full rounded-4xl border-2 border-[var(--accent)] outline-none text-lg`;

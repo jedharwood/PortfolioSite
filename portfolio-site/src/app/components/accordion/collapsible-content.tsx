@@ -1,20 +1,19 @@
-import { JSX, ReactNode } from 'react';
+import { FC, PropsWithChildren } from 'react';
 
 type CollapsibleContentProps = {
     id: string;
-    children: ReactNode;
     headerProps: AccordionHeaderProps;
     accordionIsOpen: boolean;
     isNestingAccordion?: boolean;
 };
 
-const CollapsibleContent = ({
+const CollapsibleContent: FC<PropsWithChildren<CollapsibleContentProps>> = ({
     id,
     children,
     headerProps,
     accordionIsOpen,
     isNestingAccordion = false,
-}: CollapsibleContentProps): JSX.Element => {
+}) => {
     const { jobTitle, companyName, dateRange } = headerProps;
     const baseClasses: string = 'overflow-hidden transition-all duration-300';
     const nestedClasses: string = isNestingAccordion ? 'col-span-3' : '';

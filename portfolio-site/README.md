@@ -37,8 +37,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 Write up README
 Tests
-Element or FC
-Env Vars
 i18n validation messages
 i18n components
 Translation

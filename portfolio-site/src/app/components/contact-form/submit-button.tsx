@@ -1,15 +1,16 @@
+import { JSX } from 'react';
 import { useTranslations } from 'next-intl';
 import Spinner from './spinner';
 
-interface SubmitButtonProps {
+type SubmitButtonProps = {
     isSending: boolean;
     focusClasses: string;
 }
 
-const SubmitButton: React.FC<SubmitButtonProps> = ({
+const SubmitButton = ({
     isSending,
     focusClasses,
-}) => {
+}: SubmitButtonProps): JSX.Element => {
     const t = useTranslations('Contact.form.buttons');
     const baseClasses: string =
         'w-full min-w-3xs rounded-4xl bg-[var(--accent)] px-5 py-2.5 text-center text-white sm:w-auto outline-none';
