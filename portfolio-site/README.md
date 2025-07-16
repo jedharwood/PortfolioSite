@@ -41,7 +41,7 @@ i18n validation messages
 Do I need to I18n any of the svgIcons?
 Translation
 Image optimisation
-Project page
+Project page Content
 Favicon
 Metadata - SEO
 Sent Email confirmation
