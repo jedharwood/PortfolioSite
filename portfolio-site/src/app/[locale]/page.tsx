@@ -16,6 +16,11 @@ const emailSvg: JSX.Element = (
     </svg>
 );
 
+export const metadata = {
+  title: 'Jed Harwood | Home',
+  description: 'A full-stack software developer portfolio showcasing expertise in modern web technologies, with a strong focus on frontend development and clean UI design.'
+};
+
 const HomePage: FC = () => {
     const t = useTranslations('Home');
 

@@ -12,6 +12,11 @@ import Accordion from '../../components/accordion/accordion';
 import AccordionNest from '../../components/accordion/accordion-nest';
 import CommonMainLayout from '../../components/common-main-layout';
 
+export const metadata = {
+  title: 'Jed Harwood | Work History',
+  description: 'Explore Jed Harwood’s professional journey; from early roles to recent developer positions — including detailed responsibilities, achievements and tech stacks.'
+};
+
 const WorkHistoryPage: FC = () => {
     const t = useTranslations('WorkHistory');
 

@@ -13,7 +13,7 @@ const Jumbotron = (): JSX.Element | null => {
             <Image
                 src={gotokuji}
                 alt={t('gotokuji')}
-                className='dark:hidden object-cover shadow-lg'
+                className='object-cover shadow-lg dark:hidden'
                 placeholder='blur'
                 priority
                 fill
@@ -22,7 +22,7 @@ const Jumbotron = (): JSX.Element | null => {
             <Image
                 src={hakkei}
                 alt={t('hakkei')}
-                className='hidden dark:block object-cover shadow-lg'
+                className='hidden object-cover shadow-lg dark:block'
                 placeholder='blur'
                 priority
                 fill
