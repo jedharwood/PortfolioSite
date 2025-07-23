@@ -47,3 +47,4 @@ Sent Email confirmation
 Theme switcher - maybe additional theme
 Move form element styles into css
 Can I localise metadata?
+SVG rendering strategy
