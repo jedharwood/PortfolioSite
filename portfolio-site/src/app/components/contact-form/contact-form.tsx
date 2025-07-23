@@ -80,7 +80,7 @@ const ContactForm = (): JSX.Element => {
     });
     const [formState, dispatch] = useReducer(formStateReducer, initialState);
 
-    const onSubmit = async (data: ContactFormData) => {
+    const onSubmit = async (data: ContactFormData): Promise<void> => {
         dispatch({ type: actionTypes.FORM_SUBMITTED });
         const res = await contactFormSubmitHandler(data);
 
@@ -93,6 +93,7 @@ const ContactForm = (): JSX.Element => {
     };
 
     // conditionally set/unset tab index for hidden elements
+    // extract into new component
     const focusClasses: string =
         'focus:ring-3 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--background)]';
 
@@ -103,40 +104,43 @@ const ContactForm = (): JSX.Element => {
             stroke='currentColor'
             className='h-6 w-6'
         >
-            <path
-                strokeLinecap='round'
-                d='M6 18L18 6M6 6l12 12'
-            />
+            <path strokeLinecap='round' d='M6 18L18 6M6 6l12 12' />
         </svg>
     );
 
     return (
         <>
             <div
-                className={`relative flex flex-col items-center justify-center gap-4 transition-opacity duration-300 md:flex-row ${!formState.isSuccess ? 'pointer-events-none max-h-0 opacity-0' : 'pointer-events-auto max-h-[300px] opacity-100'}`}
+                className={`flex justify-center transition-opacity duration-300 ${!formState.isSuccess ? 'pointer-events-none max-h-0 opacity-0' : 'pointer-events-auto max-h-[300px] opacity-100'}`}
             >
-                <button
-                    className='svg-button absolute top-2 right-2'
-                    onClick={() => dispatch({ type: actionTypes.FORM_RESET })}
+                <div
+                    className={`relative flex w-fit flex-col items-center gap-4 md:flex-row`}
                 >
-                    {closeButtonSvg}
-                </button>
-                <SvgButton
-                    onClickFunction={() =>
-                        dispatch({ type: actionTypes.FORM_RESET })
-                    }
-                    label='Need to internationalize this'
-                    buttonType='form-success'
-                    size='xl'
-                />
-                <div className='flex flex-col justify-center text-center'>
-                    {/* Extract into component */}
-                    <h1 className='text-2xl font-semibold'>
-                        Thanks for your message
-                    </h1>
-                    <p>Youll be hearing from me real soon.</p>
+                    <button
+                        className='svg-button absolute top-0 right-0'
+                        onClick={() =>
+                            dispatch({ type: actionTypes.FORM_RESET })
+                        }
+                    >
+                        {closeButtonSvg}
+                    </button>
+                    <SvgButton
+                        onClickFunction={() =>
+                            dispatch({ type: actionTypes.FORM_RESET })
+                        }
+                        label='Need to internationalize this'
+                        buttonType='form-success'
+                        size='xl'
+                    />
+                    <div className='flex flex-col text-center md:text-left'>
+                        <h1 className='text-2xl font-semibold'>
+                            Thanks for your message
+                        </h1>
+                        <p>Youll be hearing from me real soon.</p>
+                    </div>
                 </div>
             </div>
+
             <form
                 onSubmit={handleSubmit(onSubmit)}
                 className={`transition-opacity duration-300 ${formState.isSuccess ? 'pointer-events-none max-h-0 opacity-0' : 'pointer-events-auto max-h-[600px] opacity-100'}`} // make untabbable
