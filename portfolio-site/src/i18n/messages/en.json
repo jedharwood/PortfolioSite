@@ -133,6 +133,14 @@
                 "send": "Send",
                 "sending": "Sending..."
             }
+        },
+        "successReport": {
+            "closeButton": "Close and return to email form",
+            "success": {
+                "title": "Thanks for your message",
+                "message": "You'll be hearing from me real soon.",
+                "svgLabel": "An image of a Manekineko. Click here to return to email form"
+            }
         }
     },
     "Components": {

@@ -10,6 +10,7 @@ import { contactFormSubmitHandler } from '@/actions';
 import FormInput from './input-field';
 import SubmitButton from './submit-button';
 import SvgButton from '../svg-button/svg-button';
+import { useTranslations } from 'next-intl';
 
 const actionTypes = {
     FORM_SUBMITTED: 'FORM_SUBMITTED',
@@ -78,6 +79,7 @@ const ContactForm = (): JSX.Element => {
         resolver: zodResolver(contactFormSchema),
         mode: 'onChange',
     });
+    const t = useTranslations('Contact.successReport');
     const [formState, dispatch] = useReducer(formStateReducer, initialState);
 
     const onSubmit = async (data: ContactFormData): Promise<void> => {
@@ -103,6 +105,8 @@ const ContactForm = (): JSX.Element => {
             strokeWidth='2'
             stroke='currentColor'
             className='h-6 w-6'
+            aria-hidden='true'
+            focusable='false'
         >
             <path strokeLinecap='round' d='M6 18L18 6M6 6l12 12' />
         </svg>
@@ -121,6 +125,7 @@ const ContactForm = (): JSX.Element => {
                         onClick={() =>
                             dispatch({ type: actionTypes.FORM_RESET })
                         }
+                        aria-label={t('closeButton')}
                     >
                         {closeButtonSvg}
                     </button>
@@ -128,19 +133,18 @@ const ContactForm = (): JSX.Element => {
                         onClickFunction={() =>
                             dispatch({ type: actionTypes.FORM_RESET })
                         }
-                        label='Need to internationalize this'
+                        label={t('success.svgLabel')}
                         buttonType='form-success'
                         size='xl'
                     />
                     <div className='flex flex-col text-center md:text-left'>
                         <h1 className='text-2xl font-semibold'>
-                            Thanks for your message
+                            {t('success.title')}
                         </h1>
-                        <p>Youll be hearing from me real soon.</p>
+                        <p>{t('success.message')}</p>
                     </div>
                 </div>
             </div>
-
             <form
                 onSubmit={handleSubmit(onSubmit)}
                 className={`transition-opacity duration-300 ${formState.isSuccess ? 'pointer-events-none max-h-0 opacity-0' : 'pointer-events-auto max-h-[600px] opacity-100'}`} // make untabbable
