@@ -16,10 +16,10 @@ const svgButtonContentMap: Record<ButtonType, JSX.Element> = {
     'form-success': images.manekiNekoSvg,
 };
 
-const svgButtonSizeMap: Record<ButtonSize, string> ={
-    'regular': 'h-12 w-12',
-    'large': 'h-20 w-20',
-    'xl': 'h-50 w-50'
+const svgButtonSizeMap: Record<ButtonSize, string> = {
+    regular: 'h-12 w-12',
+    large: 'h-20 w-20',
+    xl: 'h-50 w-50',
 };
 
 const SvgButton = ({

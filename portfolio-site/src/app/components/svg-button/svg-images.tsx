@@ -1,4 +1,4 @@
-import { JSX } from "react";
+import { JSX } from 'react';
 
 export const burgerMenuSvg: JSX.Element = (
     <svg

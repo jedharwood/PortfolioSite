@@ -92,19 +92,21 @@ const ContactForm = (): JSX.Element => {
         }
     };
 
-    // display success component.
-    // click close
-    // close when inputs onChange
-    // conditionally set/unset tab index for ohidden elements
+    // conditionally set/unset tab index for hidden elements
     const focusClasses: string =
         'focus:ring-3 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--background)]';
 
     return (
         <>
             <div
-                className={`flex gap-4 transition-opacity duration-300 ${!formState.isSuccess ? 'pointer-events-none max-h-0 opacity-0' : 'pointer-events-auto max-h-[300px] opacity-100'}`}
+                className={`relative flex flex-col items-center justify-center gap-4 transition-opacity duration-300 md:flex-row ${!formState.isSuccess ? 'pointer-events-none max-h-0 opacity-0' : 'pointer-events-auto max-h-[300px] opacity-100'}`}
             >
-                {/* <button className='svg-button' onClick={() => dispatch({ type: actionTypes.FORM_RESET })}>{catSvg}</button> */}
+                <button
+                    className='absolute top-2 right-2'
+                    onClick={() => dispatch({ type: actionTypes.FORM_RESET })}
+                >
+                    X
+                </button>
                 <SvgButton
                     onClickFunction={() =>
                         dispatch({ type: actionTypes.FORM_RESET })
@@ -113,12 +115,8 @@ const ContactForm = (): JSX.Element => {
                     buttonType='form-success'
                     size='xl'
                 />
-                <div>
-                    {/* Give it a close button
-                    Make the SVG clickable
-                    Mobile styling
-                    Conditionally show/hide with transitions
-                    Extract into component */}
+                <div className='flex flex-col justify-center text-center'>
+                    {/* Extract into component */}
                     <h1 className='text-2xl font-semibold'>
                         Thanks for your message
                     </h1>
