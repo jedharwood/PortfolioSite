@@ -94,8 +94,10 @@ const ContactForm = (): JSX.Element => {
         }
     };
 
-    // conditionally set/unset tab index for hidden elements
+    // conditionally set/unset tab index for hidden elements or does pointer-events take care of this?
     // extract into new component
+    // Should the message box have an outline?
+
     const focusClasses: string =
         'focus:ring-3 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--background)]';
 
@@ -112,79 +114,71 @@ const ContactForm = (): JSX.Element => {
         </svg>
     );
 
-    return (
-        <>
+    return formState.isSuccess ? (
+        <div className='flex justify-center'>
             <div
-                className={`flex justify-center transition-opacity duration-300 ${!formState.isSuccess ? 'pointer-events-none max-h-0 opacity-0' : 'pointer-events-auto max-h-[300px] opacity-100'}`}
+                className={`relative flex w-fit flex-col items-center gap-4 md:flex-row`}
             >
-                <div
-                    className={`relative flex w-fit flex-col items-center gap-4 md:flex-row`}
+                <button
+                    className='svg-button absolute top-0 right-0'
+                    onClick={() => dispatch({ type: actionTypes.FORM_RESET })}
+                    aria-label={t('closeButton')}
                 >
-                    <button
-                        className='svg-button absolute top-0 right-0'
-                        onClick={() =>
-                            dispatch({ type: actionTypes.FORM_RESET })
-                        }
-                        aria-label={t('closeButton')}
-                    >
-                        {closeButtonSvg}
-                    </button>
-                    <SvgButton
-                        onClickFunction={() =>
-                            dispatch({ type: actionTypes.FORM_RESET })
-                        }
-                        label={t('success.svgLabel')}
-                        buttonType='form-success'
-                        size='xl'
-                    />
-                    <div className='flex flex-col text-center md:text-left'>
-                        <h1 className='text-2xl font-semibold'>
-                            {t('success.title')}
-                        </h1>
-                        <p>{t('success.message')}</p>
-                    </div>
+                    {closeButtonSvg}
+                </button>
+                <SvgButton
+                    onClickFunction={() =>
+                        dispatch({ type: actionTypes.FORM_RESET })
+                    }
+                    label={t('success.svgLabel')}
+                    buttonType='form-success'
+                    size='xl'
+                />
+                <div className='flex flex-col px-2 text-center md:text-left'>
+                    <h1 className='text-2xl font-semibold'>
+                        {t('success.title')}
+                    </h1>
+                    <p>{t('success.message')}</p>
                 </div>
             </div>
-            <form
-                onSubmit={handleSubmit(onSubmit)}
-                className={`transition-opacity duration-300 ${formState.isSuccess ? 'pointer-events-none max-h-0 opacity-0' : 'pointer-events-auto max-h-[600px] opacity-100'}`} // make untabbable
-            >
-                <div className='grid gap-x-6 md:grid-cols-2'>
-                    <FormInput
-                        inputId='name'
-                        inputType='text'
-                        register={register}
-                        errors={errors}
-                        focusClasses={focusClasses}
-                    />
-                    <FormInput
-                        inputId='email'
-                        inputType='email'
-                        register={register}
-                        errors={errors}
-                        focusClasses={focusClasses}
-                    />
-                </div>{' '}
+        </div>
+    ) : (
+        <form onSubmit={handleSubmit(onSubmit)}>
+            <div className='grid gap-x-6 md:grid-cols-2'>
                 <FormInput
-                    inputId='subject'
+                    inputId='name'
                     inputType='text'
                     register={register}
                     errors={errors}
                     focusClasses={focusClasses}
                 />
                 <FormInput
-                    inputId='message'
-                    inputType='text-area'
+                    inputId='email'
+                    inputType='email'
                     register={register}
                     errors={errors}
                     focusClasses={focusClasses}
                 />
-                <SubmitButton
-                    isSending={formState.isSending}
-                    focusClasses={focusClasses}
-                />
-            </form>
-        </>
+            </div>{' '}
+            <FormInput
+                inputId='subject'
+                inputType='text'
+                register={register}
+                errors={errors}
+                focusClasses={focusClasses}
+            />
+            <FormInput
+                inputId='message'
+                inputType='text-area'
+                register={register}
+                errors={errors}
+                focusClasses={focusClasses}
+            />
+            <SubmitButton
+                isSending={formState.isSending}
+                focusClasses={focusClasses}
+            />
+        </form>
     );
 };
 
