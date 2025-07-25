@@ -6,11 +6,12 @@ import {
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useReducer, JSX } from 'react';
 import { useForm } from 'react-hook-form';
+import { useTranslations } from 'next-intl';
 import { contactFormSubmitHandler } from '@/actions';
 import FormInput from './input-field';
 import SubmitButton from './submit-button';
+import SuccessReport from './success-report';
 import SvgButton from '../svg-button/svg-button';
-import { useTranslations } from 'next-intl';
 
 const actionTypes = {
     FORM_SUBMITTED: 'FORM_SUBMITTED',
@@ -94,54 +95,24 @@ const ContactForm = (): JSX.Element => {
         }
     };
 
-    // conditionally set/unset tab index for hidden elements or does pointer-events take care of this?
-    // extract into new component
-    // Should the message box have an outline?
-
     const focusClasses: string =
         'focus:ring-3 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--background)]';
 
-    const closeButtonSvg: JSX.Element = (
-        <svg
-            viewBox='0 0 24 24'
-            strokeWidth='2'
-            stroke='currentColor'
-            className='h-6 w-6'
-            aria-hidden='true'
-            focusable='false'
-        >
-            <path strokeLinecap='round' d='M6 18L18 6M6 6l12 12' />
-        </svg>
-    );
-
     return formState.isSuccess ? (
-        <div className='flex justify-center'>
-            <div
-                className={`relative flex w-fit flex-col items-center gap-4 md:flex-row`}
-            >
-                <button
-                    className='svg-button absolute top-0 right-0'
-                    onClick={() => dispatch({ type: actionTypes.FORM_RESET })}
-                    aria-label={t('closeButton')}
-                >
-                    {closeButtonSvg}
-                </button>
-                <SvgButton
-                    onClickFunction={() =>
-                        dispatch({ type: actionTypes.FORM_RESET })
-                    }
-                    label={t('success.svgLabel')}
-                    buttonType='form-success'
-                    size='xl'
-                />
-                <div className='flex flex-col px-2 text-center md:text-left'>
-                    <h1 className='text-2xl font-semibold'>
-                        {t('success.title')}
-                    </h1>
-                    <p>{t('success.message')}</p>
-                </div>
-            </div>
-        </div>
+        <SuccessReport
+            onClickClose={() => dispatch({ type: actionTypes.FORM_RESET })}
+            title={t('success.title')}
+            message={t('success.message')}
+        >
+            <SvgButton
+                onClickFunction={() =>
+                    dispatch({ type: actionTypes.FORM_RESET })
+                }
+                label={t('success.svgLabel')}
+                buttonType='form-success'
+                size='xl'
+            />
+        </SuccessReport>
     ) : (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className='grid gap-x-6 md:grid-cols-2'>
