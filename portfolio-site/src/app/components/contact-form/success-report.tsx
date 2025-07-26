@@ -24,17 +24,9 @@ const SuccessReport: FC<PropsWithChildren<SuccessReportProps>> = ({
     onClickClose,
     imageElement,
     reportType,
+    children,
 }) => {
     const t = useTranslations('Contact.successReport');
-
-    const textContent: JSX.Element = (
-        <div className={`flex flex-col px-2 text-center md:text-left`}>
-            <h1 className='text-2xl font-semibold'>
-                {t(`${reportType}.title`)}
-            </h1>
-            <p>{t(`${reportType}.message`)}</p>
-        </div>
-    );
 
     return (
         <div className='flex justify-center'>
@@ -49,7 +41,15 @@ const SuccessReport: FC<PropsWithChildren<SuccessReportProps>> = ({
                     {closeButtonSvg}
                 </button>
                 {imageElement}
-                {textContent}
+                <div className={`flex flex-col px-2 text-center md:text-left`}>
+                    <div className='mb-4'>
+                        <h1 className='text-2xl font-semibold'>
+                            {t(`${reportType}.title`)}
+                        </h1>
+                        <p>{t(`${reportType}.message`)}</p>
+                    </div>
+                    {children}
+                </div>
             </div>
         </div>
     );
