@@ -131,7 +131,8 @@
             },
             "buttons": {
                 "send": "Send",
-                "sending": "Sending..."
+                "sending": "Sending...",
+                "retry": "Retry"
             }
         },
         "successReport": {
@@ -140,6 +141,10 @@
                 "title": "Thanks for your message",
                 "message": "You'll be hearing from me real soon.",
                 "svgLabel": "An image of a Manekineko. Click here to return to email form"
+            },
+            "failure": {
+                "title": "Failed to send",
+                "message": "Something went wrong. Try again?"
             }
         }
     },

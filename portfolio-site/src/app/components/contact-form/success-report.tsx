@@ -1,10 +1,10 @@
-import { FC, JSX, PropsWithChildren } from 'react';
+import { FC, JSX, PropsWithChildren, ReactNode } from 'react';
 import { useTranslations } from 'next-intl';
 
 type SuccessReportProps = {
     onClickClose: () => void;
-    title: string;
-    message: string;
+    reportType: 'success' | 'failure';
+    imageElement: ReactNode;
 };
 
 const closeButtonSvg: JSX.Element = (
@@ -22,11 +22,19 @@ const closeButtonSvg: JSX.Element = (
 
 const SuccessReport: FC<PropsWithChildren<SuccessReportProps>> = ({
     onClickClose,
-    children,
-    title,
-    message,
+    imageElement,
+    reportType,
 }) => {
     const t = useTranslations('Contact.successReport');
+
+    const textContent: JSX.Element = (
+        <div className={`flex flex-col px-2 text-center md:text-left`}>
+            <h1 className='text-2xl font-semibold'>
+                {t(`${reportType}.title`)}
+            </h1>
+            <p>{t(`${reportType}.message`)}</p>
+        </div>
+    );
 
     return (
         <div className='flex justify-center'>
@@ -40,11 +48,8 @@ const SuccessReport: FC<PropsWithChildren<SuccessReportProps>> = ({
                 >
                     {closeButtonSvg}
                 </button>
-                {children}
-                <div className='flex flex-col px-2 text-center md:text-left'>
-                    <h1 className='text-2xl font-semibold'>{title}</h1>
-                    <p>{message}</p>
-                </div>
+                {imageElement}
+                {textContent}
             </div>
         </div>
     );
