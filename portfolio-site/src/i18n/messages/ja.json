@@ -144,7 +144,13 @@
             },
             "failure": {
                 "title": "Failed to send",
-                "message": "Something wemnt wrong. Try again?"
+                "message": "Something went wrong. Try again?",
+                "svgLabel": "// probably need to label this image"
+            },
+            "completeFailure": {
+                "title": "Unable to send message",
+                "message": "Try again later or contact me through LinkedIn",
+                "svgLabel": "An image of a skull. Click here to return to email form"
             }
         }
     },
@@ -161,9 +167,11 @@
             "hakkei": "Lanterns outside Seto shrine, Kanazawa Hakkei"
         },
         "footer": {
-            "linkedIn": "Link to LinkedIn page",
-            "github": "Link to github page",
             "scrollToTop": "Scroll to top"
+        },
+        "svgAnchor": {
+            "linkedIn": "Link to LinkedIn page",
+            "github": "Link to github page"
         }
     },
     "Projects": {

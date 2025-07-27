@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 
 type SuccessReportProps = {
     onClickClose: () => void;
-    reportType: 'success' | 'failure';
+    reportType: 'success' | 'failure' | 'completeFailure';
     imageElement: ReactNode;
 };
 
@@ -48,7 +48,7 @@ const SuccessReport: FC<PropsWithChildren<SuccessReportProps>> = ({
                         </h1>
                         <p>{t(`${reportType}.message`)}</p>
                     </div>
-                    {children}
+                    {children && <div>{children}</div>}
                 </div>
             </div>
         </div>

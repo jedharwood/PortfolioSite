@@ -2,7 +2,11 @@ import { JSX } from 'react';
 import * as images from './svg-images';
 
 type ButtonSize = 'regular' | 'large' | 'xl';
-type ButtonType = 'burger-menu' | 'scroll-to-top' | 'form-success';
+type ButtonType =
+    | 'burger-menu'
+    | 'scroll-to-top'
+    | 'form-success'
+    | 'complete-failure';
 type SvgButtonProps = {
     onClickFunction: () => void;
     label: string;
@@ -14,6 +18,7 @@ const svgButtonContentMap: Record<ButtonType, JSX.Element> = {
     'burger-menu': images.burgerMenuSvg,
     'scroll-to-top': images.upChevronSvg,
     'form-success': images.manekiNekoSvg,
+    'complete-failure': images.skullSvg,
 };
 
 const svgButtonSizeMap: Record<ButtonSize, string> = {
