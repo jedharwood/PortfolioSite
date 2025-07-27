@@ -1,7 +1,6 @@
 'use client';
 import { JSX } from 'react';
 import { useTranslations } from 'next-intl';
-// import { githubUrl, linkedInUrl } from '../utilities/resources';
 import SvgAnchor from './svg-anchor';
 import SvgButton from './svg-button/svg-button';
 
