@@ -39,12 +39,11 @@ Write up README
 Tests
 i18n validation messages
 Do I need to I18n any of the svgIcons?
+SVG rendering strategy
 Translation
 Project page Content
 Favicon
 SEO
-Sent Email confirmation
 Theme switcher - maybe additional theme
 Move form element styles into css
 Can I localise metadata?
-SVG rendering strategy
