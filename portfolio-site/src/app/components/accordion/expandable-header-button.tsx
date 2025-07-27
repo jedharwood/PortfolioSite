@@ -37,7 +37,6 @@ const ExpandableHeaderButton = ({
             className='svg-button ml-4 shrink-0 lg:ml-6'
             width='16'
             height='16'
-            xmlns='http://www.w3.org/2000/svg'
             fill='currentColor'
         >
             <rect

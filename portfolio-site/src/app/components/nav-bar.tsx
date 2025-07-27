@@ -3,7 +3,7 @@ import { useState, useRef, useEffect, JSX } from 'react';
 import { Link, usePathname } from '../../i18n/routing';
 import { useTranslations } from 'next-intl';
 import LanguageSelector from './language-selector';
-import SvgButton from './svg-button';
+import SvgButton from './svg-button/svg-button';
 
 const Navbar = (): JSX.Element => {
     const t = useTranslations('Components.navBar');

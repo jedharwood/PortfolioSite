@@ -68,15 +68,15 @@ const svgIconContentMap: Record<
 };
 
 const SvgIcon = ({ type }: SvgIconProps): JSX.Element => {
-    const svgIconContent = svgIconContentMap[type];
+    const { icon, label } = svgIconContentMap[type];
 
     return (
         <div className='svg-icon inline-flex origin-center transform gap-4 transition-transform duration-300 hover:scale-105'>
             <div className='flex items-center'>
-                <div className='h-10 w-10'>{svgIconContent.icon}</div>
+                <div className='h-10 w-10'>{icon}</div>
             </div>
             <span className='primary-text-hoverable content-center text-xl font-semibold'>
-                {svgIconContent.label}
+                {label}
             </span>
         </div>
     );

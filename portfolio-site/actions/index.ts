@@ -3,13 +3,12 @@ import { ContactFormData, contactFormSchema } from '../schemas/contact-form';
 import nodemailer from 'nodemailer';
 
 type FormResponse = {
-    status: boolean;
-    message: string;
+    success: boolean;
 };
 
-export async function contactFormSubmitHandler(
+export const contactFormSubmitHandler = async (
     data: ContactFormData,
-): Promise<FormResponse> {
+): Promise<FormResponse> => {
     try {
         const validation = contactFormSchema.safeParse(data);
         if (!validation.success) throw new Error('Invalid data');
@@ -42,16 +41,12 @@ export async function contactFormSubmitHandler(
         });
 
         return {
-            status: true,
-            message: 'Form submitted successfully',
+            success: true,
         };
     } catch (error) {
         console.error('e', error);
         return {
-            status: false,
-            message: 'Failed',
+            success: false,
         };
     }
-}
-
-//
+};

@@ -131,7 +131,26 @@
             },
             "buttons": {
                 "send": "Send",
-                "sending": "Sending..."
+                "sending": "Sending...",
+                "retry": "Retry"
+            }
+        },
+        "successReport": {
+            "closeButton": "Close and return to email form",
+            "success": {
+                "title": "Thanks for your message",
+                "message": "You'll be hearing from me real soon.",
+                "svgLabel": "An image of a Manekineko. Click here to return to email form"
+            },
+            "failure": {
+                "title": "Failed to send",
+                "message": "Something went wrong. Try again?",
+                "svgLabel": "// probably need to label this image"
+            },
+            "completeFailure": {
+                "title": "Unable to send message",
+                "message": "Try again later or contact me through LinkedIn",
+                "svgLabel": "An image of a skull. Click here to return to email form"
             }
         }
     },
@@ -148,9 +167,11 @@
             "hakkei": "Lanterns outside Seto shrine, Kanazawa Hakkei"
         },
         "footer": {
-            "linkedIn": "Link to LinkedIn page",
-            "github": "Link to github page",
             "scrollToTop": "Scroll to top"
+        },
+        "svgAnchor": {
+            "linkedIn": "Link to LinkedIn page",
+            "github": "Link to github page"
         }
     },
     "Projects": {

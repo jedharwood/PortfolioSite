@@ -1,4 +1,6 @@
 import { JSX } from 'react';
+import { useTranslations } from 'next-intl';
+import { githubUrl, linkedInUrl } from '../utilities/resources';
 
 const linkedInSvg: JSX.Element = (
     <svg
@@ -31,19 +33,30 @@ const githubSvg: JSX.Element = (
 );
 
 type SvgAnchorProps = {
-    href: string;
-    label: string;
-    buttonType: 'linked-in' | 'github';
+    type: 'linked-in' | 'github';
 };
 
-const SvgAnchor = ({
-    href,
-    label,
-    buttonType,
-}: SvgAnchorProps): JSX.Element => (
-    <a href={href} className='svg-button h-20 w-20' aria-label={label}>
-        {buttonType === 'linked-in' ? linkedInSvg : githubSvg}
-    </a>
-);
+const svgAnchorContentMap: Record<
+    SvgAnchorProps['type'],
+    { href: string; label: string; icon: JSX.Element }
+> = {
+    'linked-in': { href: linkedInUrl, label: 'linkedIn', icon: linkedInSvg },
+    github: { href: githubUrl, label: 'github', icon: githubSvg },
+};
+
+const SvgAnchor = ({ type }: SvgAnchorProps): JSX.Element => {
+    const t = useTranslations('Components.svgAnchor');
+    const { href, label, icon } = svgAnchorContentMap[type];
+
+    return (
+        <a
+            href={href}
+            className='svg-button h-20 w-20'
+            aria-label={t(`${label}`)}
+        >
+            {icon}
+        </a>
+    );
+};
 
 export default SvgAnchor;
