@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     description:
         'A full-stack software developer portfolio showcasing expertise in modern web technologies, with a strong focus on frontend development and clean UI design.',
     icons: {
-        icon: '/icon'
-    }
+        icon: '/icon',
+    },
 };
 
 interface LocaleLayoutProps {
