@@ -39,7 +39,7 @@ Write up README
 Tests
 i18n validation messages
 Do I need to I18n any of the svgIcons?
-SVG rendering strategy
+// SVG rendering strategy
 Translation
 Project page Content
 Favicon
