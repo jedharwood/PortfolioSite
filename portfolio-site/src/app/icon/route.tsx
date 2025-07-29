@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+import type { NextRequest } from 'next/server';
 
 export const size = {
     width: 32,
@@ -6,7 +7,15 @@ export const size = {
 };
 export const contentType = 'image/png';
 
-export default function Icon() {
+export async function GET(
+    req: NextRequest
+) {
+    const headers = Object.fromEntries(req.headers.entries());
+    const colorScheme = headers['sec-ch-prefers-color-scheme'] || 'light';
+    const darkSvgPathColor = '#ec7d4e';
+    const lightSvgPathColor = '#c32b2e';
+    const svgPathColor = colorScheme === 'light' ? lightSvgPathColor : darkSvgPathColor;
+
     return new ImageResponse(
         (
             <div
@@ -14,7 +23,7 @@ export default function Icon() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: 'red',
+                    color: svgPathColor,
                     width: '100%',
                     height: '100%',
                 }}
