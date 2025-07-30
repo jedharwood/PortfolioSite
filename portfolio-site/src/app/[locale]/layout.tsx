@@ -21,15 +21,15 @@ export const metadata: Metadata = {
     title: 'Jed Harwood',
     description:
         'A full-stack software developer portfolio showcasing expertise in modern web technologies, with a strong focus on frontend development and clean UI design.',
-    icons: {
-        icon: [
-            {
-                url: '/favicon.ico',
-                type: 'image/x-icon',
-            },
-        ],
-        apple: '/apple-touch-icon.png',
-    },
+    // icons: {
+    //     icon: [
+    //         {
+    //             url: '/favicon.ico',
+    //             type: 'image/x-icon',
+    //         },
+    //     ],
+    //     apple: '/apple-touch-icon.png',
+    // },
 };
 
 interface LocaleLayoutProps {
