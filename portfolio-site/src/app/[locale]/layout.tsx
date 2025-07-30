@@ -26,15 +26,15 @@ export const metadata: Metadata = {
             {
                 media: '(prefers-color-scheme: light)',
                 url: '/favicon-light.svg',
-                href: '/favicon-light.svg'
+                href: '/favicon-light.svg',
             },
             {
                 media: '(prefers-color-scheme: dark)',
                 url: '/favicon-dark.svg',
-                href: '/favicon-dark.svg'
-            }
-        ]
-    }
+                href: '/favicon-dark.svg',
+            },
+        ],
+    },
 };
 
 interface LocaleLayoutProps {
