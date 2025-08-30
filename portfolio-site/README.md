@@ -46,3 +46,4 @@ SEO
 Theme switcher - maybe additional theme
 Move form element styles into css
 Can I localise metadata?
+Implement not found page
