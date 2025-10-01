@@ -26,13 +26,13 @@ export const metadata: Metadata = {
             {
                 media: '(prefers-color-scheme: light)',
                 url: '/icons/favicon-light.svg',
-                href: '/icons/favicon-light.svg'
+                href: '/icons/favicon-light.svg',
             },
             {
                 media: '(prefers-color-scheme: dark)',
                 url: '/icons/favicon-dark.svg',
-                href: '/icons/favicon-dark.svg'
-            }
+                href: '/icons/favicon-dark.svg',
+            },
         ],
         apple: '/icons/apple-touch-icon.png',
     },
