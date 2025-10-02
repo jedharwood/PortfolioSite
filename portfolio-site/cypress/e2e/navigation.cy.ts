@@ -1,21 +1,24 @@
 export const locales = {
-  en: 'en',
-  ja: 'ja',
-} as const
+    en: 'en',
+    ja: 'ja',
+} as const;
 
-export type Locale = keyof typeof locales
+export type Locale = keyof typeof locales;
 
 const openNavMenuWithLocale = (locale: Locale): void => {
     cy.get('button[aria-label="Open main menu"]').click();
     cy.get('#burger-menu').within(() => {
         cy.contains(`a[href*="/${locale}"]`, /^Home$/).should('be.visible');
-        cy.contains(`a[href*="/${locale}/work-history"]`, /^Work History$/).should(
-            'be.visible',
-        );
+        cy.contains(
+            `a[href*="/${locale}/work-history"]`,
+            /^Work History$/,
+        ).should('be.visible');
         cy.contains(`a[href*="/${locale}/projects"]`, /^Projects$/).should(
             'be.visible',
         );
-        cy.contains(`a[href*="/${locale}/contact"]`, /^Contact$/).should('be.visible');
+        cy.contains(`a[href*="/${locale}/contact"]`, /^Contact$/).should(
+            'be.visible',
+        );
     });
 };
 
@@ -26,10 +29,14 @@ const visitHomePageWithLocale = (locale: Locale): void => {
     cy.url().should('equal', `http://localhost:3000/${locale}`);
     cy.get('#burger-menu')
         .find(`a[href*="/${locale}"]`)
-        .should('have.css', 'text-decoration-line', 'underline')
+        .should('have.css', 'text-decoration-line', 'underline');
 };
 
-const findAndClickNavLink = (locale: Locale, path: string, expectedTextContent: string) => {
+const findAndClickNavLink = (
+    locale: Locale,
+    path: string,
+    expectedTextContent: string,
+) => {
     cy.get('#burger-menu')
         .find(`a[href*="/${locale}/${path}"]`)
         .should('be.visible')
@@ -39,7 +46,7 @@ const findAndClickNavLink = (locale: Locale, path: string, expectedTextContent: 
     cy.url().should('equal', `http://localhost:3000/${locale}/${path}`);
     cy.get('#burger-menu')
         .find(`a[href*="/${locale}/${path}"]`)
-        .should('have.css', 'text-decoration-line', 'underline')
+        .should('have.css', 'text-decoration-line', 'underline');
 };
 
 describe('Navigation', () => {
