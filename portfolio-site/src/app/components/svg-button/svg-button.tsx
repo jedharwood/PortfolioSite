@@ -6,7 +6,9 @@ type ButtonType =
     | 'burger-menu'
     | 'scroll-to-top'
     | 'form-success'
-    | 'complete-failure';
+    | 'complete-failure'
+    | 'light-theme'
+    | 'dark-theme';
 type SvgButtonProps = {
     onClickFunction: () => void;
     label: string;
@@ -19,6 +21,8 @@ const svgButtonContentMap: Record<ButtonType, JSX.Element> = {
     'scroll-to-top': images.upChevronSvg,
     'form-success': images.manekiNekoSvg,
     'complete-failure': images.skullSvg,
+    'light-theme': images.sunSvg,
+    'dark-theme': images.moonSvg,
 };
 
 const svgButtonSizeMap: Record<ButtonSize, string> = {

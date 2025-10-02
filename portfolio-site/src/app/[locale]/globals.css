@@ -1,6 +1,8 @@
 @import 'tailwindcss';
+@variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
+:root,
+[data-theme='light'] {
     --background: #cececc;
     --foreground: #292320;
     --foreground-hover: #5a4d46;
@@ -9,6 +11,17 @@
     --svg-path-focus: #8c1f21;
     --accent: #665c45;
     --accent-hover: #8e8060;
+}
+
+[data-theme='dark'] {
+    --background: #351815;
+    --foreground: #fbe2a3;
+    --foreground-hover: #fdf3da;
+    --svg-path: #ec7d4e;
+    --svg-path-hover: #f5bca3;
+    --svg-path-focus: #df5418;
+    --accent: #7e809a;
+    --accent-hover: #9ea0b3;
 }
 
 /*
@@ -35,26 +48,6 @@ Tobacco Brown
 # --accent: #665C45; 0%
 # --accent: #8e8060; 20%
 */
-
-@theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #351815;
-        --foreground: #fbe2a3;
-        --foreground-hover: #fdf3da;
-        --svg-path: #ec7d4e;
-        --svg-path-hover: #f5bca3;
-        --svg-path-focus: #df5418;
-        --accent: #7e809a;
-        --accent-hover: #9ea0b3;
-    }
-}
 
 /* 
 Dark Theme

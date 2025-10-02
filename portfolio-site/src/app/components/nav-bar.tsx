@@ -4,6 +4,7 @@ import { Link, usePathname } from '../../i18n/routing';
 import { useTranslations } from 'next-intl';
 import LanguageSelector from './language-selector';
 import SvgButton from './svg-button/svg-button';
+import ThemeSelector from './theme-selector';
 
 const Navbar = (): JSX.Element => {
     const t = useTranslations('Components.navBar');
@@ -51,6 +52,7 @@ const Navbar = (): JSX.Element => {
                 ref={menuRef}
             >
                 <div className='flex space-x-2'>
+                    <ThemeSelector />
                     <LanguageSelector />
                     <SvgButton
                         onClickFunction={toggleMenu}

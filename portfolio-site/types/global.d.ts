@@ -9,3 +9,5 @@ type AccordionHeaderProps = {
     location: string;
     dateRange: string;
 };
+
+type Theme = 'light' | 'dark';

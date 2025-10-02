@@ -43,9 +43,10 @@ Do I need to I18n any of the svgIcons?
 Translation
 Project page Content
 SEO
-Theme switcher - maybe additional theme
+Maybe additional theme for accessibility
 Move form element styles into css
 Can I localise metadata?
 Implement not found page
 Can I run cypress tests on commit?
 Make hidden elements untabbable
+MartenDb/JsonB svg

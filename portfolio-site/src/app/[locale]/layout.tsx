@@ -6,6 +6,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import Footer from '../components/footer';
 import Jumbotron from '../components/jumbotron';
 import Navbar from '../components/nav-bar';
+import { ThemeProvider } from '../theme-provider';
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -54,12 +55,14 @@ export default async function LocaleLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col px-0 antialiased lg:px-16 xl:px-48 2xl:px-64`}
             >
-                <NextIntlClientProvider messages={messages}>
-                    <Jumbotron />
-                    <Navbar />
-                    <main className='flex-grow'>{children}</main>
-                    <Footer />
-                </NextIntlClientProvider>
+                <ThemeProvider>
+                    <NextIntlClientProvider messages={messages}>
+                        <Jumbotron />
+                        <Navbar />
+                        <main className='flex-grow'>{children}</main>
+                        <Footer />
+                    </NextIntlClientProvider>
+                </ThemeProvider>
             </body>
         </html>
     );
