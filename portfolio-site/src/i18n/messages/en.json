@@ -172,6 +172,10 @@
         "svgAnchor": {
             "linkedIn": "Link to LinkedIn page",
             "github": "Link to github page"
+        },
+        "themeSelector": {
+            "light": "Switch to light theme",
+            "dark": "Switch to dark theme"
         }
     },
     "Projects": {
