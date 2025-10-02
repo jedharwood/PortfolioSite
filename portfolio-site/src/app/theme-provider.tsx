@@ -9,14 +9,11 @@ import {
     SetStateAction,
 } from 'react';
 
-export type Theme = 'light' | 'dark'; // matbe make global?
-
 interface ThemeContextType {
     theme: Theme;
     setTheme: Dispatch<SetStateAction<Theme>>;
 }
 
-// Pass the type to createContext
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {

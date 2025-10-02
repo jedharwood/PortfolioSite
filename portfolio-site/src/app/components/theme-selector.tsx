@@ -23,5 +23,3 @@ const ThemeSelector = (): JSX.Element => {
 };
 
 export default ThemeSelector;
-// update context to read from browser
-// test context
